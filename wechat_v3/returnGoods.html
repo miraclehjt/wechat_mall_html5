@@ -20,108 +20,115 @@
 </div><!--//头部结束-->
 
 <div class="content">
-	<div class="m-recycle m-return-product m-only mt">
-		<ul class="m-list">
-			<li>
-				<div class="item">
-					<div class="img"><a href="product.html"><img src="images/img/product1.jpg"></a></div>
-					<div class="info">
-						<a href="product.html"><h3 class="tit">新款哥弟春装连衣裙女装修身长袖时尚气质OL</h3></a>
-						<p class="pick-code">提货码：256485</p><!-- //说明：只有自提订单有提货码 没有则为空 -->
-						<div class="sku">红色　XXL　1件</div>
-					</div>
-				</div>
-			</li><!-- 单品结束 -->
-			<li>
-				<div class="item">
-					<div class="img"><a href="product.html"><img src="images/img/product2.jpg"></a></div>
-					<div class="info">
-						<a href="product.html"><h3 class="tit">新款哥弟春装连衣裙女装修身长袖时尚气质OL</h3></a>
-						<p class="pick-code"></p><!-- //说明：配送订单显示 -->
-						<div class="sku">红色　XXL　1件</div>
-					</div>
-				</div>
-			</li><!-- 单品结束 -->
-		</ul>
-	</div><!-- 订单结束 -->
-
-	<div class="m-title mt">退货原因<i class="font-red" style="font-family:simsun">&nbsp;*</i></div>
-	<div class="m-return">
-		<select id="">
-			<option value="">请选择退款原因</option>
-			<option value="">商品不喜欢</option>
-			<option value="">商品不适合</option>
-			<option value="">质量问题</option>
-			<option value="">商品脏、残</option>
-			<option value="">发错尺码、颜色、款号</option>
-			<option value="">发错商品（品牌、订单号）</option>
-			<option value="">信息错误</option>
-			<option value="">与介绍不符合</option>
-			<option value="">少配件、少饰品</option>
-			<option value="other">其它</option>
-		</select>
-	</div><!-- 填写退货信息结束 -->
-
-	<div class="m-title mt">退货说明<i class="font-red" style="font-family:simsun">&nbsp;*</i></div>
-	<div class="m-return">
-		<input type="text" placeholder="请输入退货说明">
-	</div><!-- 填写退货信息结束 -->
-
-	<div class="m-title mt">联系人<i class="font-red" style="font-family:simsun">&nbsp;*</i></div>
-	<div class="m-return">
-		<input type="text" placeholder="请输入联系人姓名">
-	</div><!-- 填写退货信息结束 -->
-
-	<div class="m-title mt">联系方式<i class="font-red" style="font-family:simsun">&nbsp;*</i></div>
-	<div class="m-return">
-		<input type="text" placeholder="请输入联系人电话号码">
-	</div><!-- 填写退货信息结束 -->
-
-	<div class="m-title mt">商品退回方式<i class="font-red" style="font-family:simsun">&nbsp;*</i></div>
-	<div class="m-return">
-		<select id="">
-			<option value="">到购买店面退回</option>
-			<option value="">快递退回</option>
-		</select>
-	</div><!-- 填写退货信息结束 -->
-
-	<div class="m-title mt">快递公司<i class="font-red" style="font-family:simsun">&nbsp;*</i></div>
-	<div class="m-return">
-		<select id="">
-			<option value="">请选择快递公司</option>
-			<option value="">顺风</option>
-			<option value="">申通</option>
-			<option value="">中退</option>
-			<option value="">圆通</option>
-		</select>
-	</div><!-- 填写退货信息结束 -->
-
-	<div class="m-title mt">快递单号<i class="font-red" style="font-family:simsun">&nbsp;*</i></div>
-	<div class="m-return">
-		<input type="text" placeholder="请输入快递单号">
-	</div><!-- 填写退货信息结束 -->
-
-	<div class="m-return m-return-1 mt">
-		<div class="m-return-photo">
-			<ul>
-				<li><img src="images/img/pic1.jpg"><i class="icon-del"></i></li>
-				<li><img src="images/img/pic2.jpg"><i class="icon-del"></i></li>
-				<li><img src="images/img/pic3.jpg"><i class="icon-del"></i></li>
-			</ul>
+	<div class="return">
+		<div class="row">
+			<label class="r-label">
+				<em>*</em>退货原因
+			</label>
+			<div class="r-main select-wrapper">
+				<select class="select" id="reason">
+					<option value="">请选择退款原因</option>
+					<option value="">商品不喜欢</option>
+					<option value="">商品不适合</option>
+					<option value="">质量问题</option>
+					<option value="">商品脏、残</option>
+					<option value="">发错尺码、颜色、款号</option>
+					<option value="">发错商品（品牌、订单号）</option>
+					<option value="">信息错误</option>
+					<option value="">与介绍不符合</option>
+					<option value="">少配件、少饰品</option>
+					<option value="other">其它</option>
+				</select>
+			</div>
 		</div>
-	</div><!-- 填写退货信息结束 -->
-	<p class="t-order">温馨提示：退货成功后会扣除购买时所获积分</p>
+		<div class="row">
+			<label class="r-label">
+				<em>*</em>退货说明
+			</label>
+			<div class="r-main">
+				<textarea placeholder="最多200字" max-length="200"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<label class="r-label">
+				<em>*</em>联系人
+			</label>
+			<div class="r-main">
+				<input type="text" placeholder="请输入联系人姓名">
+			</div>
+		</div>
+		<div class="row">
+			<label class="r-label">
+				<em>*</em>联系方式
+			</label>
+			<div class="r-main">
+				<input type="text" placeholder="请输入联系电话">
+			</div>
+		</div>
+		<div class="row">
+			<label class="r-label">
+				<em>*</em>退回方式
+			</label>
+			<div class="r-main select-wrapper">
+				<select class="select" id="">
+					<option value="">到购买门店退回</option>
+					<option value="">快递退回</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<label class="r-label">
+				<em>*</em>快递公司
+			</label>
+			<div class="r-main select-wrapper">
+				<select class="select" id="">
+					<option value="">请选择快递公司</option>
+					<option value="">顺风</option>
+					<option value="">申通</option>
+					<option value="">中通</option>
+					<option value="">圆通</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<label class="r-label">
+				<em>*</em>快递单号
+			</label>
+			<div class="r-main">
+				<input type="text" placeholder="请输入快递单号">
+			</div>
+		</div>
 
-	<div class="m-end">
-		<a href="aftersales3.html" class="btn-full">提交申请</a>
+		<div class="uploader-field">
+	        <div class="takephoto">
+	        	<div class="takephoto-queue">
+	        		<ul>
+	        			<li><img src="images/img/p4.jpg"><i>-</i></li>
+	        			<li><img src="images/img/p5.jpg"><i>-</i></li>
+	        			<li><img src="images/img/p6.jpg"><i>-</i></li>
+	        		</ul>
+	        	</div>
+		        <div class="takephoto-trigger">
+			        <div class="add-icon">+</div>
+			        <div class="add-text">上传凭证<br><span>(最多三张)</span></div>
+		        </div>
+	        </div>
+		</div>
 	</div>
-
-
+	<div class="btn-box">
+		<a class="btn btn-block btn-submit disabled" href="returnSuccess.html">提交申请</a>
+		<p class="hint tr">温馨提示：退货成功后会扣除购买时所获积分</p>
+	</div>
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
 <script>
-
+$('.return textarea').focus(function(){
+	$(this).closest('.row').addClass('block-input');
+});
+$('.return textarea').blur(function(){
+	$(this).closest('.row').removeClass('block-input');
+});
 </script>
 </body>
 </html>

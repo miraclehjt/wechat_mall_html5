@@ -24,80 +24,68 @@
 		<div class="s-product flex">
 			<a class="img" href=""><img src="images/img/p6-small.jpg"></a>
 			<div class="info cell">
-				<a class="name" href="product.html"><h4 class="clamp clamp1">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
-				<div class="sku">颜色:蓝色;尺码:42 </div>
+				<a href="product.html"><h4 class="clamp">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
 				<div class="sub flex">
 					<span class="price cell">
 						<span class="s">￥<em class="n">198</em>.00</span>
 						<del>吊牌价￥1499.00</del>
 					</span>
-					<i class="icon-del"></i>
 				</div>
 			</div>
 		</div>
 		<div class="s-product flex">
 			<a class="img" href=""><img src="images/img/p6-small.jpg"></a>
 			<div class="info cell">
-				<a class="name" href="product.html"><h4 class="clamp clamp1">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
-				<div class="sku">颜色:蓝色;尺码:42 </div>
+				<a href="product.html"><h4 class="clamp">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
 				<div class="sub flex">
 					<span class="price cell">
 						<span class="s">￥<em class="n">198</em>.00</span>
 						<del>吊牌价￥1499.00</del>
 					</span>
-					<i class="icon-del"></i>
 				</div>
 			</div>
 		</div>
 		<div class="s-product flex">
 			<a class="img" href=""><img src="images/img/p6-small.jpg"></a>
 			<div class="info cell">
-				<a class="name" href="product.html"><h4 class="clamp clamp1">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
-				<div class="sku">颜色:蓝色;尺码:42 </div>
+				<a href="product.html"><h4 class="clamp">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
 				<div class="sub flex">
 					<span class="price cell">
 						<span class="s">￥<em class="n">198</em>.00</span>
 						<del>吊牌价￥1499.00</del>
 					</span>
-					<i class="icon-del"></i>
 				</div>
 			</div>
 		</div>
 		<div class="s-product flex">
 			<a class="img" href=""><img src="images/img/p6-small.jpg"></a>
 			<div class="info cell">
-				<a class="name" href="product.html"><h4 class="clamp clamp1">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
-				<div class="sku">颜色:蓝色;尺码:42 </div>
+				<a href="product.html"><h4 class="clamp">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
 				<div class="sub flex">
 					<span class="price cell">
 						<span class="s">￥<em class="n">198</em>.00</span>
 						<del>吊牌价￥1499.00</del>
 					</span>
-					<i class="icon-del"></i>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="btn-box"><a href="javascript:;" class="btn btn-block btn-clear">清空</a></div><!-- //如果没有相关记录 则隐藏 -->
-	<div class="cart-empty">
-		<div class="cart-empty-pic"></div>
-		<div class="cart-empty-text">您还没有浏览记录，快去购物吧！</div>
-		<div class="empty-btn-wrapper"><a href="index.html" class="btn">去逛逛</a></div>
-	</div><!-- //如果没有相关记录 则显示 -->
+	<div class="btn-box"><a href="javascript:cleanOut();" class="btn btn-block btn-clear">全部删除</a></div><!-- //如果没有相关记录 则隐藏 -->
+</div>
+<div class="empty">
+	<div class="empty-pic cry-pic"></div>
+	<div class="empty-text">您的购物车中空空如也，快去购物吧！</div>
+	<div class="empty-btn"><a href="index.html" class="btn">去逛逛</a></div>
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
 <script>
-$('.icon-del').on('tap', function() {
-	$(this).closest('.s-product').remove();
-	//这里写删除ajax
-});
-$('.btn-clear').on('tap', function() {
-	$(this).remove()
+function cleanOut(){
+	$('.btn-clear').remove();
 	$('.record').remove();
+	$('.empty').css('display','block');
 	//这里写删除ajax
-	$('.cart-empty').css('display','block');
-});
+};
 </script>
 </body>
 </html>
