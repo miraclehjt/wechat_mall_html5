@@ -96,7 +96,7 @@ pop.hide = function() {
 };
 
 function enableRegister() {
-	if (_len_phone && _len_sms) {
+	if (_len_phone && _len_sms == 6) {
 		$('.login').removeClass('disabled');
 	} else {
 		$('.login').addClass('disabled');
@@ -105,7 +105,7 @@ function enableRegister() {
 
 function enableCaptcha() {
 	var $btn = $('.retransmit');
-	if (_len_phone && !$btn.hasClass('restransit')) {
+	if (_len_phone == 11 && !$btn.hasClass('restransit')) {
 		$btn.removeClass('disabled');
 	} else {
 		$btn.addClass('disabled');
