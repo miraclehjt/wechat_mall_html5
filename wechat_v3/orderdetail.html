@@ -15,12 +15,27 @@
 <div class="header fixed-bar static flex">
     <div class="left"><a class="a-back" href="javascript:;"><span>后退</span></a></div>
     <div class="title cell">
-        <h1>物流查询</h1>
+        <h1>确认详情</h1>
     </div>
+    <div class="right"><a class="a-more" href="javascript:;"><span>更多</span></a></div>
 </div><!--//头部结束-->
+<div class="sub-menu j-menu">
+	<a class="item" href="index.html">首页</a>
+	<a class="item" href="cate.html">分类</a>
+	<a class="item" href="cart.html">购物车</a>
+	<a class="item" href="vip.html">我</a>
+</div><!-- //二级导航结束 -->
 
 <div class="content">
 	<div class="order-detail">
+		<div class="pickup-code">
+			<div class="delivery">
+				<div class="icon"><img src="images/lady.png"></div>
+				<div class="num-code"><p>6565805</p><span>请向导购出示此凭证提货</span></div>
+			</div>
+			<div class="cut-line"><span>或直接扫描二维码</span></div>
+			<div class="qr-code"><img src="images/img/qr.jpg"></div>
+		</div><!-- //自提订单 ：只自提订单显示-->
 		<div class="address order-address">
 			<div class="info">
 				收货人：<p class="name">刘伯温</p>
@@ -33,33 +48,31 @@
 			<div class="status">中通快递来广营公司已收件</div>
 		</div>
 		<div class="order-list mt">
-			<div class="s-product">
-				<a href="orderdetail.html" class="flex">
-					<div class="img"><img src="images/img/p6-small.jpg"></div>
-					<div class="info cell">
-						<h4 class="clamp">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4>
-						<div class="sku">颜色:蓝色;尺码:42;数量：x1</div>
-						<div class="sub">
-							<span class="price">
-								<span class="s">￥<em class="n">198</em>.00</span>
-							</span>
-						</div>
+			<div class="s-product flex">
+				<a class="img" href=""><img src="images/img/p6-small.jpg"></a>
+				<div class="info cell">
+					<a class="name" href="product.html"><h4 class="clamp clamp1">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
+					<div class="sku">颜色:蓝色;尺码:42 </div>
+					<div class="sub flex">
+						<span class="price cell">
+							<span class="s">￥<em class="n">198</em>.00</span>
+						</span>
+						<a href="returnGoods.html" class="btn returnBtn">退货</a><!-- //当用户确定收货后显示退货按钮 -->
 					</div>
-				</a>
+				</div>
 			</div>
-			<div class="s-product">
-				<a href="orderdetail.html" class="flex">
-					<div class="img"><img src="images/img/p6-small.jpg"></div>
-					<div class="info cell">
-						<h4 class="clamp">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4>
-						<div class="sku">颜色:蓝色;尺码:42;数量：x1</div>
-						<div class="sub">
-							<span class="price">
-								<span class="s">￥<em class="n">198</em>.00</span>
-							</span>
-						</div>
+			<div class="s-product flex">
+				<a class="img" href=""><img src="images/img/p6-small.jpg"></a>
+				<div class="info cell">
+					<a class="name" href="product.html"><h4 class="clamp clamp1">新款独家定制韩国显瘦无袖A字连衣裙2015夏季雪纺百褶中裙</h4></a>
+					<div class="sku">颜色:蓝色;尺码:42 </div>
+					<div class="sub flex">
+						<span class="price cell">
+							<span class="s">￥<em class="n">198</em>.00</span>
+						</span>
+						<a href="returnGoods.html" class="btn returnBtn">退货</a><!-- //当用户确定收货后显示退货按钮 -->
 					</div>
-				</a>
+				</div>
 			</div>
 		</div><!-- //购买商品 -->
 		<div class="m-text order-text mt">
@@ -126,7 +139,8 @@
 			</div>
 		</div><!-- //物流 ：只配送订单显示-->
 		<div class="btn-box">
-			<a href="javascript:;" class="btn btn-block btn-success">确认收货</a><!-- //配送订单显示： 取消 -->
+			<a href="index.html" class="btn btn-block btn-success">继续购物</a><!-- //刚确认订单显示： 继续购物 -->
+			<a href="javascript:;" class="btn btn-block btn-success">确认收货</a><!-- //配送订单显示： 确认收货 -->
 			<a href="javascript:;" class="btn btn-block btn-warning">取消订单</a><!-- //未支付订单显示： 取消 -->
 			<p class="hint">请收到物品后再确认收货 以免造成损失</p>
 		</div>
@@ -134,5 +148,14 @@
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
+<script>
+$(".j_select").change(function(){
+	var value = $(this).find("option:selected").text();
+    $(this).prev('.j_multi').text(value);
+});
+$('#j_address').on('tap', function(event) {
+	window.location.href="address.html"
+});
+</script>
 </body>
 </html>

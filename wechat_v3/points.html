@@ -66,7 +66,7 @@
 			<span class="num f-red">+42</span>
 		</li>
 	</ul>
-	<div class="btn-box"><a href="javascript:;" class="btn btn-block btn-load-more">点击加载更多</a></div>
+	<div class="btn-box"><a href="javascript:loadPoints();" class="btn btn-block btn-load-more">点击加载更多</a></div>
 </div>
 <div class="empty">
 	<div class="empty-pic cry-pic"></div>
@@ -123,6 +123,11 @@ function closePoint(){
 	$('.mask').css('display','none');
 	$('.point-fixed').removeClass('point-move');
 	$('.point-fixed').removeClass('point-back');
+};
+
+//加载更多积分明细
+function loadPoints(){
+	loading();
 };
 </script>
 </body>

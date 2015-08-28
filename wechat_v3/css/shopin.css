@@ -72,6 +72,7 @@ input[type=checkbox]:before,
 .btn-success { background:#1ebc23; border: 0; color: #fff}
 .btn-warning { background:#dd524d; border: 0; color: #fff}
 .btn-load-more { background: transparent; border: solid 1px #f04e23; color: #f04e23}
+.btn-default { padding: 2px 10px; background: -webkit-linear-gradient(top,#fcfcfc,#ededed); background: -ms-linear-gradient(top,#fcfcfc,#ededed); background: linear-gradient(top,#fcfcfc,#ededed); color: #666}
 .btn.disabled { background:#dcdcdc; border: 0; color:#999}
 input[type=checkbox][disabled]:before, input[type=radio][disabled]:before { opacity: .4}
 input[type=checkbox], input[type=radio] { background: none; border: 0; -webkit-appearance:none; -webkit-tap-highlight-color:rgba(0,0,0,0)}
@@ -168,7 +169,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 /*文本列表*/
 .m-text li { display: -webkit-box; display: -ms-box; display: box; border-bottom:solid 1px #ddd}
 .m-text li:last-child { border-bottom: 0}
-.m-text li s { display:block; width:6rem; color:#999}
+.m-text li s { display:block; width: 7rem; color:#999}
 .m-text li b { -webkit-box-flex:1; -ms-box-flex:1; box-flex:1; display:block}
 /*订单信息*/
 .order-text { padding: 1rem; background:#fff}
@@ -323,9 +324,9 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .m-sift .row-body .sift-item { display: block; height: 40px; line-height: 40px; border-bottom: solid 1px #eee}
 .m-sift .row-body .sift-item:last-child { border-bottom: none}
 .m-sift .row-body .sift-item.selected:after { position: relative; top: 50%; content: ''; float: right; width: 6px; height: 12px; margin: -9px 1rem 0 0; border: solid; background: 0; color: #f04e23; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); transform: rotate(45deg)}
-.m-sift .two-input { display: block; padding: 0 .5rem}
-.m-sift .two-input .input-item { display: inline-block; width: 28%; height: 26px; line-height: 26px; outline: none; text-indent: 5px; background: #f2f2f2; border: none; border-radius: 3px}
-.m-sift .two-input .sift-btn { -webkit-appearance:none; display: inline-block; padding: .8rem 1.5rem; margin-left: .5rem; vertical-align: baseline; border: 1px solid #f04e23; background: #fff; border-radius: 3px; color: #f04e23; }
+.m-sift .two-input { display: block; padding: .5rem}
+.m-sift .two-input .input-item { display: inline-block; width: 28%; height: 26px; vertical-align: middle; outline: none; text-indent: 5px; background: #f2f2f2; border: none; border-radius: 3px}
+.m-sift .two-input .sift-btn { -webkit-appearance:none; display: inline-block; padding: .4rem 1.5rem; margin-left: .5rem; vertical-align: middle; border: 1px solid #f04e23; background: #fff; border-radius: 3px; color: #f04e23; }
 .m-sift .two-input .divider { padding: 0 5px}
 .sift-footer { position: fixed; right: 0; bottom: 0; width: 100%; height: 48px}
 .sift-footer .sift-btn { width: 40%; height: 48px; background: #fff; line-height: 48px; float: left; text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; border-top: 1px solid #e7e7e7; }
@@ -375,10 +376,10 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 /*购买*/
 .buy-fixed { position: fixed; left: 0; bottom: 0; z-index: 10; text-align: center; width: 100%; padding: 10px 0; background-color: #fff; border-top: 1px solid #dfdfe3; border-width: 1px 0 0 0;  box-shadow: 0 1px 1px 1px rgba(0,0,0,0.2)}
 .buy-bar { padding: .6rem 0; background: #fff; border-top: solid 1px #ddd}
-.buy-bar a { display: block; line-height:30px; margin:0 5px; border-radius:3px; font-size: 1.6rem; text-align:center; color:#fff}
+.buy-bar a { line-height:30px; margin:0 5px; border-radius:3px; font-size: 1.6rem; text-align:center; color:#fff}
 .buy-now { width:36%; background:#f04e23; border: solid 1px #f04e23}
 .add-cart { width:36%; background: rgba(240,78,35,.05); border: solid 1px #f04e23; color: #f04e23!important}
-.go-cart { position:relative; width:30px; background: #fff; border:solid 1px #ddd}
+.go-cart { position:relative; float: left; width:30px; height:30px; background: #fff; border:solid 1px #ddd}
 .go-cart span { display:block; height:30px; text-indent:-999em; overflow:hidden}
 .go-cart span:before { display:block; content:''; width:24px; height:21px; margin: 5px auto 0; background-position:-58px -60px}
 .go-cart .icon { position:absolute; right:-5px; top:-5px; width:18px; height:18px; line-height:18px; text-align:center; font-family:arial; font-size:12px; border-radius:20px; background:#f00}
@@ -391,8 +392,8 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .m-sku .row-title { display: block; padding: 1.5rem 0 .5rem}
 .m-sku .sku-row .sku-item { display: inline-block; position: relative; padding: .5rem 1.2rem; margin: 0 .5rem .5rem 0; border: solid 1px #ddd; border-radius: 3px}
 .m-sku .sku-row .sku-item.on { background:  #f04e23; border-color: #f04e23; color: #fff}
-.sku-footer { font-size: 0}
-.sku-footer a { display: inline-block; width: 50%; text-align: center; line-height: 40px; font-size: 1.4rem; font-weight: 700; background: #f04e23; border-top: solid 1px #ddd; color: #fff}
+.sku-footer { height: 40px; line-height: 40px; overflow: hidden; text-align: center;}
+.sku-footer a { float: left; width: 50%; font-size: 1.4rem; font-weight: 700; background: #f04e23; border-top: solid 1px #ddd; color: #fff}
 .sku-footer .btn-cancel { background: #fff; color: #666}
 .sku-move{bottom:-100%; animation:sku-move .3s 1 ease 0;-webkit-animation:sku-move .3s 1 ease 0}
 @-webkit-keyframes sku-move{
@@ -433,7 +434,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 /*数量*/
 .number { display: inline-block; height: 3rem; line-height: 3rem; overflow: hidden; vertical-align: middle; border: 1px solid #b3b3b3; -webkit-border-radius: 3px; border-radius: 3px}
 .cart-box .operate { display: none}
-.cart-box .clamp { margin-bottom: 5px}
+.cart-box .clamp { margin-bottom: 3px}
 .cart-box .cart-group .s-product { border-bottom: solid 1px #ddd}
 .cart-box .cart-group:last-child .s-product { border-bottom: 0}
 .operate .increase, .operate .decrease, .operate .num { float: left; text-align: center; vertical-align: middle}
@@ -443,7 +444,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .operate .num { width: 3rem; height: 100%; padding: 0 .2rem; text-align: center; border: 0; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 0; border-radius: 0; font-weight: 700; color: #454545; }
 .icon-del { display: inline-block; vertical-align: middle; width: 21px; height: 21px; margin-right: 1rem; background-position: -143px 0}
 .editOrder .sku { display: none}
-.editOrder .clamp { margin-bottom: 10px; -webkit-line-clamp:1; line-clamp:1}
+.editOrder .clamp { margin-bottom: 7px; -webkit-line-clamp:1; line-clamp:1}
 .editOrder .cart-group .price { display: none}
 .editOrder .operate { display: block}
 .cart-footer { position: relative; padding: 1rem 1rem 1rem 40px; background: #fff; border-top: solid 1px #ddd}
