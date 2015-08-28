@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='black' name='apple-mobile-web-app-status-bar-style'>
+<meta content='telephone=no' name='format-detection'>
+<meta content='no-cache' http-equiv='Cache-Control'>
+<title>上品折扣微商城</title>
+<link href='css/shopin.css' rel='stylesheet'/>
+</head>
+
+<body>
+<div class='m-reg'>
+	<form action=''>
+		<div class='row animate'>
+			<s class='s'><input class='i' id='phone' maxlength='11' type='tel' placeholder='手机号'></s><b class='b animate disabled retransmit' onclick='javascript:;'>获取验证码</b>
+		</div>
+		<div class='row animate'>
+			<s class='s'><input class='i' id='captcha' maxlength='6' type='tel' placeholder='验证码'></s>
+		</div>
+		<div class='u-btn'><a class='btn btn-block animate login disabled' href='javascript:;'>立即绑定</a></div>
+	</form>
+</div>
+<dl class='m-rule'>
+	<dt>特权一：</dt>
+	<dd>购物积分。购买服装服饰2元即得1分，不足2元不积分；金牌粉丝会员购买服装服饰1元即得1分，不足1元不积分。</dd>
+	<dt>特权二：</dt>
+	<dd>签到积分。签到1天得1分，连续签到2天得2分，连续签到3天及以上每天得3分。</dd>
+	<dt>特权三：</dt>
+	<dd>积分活动。红包、换购、抵现、抽大奖，积分当钱花。.shopin.net）、微信公众平台（上品折扣）轻松实现跨渠道提货，比如微信购物，实体店提货。</dd>
+	<dt>特权四：</dt>
+	<dd>粉丝会员内购会。专属于粉丝会员的超值优惠。.shopin.net）、微信公众平台（上品折扣）轻松实现跨渠道退货，比如微信购物，实体店退货。</dd>
+	<dt>特权五：</dt>
+	<dd>全渠道退货。在上品折扣官网或上品折扣微商城购物的粉丝会员，可以前往北京任意一家实体店的服务台办理退货；在北京任意一家实体店购物的粉丝会员也可以在上品折扣官网申请退货。</dd>
+	<dt>特权六：</dt>
+	<dd>其他专属活动。针对粉丝会员的专属活动，给您不期而遇的惊喜。</dd>
+</dl>
+
+<div class='pop'><p class='msg'></p></div><!-- //提示弹窗 -->
+<script src='js/zepto.min.js'></script>
+<script>
+;(function(){
+var _phone = '',
+	_len_phone = 0,
+	_len_sms = 0;
+$(function() {
+	bindEvents();
+	pop();
+	enableCaptcha();
+	enableRegister();
+	_phone = $('#phone').val();
+});
+function bindEvents(){
+	_len_phone = $('#phone').on('input', function() {
+		$(this).parents('.row').removeClass('err');
+		_phone = this.value;
+		_len_phone = _phone.length;
+		enableCaptcha();
+		enableRegister();
+	}).val().length;
+
+	_len_sms = $('#captcha').on('input', function() {
+		$(this).parents('.row').removeClass('err');
+		_len_sms = this.value.length;
+		enableRegister();
+	}).val().length;
+
+	$('.retransmit').on('click', function() {
+		if (!$(this).hasClass('disabled')) {
+			docheckPhone();
+		}
+	});
+	$('.login').on('click', function() {
+		if (!$(this).hasClass('disabled')) {
+			register();
+		}
+	});
+};
+
+function pop() {}
+pop.show = function(info) {
+	var $pop = $('.pop');
+	$("html").addClass('active-page');
+	$('.msg', $pop).html(info.msg);
+	$pop.css('opacity','1');
+	$('.mask').css('opacity','.8');
+	setTimeout(pop.hide,2500)
+};
+pop.hide = function() {
+	$('.pop,.mask').css('opacity','0');
+	$("html").removeClass('active-page');
+};
+
+function enableRegister() {
+	if (_len_phone && _len_sms == 6) {
+		$('.login').removeClass('disabled');
+	} else {
+		$('.login').addClass('disabled');
+	}
+}
+
+function enableCaptcha() {
+	var $btn = $('.retransmit');
+	if (_len_phone == 11 && !$btn.hasClass('restransit')) {
+		$btn.removeClass('disabled');
+	} else {
+		$btn.addClass('disabled');
+	}
+}
+
+function checkPhone(phone) {
+	var pattern = /^1[0-9]{10}$/;
+	return pattern.test(phone);
+}
+
+function docheckPhone() {
+	var params = {
+		'mobile': _phone,
+	};
+	if (!checkPhone(_phone)) {
+		pop.show({
+			'msg': '手机号格式错误'
+		});
+		$('#phone').parents('.row').addClass('err');
+		return;
+	};
+	//没绑定过
+	var bind = 1;
+	if(bind == 1){
+		pop.show({
+			'msg': '我们将发送短信验证码至<br />' + _phone
+		});
+		sendSmsCode(_phone, $(this).data('unbind'));
+	}else{
+		//如果手机号已绑定过
+		pop.show({
+			'msg': '<span>手机号' + _phone + '已绑定其它帐号，</span><br />请更换手机号码！'
+		});
+	}
+}
+
+function sendSmsCode(phone, unbind) {
+	var $btn = $('.retransmit');
+	$btn.html('重新发送（120s）').addClass('disabled').addClass('restransit');
+	var count = 120;
+	var ret = setInterval(function() {
+		--count;
+		if (count == 0) {
+			$btn.html('获取验证码').removeClass('disabled').removeClass('restransit');
+			clearInterval(ret);
+		} else {
+			$btn.html('重新发送（' + count + 's）');
+		}
+	}, 1000);
+}
+
+function register() {
+	//验证手机号
+
+	//验证短信码
+
+	//成功
+	$('.login').addClass('disabled').html('绑定中...');
+	pop.show({
+		'msg': '绑定成功，正在为您跳转...'
+	});
+	setTimeout('window.location.href="index.html"',4000);
+}
+})();
+</script>
+</body>
+</html>

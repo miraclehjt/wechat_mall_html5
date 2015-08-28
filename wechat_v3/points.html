@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="no-cache" http-equiv="Cache-Control">
+<title>上品折扣微商城</title>
+<link href="css/shopin.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="header fixed-bar static flex">
+    <div class="left"><a class="a-back" href="javascript:;"><span>后退</span></a></div>
+    <div class="title cell">
+        <h1>我的积分</h1>
+    </div>
+</div><!--//头部结束-->
+
+<div class="content">
+	<div class="my-point pd flex">
+		<div class="info cell">
+			我的积分：201
+			<p class="hint">积分可用于抽奖、兑换礼品</p>
+		</div>
+		<a class="btn btn-submit addPoint" href="javascript:;">补录积分</a>
+	</div>
+	<h5 class="ht">积分明细(积分可通过购物、签到等获得)</h5>
+	<ul class="point">
+		<li class="flex">
+			<div class="cell">
+				购物<p class="hint">2014-12-17 14:26</p>
+			</div>
+			<span class="num f-red">+42</span>
+		</li>
+		<li class="flex">
+			<div class="cell">
+				购物<p class="hint">2014-12-17 14:26</p>
+			</div>
+			<span class="num f-red">+42</span>
+		</li>
+		<li class="flex">
+			<div class="cell">
+				退货<p class="hint">2014-12-17 14:26</p>
+			</div>
+			<span class="num f-green">-20</span>
+		</li>
+		<li class="flex">
+			<div class="cell">
+				抽奖<p class="hint">2014-12-17 14:26</p>
+			</div>
+			<span class="num f-red">+42</span>
+		</li>
+		<li class="flex">
+			<div class="cell">
+				绑定手机送积分<p class="hint">2014-12-17 14:26</p>
+			</div>
+			<span class="num f-red">+42</span>
+		</li>
+		<li class="flex">
+			<div class="cell">
+				新会员注册送积分<p class="hint">2014-12-17 14:26</p>
+			</div>
+			<span class="num f-red">+42</span>
+		</li>
+	</ul>
+	<div class="btn-box"><a href="javascript:loadPoints();" class="btn btn-block btn-load-more">点击加载更多</a></div>
+</div>
+<div class="empty">
+	<div class="empty-pic cry-pic"></div>
+	<div class="empty-text">您还没有积分，快去购物赚取积分吧！</div>
+	<div class="empty-btn"><a href="index.html" class="btn">去逛逛</a></div>
+</div>
+<div class="point-fixed">
+	<div class="add-point">
+		<input id="receipt" class="add-point-input" type="number" maxlength="9" placeholder="请输入9位购物小票号">
+		<a class="btn btn-block btn-submit submitAddPoint disabled" href="javascript:;">确定</a>
+	</div>
+</div>
+<div class="mask"></div>
+<script src="js/zepto.min.js"></script>
+<script src="js/shopin.js"></script>
+<script>
+//显示补录积分弹层
+$('.addPoint').on('tap', function() {
+	$('html').addClass('active-page');
+	$('.point-fixed').addClass('point-move');
+	$('.mask').css('display','block');
+});
+//点击遮罩关闭补录积分弹层
+$('.mask').on('tap', function(){
+	$('.point-fixed').addClass('point-back');
+	setTimeout("closePoint()", 200 )
+});
+
+//点击确定
+var _len_point = 0;
+_len_point = $('#receipt').on('input', function() {
+	_len_point = this.value.length;
+	submitAddPoint();
+}).val().length;
+function submitAddPoint() {
+	if (_len_point == 9) {
+		$('.submitAddPoint').removeClass('disabled');
+	} else {
+		$('.submitAddPoint').addClass('disabled');
+	}
+}
+$('.submitAddPoint').on('tap', function(event) {
+	if(!$(this).hasClass('disabled')){
+		$(this).addClass('disabled');
+		//这里写补录积分的AJAX
+		alert('补录成功');
+		//成功后调取 closePoint()
+		closePoint();
+	}
+});
+//关闭补录积分
+function closePoint(){
+	$('html').removeClass('active-page');
+	$('.mask').css('display','none');
+	$('.point-fixed').removeClass('point-move');
+	$('.point-fixed').removeClass('point-back');
+};
+
+//加载更多积分明细
+function loadPoints(){
+	loading();
+};
+</script>
+</body>
+</html>
