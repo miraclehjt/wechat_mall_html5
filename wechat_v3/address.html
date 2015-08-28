@@ -28,82 +28,105 @@
 
 <div class="content">
 	<div class="m-address j_myaddress">
-		<div class="order-address current">
-			<div class="address-info">
-				 收货人:
-				<p class="address-name">舒龙飞</p>
-				<p class="address-phone">18511248858</p>
+		<div class="address confirm-address currnt">
+			<div class="info">
+				收货人：<p class="name">西门吹雪</p>
+				<p class="phone">18511248858</p>
 			</div>
-			<div class="address-details">
-				收货地址：北京北京市昌平区北七家镇北京市昌平区北七家镇宏福苑北区03A号楼1单元1803室
-			</div>
+			<div class="details">收货地址：北京市顺义区高丽营镇金马工业区18号</div>
 		</div><!-- //收货地址 -->
-		<div class="order-address">
-			<div class="address-info">
-				 收货人:
-				<p class="address-name">舒龙飞</p>
-				<p class="address-phone">18511248858</p>
+		<div class="address confirm-address">
+			<div class="info">
+				收货人：<p class="name">武器大师</p>
+				<p class="phone">18511248858</p>
 			</div>
-			<div class="address-details">
-				收货地址：北京北京市昌平区北七家镇北京市昌平区北七家镇宏福苑北区03A号楼1单元1803室
-			</div>
+			<div class="details">收货地址：北京市东城区景山前街4号</div>
 		</div><!-- //收货地址 -->
-		<div class="order-address">
-			<div class="address-info">
-				 收货人:
-				<p class="address-name">舒龙飞</p>
-				<p class="address-phone">18511248858</p>
+		<div class="address confirm-address">
+			<div class="info">
+				收货人：<p class="name">纪晓岚</p>
+				<p class="phone">18511248858</p>
 			</div>
-			<div class="address-details">
-				收货地址：北京北京市昌平区北七家镇北京市昌平区北七家镇宏福苑北区03A号楼1单元1803室
-			</div>
+			<div class="details">收货地址：北京市昌平区东小口镇陈营村溪城家园二号院二号楼一单元703室</div>
 		</div><!-- //收货地址 -->
-		<div class="order-address">
-			<div class="address-info">
-				 收货人:
-				<p class="address-name">舒龙飞</p>
-				<p class="address-phone">18511248858</p>
+		<div class="address confirm-address">
+			<div class="info">
+				收货人：<p class="name">刘伯温</p>
+				<p class="phone">18511248858</p>
 			</div>
-			<div class="address-details">
-				收货地址：北京北京市昌平区北七家镇北京市昌平区北七家镇宏福苑北区03A号楼1单元1803室
+			<div class="details">收货地址：北京市朝阳区香宾路66-1号朝来天陆综合服务楼四层上品折扣办公区</div>
+		</div><!-- //收货地址 -->
+		<div class="address confirm-address">
+			<div class="info">
+				收货人：<p class="name">奥斯特洛夫斯基</p>
+				<p class="phone">18511248858</p>
 			</div>
+			<div class="details">收货地址：北京市朝阳区北五环上元君庭26A1002室</div>
 		</div><!-- //收货地址 -->
 	</div>
-	<ul class="edit-address"><!-- //收货人地址：如果从修改过来 请带上参数 -->
-		<li><span class="m-table-cell">收货人：</span><span class="m-table-cell"><input class="ea-inp" type="text" id="name" placeholder="请填写收货人姓名"></span></li>
-		<li><span class="m-table-cell">手机号：</span><span class="m-table-cell"><input class="ea-inp" type="text" id="phone" placeholder="请填写收货人手机号码"></span></li>
-		<li><span class="m-table-cell">邮编：</span><span class="m-table-cell"><input class="ea-inp" type="text" id="zipcode" placeholder="请填写邮编"></span></li>
-		<li><span class="m-table-cell">省份：</span><span class="m-table-cell">
-			<select class="ea-inp" id="province">
-				<option value="0">请选择</option>
-				<option value="">北京</option>
-				<option value="">天津</option>
-				<option value="">上海</option>
-				<option value="">广州</option>
-			</select></span>
-		</li>
-		<li><span class="m-table-cell">城市：</span><span class="m-table-cell">
-			<select class="ea-inp" id="city">
-				<option value="0">请选择</option>
-				<option value="">北京</option>
-				<option value="">天津</option>
-				<option value="">上海</option>
-				<option value="">广州</option>
-			</select></span>
-		</li>
-		<li><span class="m-table-cell">详细地址：</span><span class="m-table-cell"><textarea class="ea-inp" id="addressDetail" rows="2" placeholder="请写个详细地址！"></textarea></li>
-	</ul>
+
+	<div class="form-view address-view edit-address">
+		<div class="f-row">
+			<label class="f-label"><em>*</em>收货人姓名</label>
+			<div class="f-main">
+				<input id="name" type="text" placeholder="请填写收货人姓名">
+			</div>
+		</div>
+		<div class="f-row">
+			<label class="f-label"><em>*</em>电话/手机</label>
+			<div class="f-main">
+				<input id="phone" type="tel" placeholder="请填写电话号码">
+			</div>
+		</div>
+		<div class="f-row">
+			<label class="f-label">邮政编码</label>
+			<div class="f-main">
+				<input id="zipcode" type="text" placeholder="请填写邮政编码">
+			</div>
+		</div>
+		<div class="f-row">
+			<label class="f-label"><em>*</em>省份</label>
+			<div class="f-main f-select">
+				<select id="province" class="select">
+					<option value="0">请选择</option>
+					<option value="">北京</option>
+					<option value="">天津</option>
+					<option value="">上海</option>
+					<option value="">广州</option>
+				</select>
+			</div>
+		</div>
+		<div class="f-row">
+			<label class="f-label"><em>*</em>城市</label>
+			<div class="f-main f-select">
+				<select id="city" class="select">
+					<option value="0">请选择</option>
+					<option value="">东城区</option>
+					<option value="">西城区</option>
+					<option value="">朝阳区</option>
+					<option value="">昌平区</option>
+				</select>
+			</div>
+		</div>
+		<div class="f-row">
+			<label class="f-label"><em>*</em>详细地址</label>
+			<div class="f-main">
+				<textarea id="addressDetail" placeholder="最多200字" max-length="200"></textarea>
+			</div>
+		</div>
+	</div>
 	<button id="actionBtn">新增收货地址</button>
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
 <script>
-$(".j_myaddress .order-address").live('tap', function(){
+$(".j_myaddress .confirm-address").live('tap', function(){
 	$(this).addClass('current').siblings().removeClass('current');
 	//选定地址后跳转到订单页
 	setTimeout('window.location.href="payment.html"',200);
 });
 $('#actionBtn').on('tap', function(){
+	loading();//显示loading方法  关闭：closeLoad()
 	if($('.m-address').is(':visible') && $('.edit-address').is(':hidden')){
 		$('.m-address').css('display','none');
 		$('.edit-address').css('display','block');
@@ -119,9 +142,9 @@ $('#actionBtn').on('tap', function(){
 			$("#phone").focus();
 			return false;
 		}
-		if($("#zipcode").val() == ""){
-			alert('你没写邮编！');
-			$("#zipcode").focus();
+		if($("#addressDetail").val() == ""){
+			alert('请填写详细地址！');
+			$("#addressDetail").focus();
 			return false;
 		}
 		$('.m-address').css('display','block');
@@ -137,7 +160,7 @@ function newAddress(){
 	var _province = $('#province').find("option:selected").text();
 	var _city = $('#city').find("option:selected").text();
 	var _addressDetail = $('#addressDetail').val();
-	var _html = "<div class=\"order-address\"><div class=\"address-info\">收货人:<p class=\"address-name\">"+ _name + "</p><p class=\"address-phone\">"+ _phone + "</p></div><div class=\"address-details\">收货地址："+ _province + _city + _addressDetail + "</div></div>"
+	var _html = "<div class=\"address confirm-address\"><div class=\"info\">收货人：<p class=\"name\">" + _name + "</p><p class=\"phone\">" + _phone + "</p></div><div class=\"details\">收货地址：" + _province + _city + _addressDetail + "</div></div>";
 	$('.j_myaddress').find('.current').after(_html);
 	//ajax保存地址
 };

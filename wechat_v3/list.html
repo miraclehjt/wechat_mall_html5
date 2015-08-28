@@ -17,7 +17,7 @@
     <div class="title search cell">
         <form action="">
             <input class="inp-search" type="search" autocomplete="off" placeholder="请输入搜索内容" autosave="unique">
-            <input class="btn-search" type="button" value="">
+            <a class="btn-search" href="javascript:;"></a>
         </form>
     </div>
 </div><!--//头部结束-->
@@ -93,7 +93,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="load-more">点击加载更多</div>
+	<div class="btn-box"><a href="javascript:loadMore();" class="btn btn-block btn-load-more">点击加载更多</a></div>
 </div>
 <div class="m-sift">
 	<div class="sift-panel">
@@ -307,6 +307,10 @@ function closeSift(){
 	$('html').removeClass('sift-back')
 	$('.sift-panel, .sift-mask').css('display','none');
 }
+//加载更多
+function loadMore(){
+	loading();//loading 方法   //closeLoad() 关闭loading方法
+};
 </script>
 </body>
 </html>
