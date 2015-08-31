@@ -51,8 +51,8 @@ input[type=checkbox]:before,
 .order-status:before { background-image: url(../images/sprites.png); background-repeat: no-repeat; background-size: 200px 120px}
 
 /*global*/
-.dn { display: none!important}
-.db { display: block!important}
+.dn { display: none}
+.db { display: block}
 .pd { padding: 1rem}
 .mt { margin-top: 1rem}
 .tc { text-align: center}
@@ -66,11 +66,13 @@ input[type=checkbox]:before,
 .ellipsis { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
 .animate { -webkit-transition: all linear .4s; -ms-transition: all linear .4s; transition: all linear .4s}
 .btn-box { padding: 1rem}
-.btn{ display: inline-block; margin-bottom: 0; padding: .5rem 1rem; line-height: 1.4; cursor: pointer; text-align: center; vertical-align: top; white-space: nowrap; font-size: 1.4rem; font-weight: 400; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 3px;}
-.btn-block { display: block; width: 100%; line-height: 1; margin-bottom: 1rem; padding: 1rem 0; box-sizing: border-box; font-size: 1.6rem}
+.btn{ display: inline-block; margin-bottom: 0; padding: .5rem 1rem; line-height: 1.42; cursor: pointer; text-align: center; vertical-align: top; white-space: nowrap; font-size: 1.4rem; font-weight: 400; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 3px;}
+.btn-block { display: block; width: 100%; margin-bottom: 1rem; padding: 1rem 0; box-sizing: border-box; font-size: 1.6rem}
 .btn-submit { background: #f04e23; border: 0; color: #fff}
 .btn-success { background:#1ebc23; border: 0; color: #fff}
 .btn-warning { background:#dd524d; border: 0; color: #fff}
+.btn-pay { float: right; width: 90px; line-height: 2.5rem; background: #f04e23; border-width: 0; color: #fff}
+.btn-topay { border-color: #f04e23; color: #f04e23}
 .btn-load-more { background: transparent; border: solid 1px #f04e23; color: #f04e23}
 .btn-default { padding: 2px 10px; background: -webkit-linear-gradient(top,#fcfcfc,#ededed); background: -ms-linear-gradient(top,#fcfcfc,#ededed); background: linear-gradient(top,#fcfcfc,#ededed); color: #666}
 .btn.disabled { background:#dcdcdc; border: 0; color:#999}
@@ -160,7 +162,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .confirm-address.currnt { background-color: #496266; color: #fff}
 .address.currnt:after { display: block;}
 /*订单收货地址*/
-.order-address { padding: 1rem 24px 1rem 34px; background: #fff}
+.order-address { padding: 1rem 24px .5rem 34px; background: #fff}
 .order-address:before { content: '';}
 .order-address:after { content: '';}
 /*管理收货地址*/
@@ -178,7 +180,20 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .return-text { margin-left: 1rem; margin-right: 1rem; margin-bottom: 1rem; border:solid 1px #ddd; -webkit-border-radius:5px; -ms-border-radius:5px; border-radius:5px; background:#fff}
 .return-text li { line-height:2; padding: .6rem;}
 
-
+/*列表中的小图片单品*/
+.small, .small .list-item { display: -webkit-box; display: -ms-box; display: box}
+.small .p, .small .d { vertical-align: top;}
+.small .p { width: 70px;}
+.small .p img { width: 60px; height: 60px;}
+.small .d { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1;}
+.small .sku { height: 20px; overflow: hidden; color: #999}
+.small .number { display: inline-block; height: 30px; margin-right: 1rem; overflow: hidden; vertical-align: middle; border: 1px solid #b3b3b3; -webkit-border-radius: 3px; -ms-border-radius: 3px; border-radius: 3px}
+.small .increase, .small .decrease, .small .num { float: left; text-align: center; vertical-align: middle}
+.small .increase, .small .decrease { display: inline-block; width: 30px; height: 30px; line-height: 20px; padding: 0; margin: 0; overflow: hidden; font-style: normal; font-size: 2rem; font-weight: 700; border: 0; background-color: #fff; color: #6e6e6e}
+.small .decrease { border-right: 1px solid #b3b3b3}
+.small .increase { border-left: 1px solid #b3b3b3}
+.small .num { width: 30px; height: 30px; padding: 0 .2rem; text-align: center; border: 0; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 0; border-radius: 0; font-weight: 700; color: #454545}
+.icon-del { display: inline-block; vertical-align: middle; width: 21px; height: 21px; margin-right: 1rem; background-position: -143px 0}
 
 
 
@@ -251,6 +266,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 
 /*闪购*/
 .m-brand .brand { margin-bottom: 1rem}
+.m-brand .brand:last-child { margin-bottom: 0}
 .m-brand .text { position: relative; height: 4rem; line-height: 4rem; padding: 0 1rem; overflow: hidden; font-size: 1.5rem; background: #fff; color: #333; border-bottom: solid 1px #ddd;}
 .m-brand .text .name { float: left; width: 70%;}
 .m-brand .sale { float: right; font-size: 1.6rem; color: #f04e23}
@@ -263,7 +279,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .discount b { padding: 0 .5rem; background: #f04e23; color: #fff}
 .price .s { color:#f04e23}
 .price .n { font-size:1.5rem; font-weight:600}
-.price del { margin: 0 .5rem; font-size:1rem; color: #999}
+.price del { margin: 0 .5rem; font-size:1.2rem; color: #999}
 .list-view .list-item { display: -webkit-box; display: -ms-box; display: box}
 .list-view .p { width: 100px; height: 100px; margin-right: 1rem}
 .list-view .p-pic { width: 100px; height: 100px}
@@ -275,11 +291,6 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .larger-view li .p .p-pic { width: 100%}
 .larger-view li .d-main p { display: inline-block}
 .larger-view del { display: none}
-/*列表中的小图片单品*/
-.s-product { padding: .8rem 0; border-bottom: solid 1px #ddd}
-.s-product:last-child { border-bottom: 0}
-.s-product .img { display: block; width: 5.5rem; margin-right: 1rem}
-.s-product .clamp { height: 22px}
 
 /*品类*/
 .m-cate { position: relative; overflow: hidden; background-color: #fff}
@@ -424,38 +435,29 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 
 /*购物车*/
 .cart-main { overflow: hidden}
-.cart-main .cart-shop { display: -webkit-box; display: -ms-box; display: box; padding: 20px 1rem 8px; font-size: 1.2rem; color: #737373}
+.cart-main .cart-shop { display: -webkit-box; display: -ms-box; display: box; line-height: 2rem; padding: 20px 1rem .5rem; font-size: 1.2rem; color: #737373}
 .cart-main .cart-title { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; font-weight: 700}
-.cart-main .cart-edit { width: 50px; text-align: right}
-.cart-main .cart-group { position: relative; overflow: hidden; padding: 0 5px 0 40px; background: #fff}
-.cart-main .cart-icb { position:absolute; left: 8px; top:32px; margin:0 auto}
-.cart-main .cart-item { overflow: hidden}
-
-/*数量*/
-.number { display: inline-block; height: 3rem; line-height: 3rem; overflow: hidden; vertical-align: middle; border: 1px solid #b3b3b3; -webkit-border-radius: 3px; border-radius: 3px}
-.cart-box .operate { display: none}
-.cart-box .clamp { margin-bottom: 3px}
-.cart-box .cart-group .s-product { border-bottom: solid 1px #ddd}
-.cart-box .cart-group:last-child .s-product { border-bottom: 0}
-.operate .increase, .operate .decrease, .operate .num { float: left; text-align: center; vertical-align: middle}
-.operate .increase, .operate .decrease { display: inline-block; width: 3rem; height: 100%; padding: 0; margin: 0; overflow: hidden; font-style: normal; font-size: 2rem; font-weight: 700; border: 0; background-color: #fff; color: #6e6e6e; }
-.operate .decrease { border-right: 1px solid #b3b3b3}
-.operate .increase { border-left: 1px solid #b3b3b3}
-.operate .num { width: 3rem; height: 100%; padding: 0 .2rem; text-align: center; border: 0; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 0; border-radius: 0; font-weight: 700; color: #454545; }
-.icon-del { display: inline-block; vertical-align: middle; width: 21px; height: 21px; margin-right: 1rem; background-position: -143px 0}
-.editOrder .sku { display: none}
-.editOrder .clamp { margin-bottom: 7px; -webkit-line-clamp:1; line-clamp:1}
-.editOrder .cart-group .price { display: none}
-.editOrder .operate { display: block}
-.cart-footer { position: relative; padding: 1rem 1rem 1rem 40px; background: #fff; border-top: solid 1px #ddd}
-.cart-footer .cart-icb { top: 22px}
-.btn-pay { float: right; width: 100px; line-height: 2.5rem; background: #f04e23; border-color: #f04e23; color: #fff}
-.cart-footer .price { line-height: 20px; height: 20px}
+.cart-main .cart-group { position: relative; overflow: hidden; padding: 0 .5rem 0 3.34rem; background: #fff}
+.cart-main .cart-icb { position:absolute; left: 8px; top:30px; margin:0 auto}
+.cart-main .cart-item { padding: 1rem 0; overflow: hidden; border-bottom: solid 1px #ddd;}
+.cart-main .cart-group:last-child .cart-item { border-bottom: 0}
+.cart-main .sub { display: block}
+.cart-main .small .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; line-height: 22px; font-size: 1.3rem;}
+.cart-main .price .n { font-size: inherit; font-weight: inherit}
+.cart-main .opt { padding-top: 5px; display: none}
+.cart-main .small .d-main { height: 22px; margin-top: 16px; overflow: hidden}
+.cart-footer { border-top: solid 1px #ddd; color: #999}
+.cart-footer .cart-icb { top: 30%}
+.cart-footer .price b { font-size: 1.5rem; color: #f04e23}
+.cart-footer .quantity b { margin: 0 .3rem; font-size: 1.4rem; color: #333}
+.editOrder .sub { display: none}
+.editOrder .opt { display: block}
+.editOrder .small .d-main { height: 38px; margin-top: 0}
 
 /*确认订单*/
-.order-buy { padding-top: 1rem}
-.order-buy .order-list { padding-left: 1rem; background: #fff}
-.order-buy .order-list .product-box { padding-right: 5px}
+.order-buy .order-list { padding: .3rem 0; overflow: hidden; background: #fff}
+.order-buy .small { padding: .3rem .6rem}
+.order-buy .d-title { font-size: 1.3rem; line-height: 1.3rem; padding: 4px 0}
 
 /*促销活动*/
 .order-buy .options .arrow:after { display: none}
@@ -485,15 +487,16 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 
 /*订单详情*/
 .order-detail { padding-top: 1rem}
-.order-detail .order-list { padding-left: 1rem; background: #fff}
-.order-detail .order-address { padding-right: 1rem}
-.order-detail .order-address:after { display: none}
-.order-detail .order-address, .order-detail .order-status { padding-top: .5rem; padding-bottom: .5rem}
+.order-detail .order-list { padding: .6rem 0 0; overflow: hidden; background: #fff}
+.order-detail .small { padding: .3rem .6rem}
+.order-detail .small .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; line-height: 22px; font-size: 1.3rem;}
+
+.order-detail .order-status { padding-top: .5rem; padding-bottom: .5rem}
 .order-status { position: relative; padding: 1rem 24px 1rem 34px; background: #fff}
 .order-status:before { content: ''; position: absolute; left: 7px; top: 34%; width: 18px; height: 13px; background-position: -116px -42px}
 .order-status .title { font-size: 1.4rem}
 .order-status > div { padding: 4px 0}
-.order-detail .order-list .returnBtn { float: right; margin-right: 1rem; padding: 2px 10px; background: -webkit-linear-gradient(top,#fcfcfc,#ededed); background: -ms-linear-gradient(top,#fcfcfc,#ededed); background: linear-gradient(top,#fcfcfc,#ededed); color: #666}
+.order-detail .order-list .returnBtn { float: right; margin-right: 1rem;}
 
 /*文字列表*/
 .text-list { padding:1.2rem 1rem; background:#fff}
@@ -559,14 +562,20 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .v10:before { background-position: 0 -216px}
 
 /*全部订单*/
-.all-order .order-item { margin-bottom: 1rem; background: #fff}
-.all-order .order-list .title { padding: 1rem; border-bottom: solid 1px #ddd}
-.all-order .title .status { color: #f04e23}
-.all-order .s-product { padding-left: 1rem; padding-right: 1rem}
-.all-order .btn-box { padding: 6px 1rem; margin: 0; text-align: right; overflow: hidden}
+.order { background: #fff}
+.order .hd { display: -webkit-box; display: -ms-box; display: box; padding: 1rem}
+.order .hd .code { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; display: block}
+.order .bd { padding-left: 1rem; border: solid 1px #ddd;}
+.order .bd > div { padding: 1rem; padding-left: 0; border-bottom: solid 1px #ddd;}
+.order .bd > div:last-child { border-bottom: 0}
+.order .ft { text-align: right;}
+.order .ft .inner { padding: 1rem;}
+.all-order .order { margin-bottom: 1rem}
+.all-order .order:last-child { margin-bottom: 0}
+.all-order .small { padding: .3rem .6rem}
+.all-order .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; font-size: 1.3rem;}
+.all-order .btn-box { padding: .5rem 1rem; margin: 0; text-align: right; overflow: hidden}
 .all-order .btn-box .btn { padding: 3px 6px; font-size: 1.3rem}
-.confirmGood, .payOrder { border-color: #f04e23; color: #f04e23}
-.all-order .pickup-code { padding: 1rem; text-align: right; color: #f04e23}
 
 /*我的积分*/
 .my-point { border-bottom: solid 1px #ddd; color: #f04e23; background: #fff}
@@ -654,7 +663,6 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 	to {-webkit-transform: rotate(360deg)}
 }
 .loadMask { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 99; opacity: .8; background: #000}
-
 
 /*3D转换*/
 .translate3d { overflow: hidden; -webkit-transform: translate3d(224px, 0px, 0px); transform: translate3d(224px, 0px, 0px); -webkit-transition: transform 2s linear; transition: transform 2s linear}

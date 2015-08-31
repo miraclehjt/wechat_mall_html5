@@ -46,5 +46,4 @@ Zepto(function(a) {
 	}), a(document).on("touchmove", function(a) {
 		a.preventDefault()
 	})
-});
-var _def_click = "ontouchend" in document ? "tap" : "click";
+});var _def_click = "ontouchend" in document ? "tap" : "click";
