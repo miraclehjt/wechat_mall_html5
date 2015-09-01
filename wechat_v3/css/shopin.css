@@ -179,6 +179,9 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 /*退货信息*/
 .return-text { margin-left: 1rem; margin-right: 1rem; margin-bottom: 1rem; border:solid 1px #ddd; -webkit-border-radius:5px; -ms-border-radius:5px; border-radius:5px; background:#fff}
 .return-text li { line-height:2; padding: .6rem;}
+/*商品信息*/
+.product-text { border: solid #ddd; border-width: 1px 0}
+.product-text li { padding: 1rem; background: #fff}
 
 /*列表中的小图片单品*/
 .small, .small .list-item { display: -webkit-box; display: -ms-box; display: box}
@@ -207,7 +210,9 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .a-back span { background-position: 0 0}
 .a-home span { background-position: 0 -30px}
 .a-more span { background-position: -29px 0}
+.a-navigation { padding: 2px 8px; color: #fff;border: solid 1px #bf2d07; border-radius: 3px;}
 .header h1 { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; display: block; line-height: 2.5rem; font-size:1.6rem; font-weight:normal; text-align:center; color:#fff}
+.header .icon-arrow { position: relative; left: 6px; top: -2px; content: ''; width: 0; height: 0; line-height: 0; font-size: 0; margin-left: -3px; border: solid 6px; border-color:  #fff transparent transparent;}
 
 /*底部导航*/
 .sub-menu { display: none; width: 100%; padding: 0; background:#fff}
@@ -270,6 +275,69 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .m-brand .text { position: relative; height: 4rem; line-height: 4rem; padding: 0 1rem; overflow: hidden; font-size: 1.5rem; background: #fff; color: #333; border-bottom: solid 1px #ddd;}
 .m-brand .text .name { float: left; width: 70%;}
 .m-brand .sale { float: right; font-size: 1.6rem; color: #f04e23}
+
+/*品牌街*/
+.recommend { padding: 1rem}
+.recommend h4 { position: relative; padding: 0!important; margin-top: 0!important;}
+.recommend h4:after { position: absolute; right: 1rem; top: 47%; margin: -6px 5px 0 0; content: ''; float: right; width: 10px; height: 10px; border: #fff solid; border-width: 2px 0 0 2px; -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg)}
+.recommend img { width: 100%; vertical-align: top;}
+.recommend .m-group { display: none; padding: 0; margin: 1rem 0; border: solid #ddd; border-width: 0 1px 1px 0}
+.recommend .m-group .a-item { width: 33.3333%; text-align: center; padding: 0; margin: 0; border: solid #ddd; border-width: 1px 0 0 1px}
+.recommend .a-item img { width: 60px; height: 40px;}
+
+/*品牌页*/
+.bigbrand { position: relative; text-align: center;}
+.bigbrand .logoarea { position: absolute; width: 100%; top: 7%}
+.bigbrand .logo { width: 60px; height: 60px; margin: 0 auto 4px; border-radius: 100%; overflow: hidden}
+.bigbrand .logo img { width: 100%; height: 100%; border-radius: 100%}
+.bigbrand .slogan { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; padding: 0 1rem; font-size: 1.4rem; color: #fff}
+.bigbrand .brand-sort { position: absolute; left: 0; bottom: 4px; background: rgba(255,255,255,.2);}
+.bigbrand .brand-sort li { width: 33.33%; color: #fff}
+.bigbrand .bgbrand { width: 100%}
+
+/*微抢购*/
+.purchase .tab { height: 44px; overflow: hidden;}
+.purchase .tab li { float: left; width: 33.33%; height: 31px; line-height: 14px; padding: .5rem 0; text-align: center; border-bottom: solid 1px #ddd;}
+.purchase .tab li.cur { position: relative; height: 30px; border-bottom: solid 2px #f04e23;}
+.purchase .tab li.cur:after { position: absolute; left: 50%; bottom: 0; content: ''; width: 0; height: 0; line-height: 0; margin-left: -3px; border: solid 3px; border-color: transparent transparent #f04e23;}
+.purchase .tab li.cur a { color: #f04e23}
+.purchase .tab li a { display: block;}
+.purchase .tab li b { display: block;}
+.purchase .product { overflow: hidden; padding: 8px; background: #fff}
+.purchase .product .pic { float: left; margin-right: 8px;}
+.purchase .product .pic img { width: 100px; height: 100px; vertical-align: middle;}
+.purchase .product .opt { margin-top: 5px;}
+.pic-container { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; sizing: border-box; width: 100%; padding: 0 5px; overflow: hidden; text-align: center;}
+.pic-container img { display: block; max-width: 100%; margin: 5px auto; vertical-align: middle;}
+
+/*品牌周*/
+.storeList { width: 100%; height: 100%; overflow-y:scroll; background: #fff;}
+.storeList ul { padding-left: 1rem;}
+.storeList li { position: relative; padding: 8px 40px 8px 0; border-bottom: solid 1px #ddd;}
+.storeList .name { font-size: 1.6rem; color: #000}
+.storeList .ads { font-size: 1.4rem; color: #999}
+.storeList .cur .name { color: #f04e23}
+.storeList .cur:after { -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg); content: ''; position: absolute; right: 1.2rem; top: 50%; width: 9px; height: 15px; margin-top: -1rem; border: #f04e23 solid; border-width: 2px 0 0 2px}
+.brand-week { font-size: 1.2rem}
+.brand-week .bname { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*商品列表*/
 .list { overflow: hidden}

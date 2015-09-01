@@ -16,7 +16,7 @@ Zepto(function(a) {
 		};
 	if (a(window).on("ortchange resize", function() {
 		var d = a(window).height() - 44;
-		c.height(d).iScroll("refresh"), b.height(d).iScroll("refresh")
+		c.height(d).iScroll("refresh"), b.height(d).iScroll("refresh");
 	}), d() && (a(".ui-imglazyload").imglazyload({
 		container: b,
 		extClass: "ware-img",

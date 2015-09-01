@@ -68,44 +68,6 @@
 <script src="js/shopin.js"></script>
 <script>
 
-$('#actionBtn').on('tap', function(){
-	if($('.m-address').is(':visible') && $('.edit-address').is(':hidden')){
-		$('.m-address').css('display','none');
-		$('.edit-address').css('display','block');
-		$(this).text('保存地址');
-	}else{
-		if($("#name").val() == ""){
-			alert('你没写名字！');
-			$("#name").focus();
-			return false;
-		}
-		if($("#phone").val() == ""){
-			alert('你没写电话！');
-			$("#phone").focus();
-			return false;
-		}
-		if($("#zipcode").val() == ""){
-			alert('你没写邮编！');
-			$("#zipcode").focus();
-			return false;
-		}
-		$('.m-address').css('display','block');
-		$('.edit-address').css('display','none');
-		$(this).text('新增收货地址');
-		newAddress();
-	}
-});
-function newAddress(){
-	var _name = $('#name').val();
-	var _phone = $('#phone').val();
-	var _zipcode = $('#zipcode').val();
-	var _province = $('#province').find("option:selected").text();
-	var _city = $('#city').find("option:selected").text();
-	var _addressDetail = $('#addressDetail').val();
-	var _html = "<div class=\"order-address\"><div class=\"address-info\">收货人:<p class=\"address-name\">"+ _name + "</p><p class=\"address-phone\">"+ _phone + "</p></div><div class=\"address-details\">收货地址："+ _province + _city + _addressDetail + "</div></div>"
-	$('.j_myaddress').find('.current').after(_html);
-	//ajax保存地址
-};
 </script>
 </body>
 </html>

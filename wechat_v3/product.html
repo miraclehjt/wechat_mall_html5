@@ -46,7 +46,43 @@
 			</select>
 		</div>
 	</div>
-	<div class="btn view-picture btn-block mt">查看图片详情</div>
+	<div class="picDetail mt">
+		<div class="btn btn-block view-picture">查看图片详情</div>
+		<div class="pic-text">
+			<div class="m-text product-text mt">
+				<ul>
+					<li>
+						<s>品牌：</s>
+						<b>艾瑞纳</b>
+					</li>
+					<li>
+						<s>款号：</s>
+						<b>Q011-65</b>
+					</li>
+					<li>
+						<s>颜色分类：</s>
+						<b>粉红色</b>
+					</li>
+					<li>
+						<s>尺码：</s>
+						<b>S,M,L</b>
+					</li>
+					<li>
+						<s>年份季节：</s>
+						<b>春夏季</b>
+					</li>
+					<li>
+						<s>面料：</s>
+						<b>其他</b>
+					</li>
+				</ul>
+			</div><!-- 商品信息 -->
+			<div class="pic-container mt">
+				<a href="images/img/p1.jpg"><img src="images/img/p1.jpg"></a>
+				<a href="images/img/p2.jpg"><img src="images/img/p2.jpg"></a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="buy-bar buy-fixed flex">
@@ -122,7 +158,11 @@ window.onload = function () {
     	$('.go-cart .icon').css('display','none');
     };
 };
-
+//显示图片详情
+$('.view-picture').on('tap', function(event) {
+	$(this).hide();
+	$('.pic-text').show();
+});
 //立即购买
 function buyNow() {
 	if($('.sku-panel').hasClass('sku-move')){
