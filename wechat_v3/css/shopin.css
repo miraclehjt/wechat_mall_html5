@@ -136,7 +136,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .footer.fixed-bar ~ .content { padding-bottom: 44px}
 
 /*内容为空时展示*/
-.empty { display: none; text-align: center}
+.empty { text-align: center}
 .empty-pic { height: 80px; margin-top:5rem; background-image: url(../images/sp_girl.png); background-repeat: no-repeat; background-size: 60px 255px}
 .empty .cry-pic { background-position: center -175px}
 .empty .smile-pic { background-position: center 0}
