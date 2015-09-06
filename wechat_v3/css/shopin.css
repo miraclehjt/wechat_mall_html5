@@ -22,28 +22,24 @@ a img {	border: 0; vertical-align: middle}
 .m-reg .row { display: -webkit-box; display: -ms-box; display: box; box-sizing: border-box; line-height: 4rem; padding-left: 1rem; margin-bottom: 1rem; border: solid 1px #ddd; border-radius: 3px; color: #000}
 .m-reg .s { display: block; -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1}
 .m-reg .b { display: block; padding: 0 .6rem; text-align: center; border-top-right-radius: 3px; border-bottom-right-radius: 3px; background: #f04e23; color: #fff}
-.m-reg .disabled { -webkit-tap-highlight-color: transparent; background: #e2e2e2; color: #bdbdbd;}
+.m-reg .disabled { -webkit-tap-highlight-color: transparent; background: #e2e2e2; color: #bdbdbd}
 .m-reg .i { display: inline-block; width: 100%; height: 100%; margin: 0; padding: 0; color: #333; border: none; outline: none}
 .m-reg .login { background: #f04e23; border: 0; color: #fff}
 .m-rule { padding: 2rem 1.5rem}
 .m-rule dt { float: left}
 .m-rule dd { overflow: hidden; margin-bottom: 1rem}
 
-/*用于将 html body 禁止滚动条*/
-.active { -webkit-transform-origin: 0px 0px; -ms-transform-origin: 0px 0px; transform-origin: 0px 0px; -webkit-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1)}
-.active-page, .active-page body { height: 100%; overflow: hidden}
-
 /***********sprites************/
 input[type=checkbox]:before,
 .header span,
-.btn-search,
-.footer .item:before,
+.s-btn,
+.nav a:before,
 .m-sort .sort-price:after,
 .m-sort .icons-list:before,
 .m-sort .icons-tile:before,
 .sift-footer .sift-close:after,
 .go-cart span:before,
-.sub-menu .item:before,
+.sub-nav .item:before,
 .backtop:after,
 .icon-checkbox,
 .icon-del,
@@ -66,7 +62,7 @@ input[type=checkbox]:before,
 .ellipsis { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
 .animate { -webkit-transition: all linear .4s; -ms-transition: all linear .4s; transition: all linear .4s}
 .btn-box { padding: 1rem}
-.btn{ display: inline-block; margin-bottom: 0; padding: .5rem 1rem; line-height: 1.42; cursor: pointer; text-align: center; vertical-align: top; white-space: nowrap; font-size: 1.4rem; font-weight: 400; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 3px;}
+.btn{ display: inline-block; margin-bottom: 0; padding: .5rem 1rem; line-height: 1.42; cursor: pointer; text-align: center; vertical-align: top; white-space: nowrap; font-size: 1.4rem; font-weight: 400; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 3px}
 .btn-block { display: block; width: 100%; margin-bottom: 1rem; padding: 1rem 0; box-sizing: border-box; font-size: 1.6rem}
 .btn-submit { background: #f04e23; border: 0; color: #fff}
 .btn-success { background:#1ebc23; border: 0; color: #fff}
@@ -87,13 +83,57 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 
 /*flex*/
 .flex { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row}
-.flex, .flex *, .flex:after, .flex:before { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;}
+.flex, .flex *, .flex:after, .flex:before { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box}
 .flex .cell { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; -webkit-flex-basis: 0; -ms-flex-basis: 0; flex-basis: 0; position: relative; width: 0; max-width: 100%; display: block; padding: 0!important}
 
 /*list link*/
 .m-only { background: #fff; border: solid #ddd; border-width: 1px 0}
 .m-only .btn-link { display: block; height: 45px; line-height: 45px}
 .btn-link:after { -webkit-transform: rotate(135deg); -ms-transform: rotate(135deg); transform: rotate(135deg); content: ''; float: right; margin-right: 5px; margin-top: 15px; border: #c8c7cc solid; border-width: 2px 0 0 2px; width: 10px; height: 10px}
+
+/*头部*/
+.fixed-bar { position: fixed; z-index: 100; right: 0; left: 0}
+.header { top: 0; height: 44px; overflow: hidden; background-color: #f04e23; -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .5); -ms-box-shadow: 0 0 1px rgba(0, 0, 0, .5); box-shadow: 0 0 1px rgba(0, 0, 0, .5)}
+.header .left, .header .right { position: absolute; top: 0; width: 48px; height: 44px; overflow: hidden}
+.header .left { left: 0}
+.header .right { right: 0}
+.header .center { height: 44px; padding: 0 48px; overflow: hidden}
+.header .center h1 { display:-webkit-box; -webkit-line-clamp:1; line-clamp:1; -webkit-box-orient:vertical; box-orient:vertical; overflow:hidden; text-overflow:ellipsis; word-break:break-all; line-height: 44px; text-align: center; font-size: 1.6rem; color:#fff}
+.header .arrow-down { position: relative; left: 6px; top: -2px; content: ''; width: 0; height: 0; line-height: 0; font-size: 0; margin-left: -3px; border: solid 6px; border-color:  #fff transparent transparent}
+/*搜索*/
+.search { position: relative; height: 35px; padding-left: 5px; margin-top: 4px; border-top-left-radius:3px; border-bottom-left-radius:3px; background: #fff}
+.search .s-input { -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-appearance: none; width: 100%; height: 33px; border: 0}
+.search .s-btn { position: absolute; right: -35px; top: 0; width: 35px; height: 35px; background-color: #fff; background-position: -51px 9px; border: 0; border-top-right-radius: 3px; border-bottom-right-radius: 3px}
+/*header icon*/
+.header a { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; height: 100%}
+.header a.a-navigation { height: 25px; margin: 7px 7px 0 0; color: #fff; border: solid 1px #bf2d07; border-radius: 3px}
+.header span { width: 24px; height: 20px; text-indent: -999em; overflow: hidden}
+.a-cate span { background-position: -29px -30px}
+.a-back span { background-position: 0 0}
+.a-home span { background-position: 0 -30px}
+.a-more span { background-position: -29px 0}
+
+/*全站导航*/
+.nav a { display: table-cell; overflow: hidden; width: 1%; height: 44px; line-height: 1; text-align: center; vertical-align: middle; white-space: nowrap; text-overflow: ellipsis; color: #666}
+.nav a:before { content:''; display:block; width:24px; height:23px; margin:0 auto}
+.nav a:nth-child(1):before { background-position:0 -30px}
+.nav a:nth-child(2):before { background-position:-29px -30px}
+.nav a:nth-child(3):before { background-position:-58px -30px}
+.nav a:nth-child(4):before { background-position:-87px -30px}
+/*底部*/
+.footer { bottom: 0; display: table; width: 100%; padding: 0; table-layout: fixed; border-top: 0; border-bottom: 0; background:#496266}
+.footer a { color: #fff}
+.footer a.on { background:#f04e23}
+
+.sub-nav { display: none; margin-bottom: 1rem; background:#fff}
+.sub-nav a:nth-child(1):before { background-position:0 -60px}
+.sub-nav a:nth-child(2):before { background-position:-29px -60px}
+.sub-nav a:nth-child(3):before { background-position:-58px -60px}
+.sub-nav a:nth-child(4):before { background-position:-87px -60px}
+
+/*主体内容*/
+.header.fixed-bar ~ .content{ padding-top: 44px}
+.footer.fixed-bar ~ .content { padding-bottom: 44px}
 
 /*内容为空时展示*/
 .empty { display: none; text-align: center}
@@ -113,10 +153,10 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .table-view li a { display: block; padding: 12px 0; border-bottom: solid 1px #ddd}
 
 /*表单*/
-.form-view .f-row { display: -webkit-box; display: -ms-box; display: box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; font-size: 1.5rem;}
-.form-view .f-label { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; position: relative; float: left; width: 9rem; overflow: hidden; padding-left: 1.3rem; color: #bbb;}
+.form-view .f-row { display: -webkit-box; display: -ms-box; display: box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; font-size: 1.5rem}
+.form-view .f-label { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; position: relative; float: left; width: 9rem; overflow: hidden; padding-left: 1.3rem; color: #bbb}
 .form-view .f-label em { position: absolute; left: 7px; top: 2px; color: #f04e23}
-.form-view .f-main { position: relative; -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1;}
+.form-view .f-main { position: relative; -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1}
 .form-view .f-select:after { content: ''; position: absolute; right: 1rem; top: 50%; width: 12px; height: 12px; margin-top: -11px; border: #999 solid; border-width: 2px 0 0 2px; -webkit-transform: rotate(225deg); -moz-transform: rotate(225deg); -ms-transform: rotate(225deg); -o-transform: rotate(225deg); transform: rotate(225deg)}
 .form-view textarea,
 .form-view input[type=text],
@@ -153,18 +193,18 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .address { position: relative; background: #fff}
 .address .info { display: -webkit-box; display: -ms-box; display: box; font-size: 1.4rem}
 .address > div { padding: 4px 0}
-.address .info p { -webkit-box-flex: 1; width: 100%; overflow: hidden;}
+.address .info p { -webkit-box-flex: 1; width: 100%; overflow: hidden}
 .address:before { position: absolute; left: 10px; top: 32%; width: 12px; height: 18px; background-position: -116px -20px}
 .address:after { -webkit-transform: rotate(135deg); -ms-transform: rotate(135deg); transform: rotate(135deg); position: absolute; right: 10px; top: 32%; width: 10px; height: 10px; border: #aaa solid; border-width: 2px 0 0 2px}
 /*确认收货地址*/
 .confirm-address { padding: 1rem 28px 1rem 1rem; background-color: #fff; border-bottom: solid 1px #ddd}
 .confirm-address:after { content: ''; -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg); display: none; width: 6px; height: 12px; border-color: #fff}
 .confirm-address.currnt { background-color: #496266; color: #fff}
-.address.currnt:after { display: block;}
+.address.currnt:after { display: block}
 /*订单收货地址*/
 .order-address { padding: 1rem 24px .5rem 34px; background: #fff}
-.order-address:before { content: '';}
-.order-address:after { content: '';}
+.order-address:before { content: ''}
+.order-address:after { content: ''}
 /*管理收货地址*/
 .manage-address { padding: 1rem .5rem 0; margin-bottom: 1rem}
 
@@ -178,17 +218,17 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .order-text li { line-height:1; padding: .6rem 0; border-bottom: 0}
 /*退货信息*/
 .return-text { margin-left: 1rem; margin-right: 1rem; margin-bottom: 1rem; border:solid 1px #ddd; -webkit-border-radius:5px; -ms-border-radius:5px; border-radius:5px; background:#fff}
-.return-text li { line-height:2; padding: .6rem;}
+.return-text li { line-height:2; padding: .6rem}
 /*商品信息*/
 .product-text { border: solid #ddd; border-width: 1px 0}
 .product-text li { padding: 1rem; background: #fff}
 
 /*列表中的小图片单品*/
 .small, .small .list-item { display: -webkit-box; display: -ms-box; display: box}
-.small .p, .small .d { vertical-align: top;}
-.small .p { width: 70px;}
-.small .p img { width: 60px; height: 60px;}
-.small .d { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1;}
+.small .p, .small .d { vertical-align: top}
+.small .p { width: 70px}
+.small .p img { width: 60px; height: 60px}
+.small .d { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1}
 .small .sku { height: 20px; overflow: hidden; color: #999}
 .small .number { display: inline-block; height: 30px; margin-right: 1rem; overflow: hidden; vertical-align: middle; border: 1px solid #b3b3b3; -webkit-border-radius: 3px; -ms-border-radius: 3px; border-radius: 3px}
 .small .increase, .small .decrease, .small .num { float: left; text-align: center; vertical-align: middle}
@@ -197,51 +237,6 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .small .increase { border-left: 1px solid #b3b3b3}
 .small .num { width: 30px; height: 30px; padding: 0 .2rem; text-align: center; border: 0; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 0; border-radius: 0; font-weight: 700; color: #454545}
 .icon-del { display: inline-block; vertical-align: middle; width: 21px; height: 21px; margin-right: 1rem; background-position: -143px 0}
-
-
-
-/************头部**************/
-.fixed-bar { position: fixed; z-index: 100; right: 0; left: 0; height: 44px; padding-right: 1rem; padding-left: 1rem; border-bottom: 0; background-color: #f7f7f7; -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .85); -ms-box-shadow: 0 0 1px rgba(0, 0, 0, .85); box-shadow: 0 0 1px rgba(0, 0, 0, .85)}
-.header { top: 0; -webkit-box-shadow: 0 1px 6px #ccc; box-shadow: 0 1px 6px #ccc; background: #f04e23}
-.header .title { width: 100%}
-.header a { display: block; text-align: center}
-.header span { display: block; width: 24px; height: 20px; text-indent: -999em; overflow: hidden}
-.a-cate span { background-position: -29px -30px}
-.a-back span { background-position: 0 0}
-.a-home span { background-position: 0 -30px}
-.a-more span { background-position: -29px 0}
-.a-navigation { padding: 2px 8px; color: #fff;border: solid 1px #bf2d07; border-radius: 3px;}
-.header h1 { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; display: block; line-height: 2.5rem; font-size:1.6rem; font-weight:normal; text-align:center; color:#fff}
-.header .icon-arrow { position: relative; left: 6px; top: -2px; content: ''; width: 0; height: 0; line-height: 0; font-size: 0; margin-left: -3px; border: solid 6px; border-color:  #fff transparent transparent;}
-
-/*底部导航*/
-.sub-menu { display: none; width: 100%; padding: 0; background:#fff}
-.sub-menu .item { display: table-cell; overflow: hidden; width: 1%; height: 46px; text-align: center; vertical-align: bottom; white-space: nowrap; text-overflow: ellipsis; color: #666}
-.sub-menu .item:before { content:''; display:block; width:24px; height:21px; margin:0 auto}
-.sub-menu .item:nth-child(1):before { background-position:0 -60px}
-.sub-menu .item:nth-child(2):before { background-position:-29px -60px}
-.sub-menu .item:nth-child(3):before { background-position:-58px -60px}
-.sub-menu .item:nth-child(4):before { background-position:-87px -60px}
-
-/*搜索*/
-.search { margin: 0 1rem; padding: 1rem 0; border-radius: .3rem; background: #fff}
-.search .inp-search { -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-appearance: none; width: 90%; height: 34px; padding-left: .5rem; vertical-align: middle; border: none; border-radius: .3rem}
-.search .btn-search { float: right; width: 15px; height: 14px; margin: 9px 8px 0 0; background-color: transparent; background-position: -58px 0; border: none}
-
-/*底部导航*/
-.footer { bottom: 0; display: table; width: 100%; padding: 0; table-layout: fixed; border-top: 0; border-bottom: 0; background:#496266}
-.footer .item { display: table-cell; overflow: hidden; width: 1%; height: 46px; text-align: center; vertical-align: bottom; white-space: nowrap; text-overflow: ellipsis; color: #fff}
-.footer .item.on { background:#f04e23}
-.footer .item:before { content:''; display:block; width:24px; height:21px; margin:0 auto}
-.footer .item:nth-child(1):before { background-position:0 -30px}
-.footer .item:nth-child(2):before { background-position:-29px -30px}
-.footer .item:nth-child(3):before { background-position:-58px -30px}
-.footer .item:nth-child(4):before { background-position:-87px -30px}
-
-/*主体内容*/
-.header ~ .content{ padding-top: 44px}
-.footer ~ .content { padding-bottom: 56px}
-.static ~ .content { padding-top: 0}
 
 /*焦点图*/
 .slide-banner { position: relative; overflow: hidden}
@@ -272,54 +267,78 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 /*闪购*/
 .m-brand .brand { margin-bottom: 1rem}
 .m-brand .brand:last-child { margin-bottom: 0}
-.m-brand .text { position: relative; height: 4rem; line-height: 4rem; padding: 0 1rem; overflow: hidden; font-size: 1.5rem; background: #fff; color: #333; border-bottom: solid 1px #ddd;}
-.m-brand .text .name { float: left; width: 70%;}
+.m-brand .text { position: relative; height: 4rem; line-height: 4rem; padding: 0 1rem; overflow: hidden; font-size: 1.5rem; background: #fff; color: #333; border-bottom: solid 1px #ddd}
+.m-brand .text .name { float: left; width: 70%}
 .m-brand .sale { float: right; font-size: 1.6rem; color: #f04e23}
 
 /*品牌街*/
 .recommend { padding: 1rem}
-.recommend h4 { position: relative; padding: 0!important; margin-top: 0!important;}
+.recommend h4 { position: relative; padding: 0!important; margin-top: 0!important}
 .recommend h4:after { position: absolute; right: 1rem; top: 47%; margin: -6px 5px 0 0; content: ''; float: right; width: 10px; height: 10px; border: #fff solid; border-width: 2px 0 0 2px; -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg)}
-.recommend img { width: 100%; vertical-align: top;}
+.recommend img { width: 100%; vertical-align: top}
 .recommend .m-group { display: none; padding: 0; margin: 1rem 0; border: solid #ddd; border-width: 0 1px 1px 0}
 .recommend .m-group .a-item { width: 33.3333%; text-align: center; padding: 0; margin: 0; border: solid #ddd; border-width: 1px 0 0 1px}
-.recommend .a-item img { width: 60px; height: 40px;}
+.recommend .a-item img { width: 60px; height: 40px}
 
 /*品牌页*/
-.bigbrand { position: relative; text-align: center;}
+.bigbrand { position: relative; text-align: center}
 .bigbrand .logoarea { position: absolute; width: 100%; top: 7%}
 .bigbrand .logo { width: 60px; height: 60px; margin: 0 auto 4px; border-radius: 100%; overflow: hidden}
 .bigbrand .logo img { width: 100%; height: 100%; border-radius: 100%}
 .bigbrand .slogan { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; padding: 0 1rem; font-size: 1.4rem; color: #fff}
-.bigbrand .brand-sort { position: absolute; left: 0; bottom: 4px; background: rgba(255,255,255,.2);}
+.bigbrand .brand-sort { position: absolute; left: 0; bottom: 4px; background: rgba(255,255,255,.2)}
 .bigbrand .brand-sort li { width: 33.33%; color: #fff}
 .bigbrand .bgbrand { width: 100%}
 
 /*微抢购*/
-.purchase .tab { height: 44px; overflow: hidden;}
-.purchase .tab li { float: left; width: 33.33%; height: 31px; line-height: 14px; padding: .5rem 0; text-align: center; border-bottom: solid 1px #ddd;}
-.purchase .tab li.cur { position: relative; height: 30px; border-bottom: solid 2px #f04e23;}
-.purchase .tab li.cur:after { position: absolute; left: 50%; bottom: 0; content: ''; width: 0; height: 0; line-height: 0; margin-left: -3px; border: solid 3px; border-color: transparent transparent #f04e23;}
+.purchase .tab { height: 44px; overflow: hidden; background: #fff}
+.purchase .tab li { float: left; width: 33.33%; height: 31px; line-height: 14px; padding: .5rem 0; text-align: center; border-bottom: solid 1px #ddd}
+.purchase .tab li.cur { position: relative; height: 30px; border-bottom: solid 2px #f04e23}
+.purchase .tab li.cur:after { position: absolute; left: 50%; bottom: 0; content: ''; width: 0; height: 0; line-height: 0; margin-left: -3px; border: solid 3px; border-color: transparent transparent #f04e23}
 .purchase .tab li.cur a { color: #f04e23}
-.purchase .tab li a { display: block;}
-.purchase .tab li b { display: block;}
+.purchase .tab li a { display: block}
+.purchase .tab li b { display: block}
 .purchase .product { overflow: hidden; padding: 8px; background: #fff}
-.purchase .product .pic { float: left; margin-right: 8px;}
-.purchase .product .pic img { width: 100px; height: 100px; vertical-align: middle;}
-.purchase .product .opt { margin-top: 5px;}
-.pic-container { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; sizing: border-box; width: 100%; padding: 0 5px; overflow: hidden; text-align: center;}
-.pic-container img { display: block; max-width: 100%; margin: 5px auto; vertical-align: middle;}
+.purchase .product .pic { float: left; margin-right: 8px}
+.purchase .product .pic img { width: 100px; height: 100px; vertical-align: middle}
+.purchase .product .opt { margin-top: 5px}
+.pic-container { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; sizing: border-box; width: 100%; padding: 0 5px; overflow: hidden; text-align: center}
+.pic-container img { display: block; max-width: 100%; margin: 5px auto; vertical-align: middle}
 
 /*品牌周*/
-.storeList { width: 100%; height: 100%; overflow-y:scroll; background: #fff;}
-.storeList ul { padding-left: 1rem;}
-.storeList li { position: relative; padding: 8px 40px 8px 0; border-bottom: solid 1px #ddd;}
+.storeList { width: 100%; height: 100%; overflow-y:scroll; background: #fff}
+.storeList ul { padding-left: 1rem}
+.storeList li { position: relative; padding: 8px 40px 8px 0; border-bottom: solid 1px #ddd}
 .storeList .name { font-size: 1.6rem; color: #000}
 .storeList .ads { font-size: 1.4rem; color: #999}
 .storeList .cur .name { color: #f04e23}
 .storeList .cur:after { -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg); content: ''; position: absolute; right: 1.2rem; top: 50%; width: 9px; height: 15px; margin-top: -1rem; border: #f04e23 solid; border-width: 2px 0 0 2px}
 .brand-week { font-size: 1.2rem}
-.brand-week .bname { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1;}
+.brand-week .bname { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -471,7 +490,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .m-sku .row-title { display: block; padding: 1.5rem 0 .5rem}
 .m-sku .sku-row .sku-item { display: inline-block; position: relative; padding: .5rem 1.2rem; margin: 0 .5rem .5rem 0; border: solid 1px #ddd; border-radius: 3px}
 .m-sku .sku-row .sku-item.on { background:  #f04e23; border-color: #f04e23; color: #fff}
-.sku-footer { height: 40px; line-height: 40px; overflow: hidden; text-align: center;}
+.sku-footer { height: 40px; line-height: 40px; overflow: hidden; text-align: center}
 .sku-footer a { float: left; width: 50%; font-size: 1.4rem; font-weight: 700; background: #f04e23; border-top: solid 1px #ddd; color: #fff}
 .sku-footer .btn-cancel { background: #fff; color: #666}
 .sku-move{bottom:-100%; animation:sku-move .3s 1 ease 0;-webkit-animation:sku-move .3s 1 ease 0}
@@ -507,10 +526,10 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .cart-main .cart-title { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; font-weight: 700}
 .cart-main .cart-group { position: relative; overflow: hidden; padding: 0 .5rem 0 3.34rem; background: #fff}
 .cart-main .cart-icb { position:absolute; left: 8px; top:30px; margin:0 auto}
-.cart-main .cart-item { padding: 1rem 0; overflow: hidden; border-bottom: solid 1px #ddd;}
+.cart-main .cart-item { padding: 1rem 0; overflow: hidden; border-bottom: solid 1px #ddd}
 .cart-main .cart-group:last-child .cart-item { border-bottom: 0}
 .cart-main .sub { display: block}
-.cart-main .small .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; line-height: 22px; font-size: 1.3rem;}
+.cart-main .small .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; line-height: 22px; font-size: 1.3rem}
 .cart-main .price .n { font-size: inherit; font-weight: inherit}
 .cart-main .opt { padding-top: 5px; display: none}
 .cart-main .small .d-main { height: 22px; margin-top: 16px; overflow: hidden}
@@ -543,9 +562,9 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 /*收货地址*/
 #actionBtn { height: 3.5rem; width: 100%; position: fixed; left: 0; bottom: 0; border: 0; font-size: 1.6rem; background: #f04e23; color: #fff}
 .m-address .address-bottom { padding: 1rem 0; margin-top: .5rem; overflow: hidden; border-top: dashed 1px #ddd}
-.m-address .address-bottom label { float: left;}
+.m-address .address-bottom label { float: left}
 .m-address .address-bottom label input[type='checkbox'] { vertical-align: -3px; margin-right: .5rem}
-.m-address .address-bottom .operate { float: right;}
+.m-address .address-bottom .operate { float: right}
 .edit-address { display: none}
 
 /*自提门店*/
@@ -557,14 +576,14 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .order-detail { padding-top: 1rem}
 .order-detail .order-list { padding: .6rem 0 0; overflow: hidden; background: #fff}
 .order-detail .small { padding: .3rem .6rem}
-.order-detail .small .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; line-height: 22px; font-size: 1.3rem;}
+.order-detail .small .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; line-height: 22px; font-size: 1.3rem}
 
 .order-detail .order-status { padding-top: .5rem; padding-bottom: .5rem}
 .order-status { position: relative; padding: 1rem 24px 1rem 34px; background: #fff}
 .order-status:before { content: ''; position: absolute; left: 7px; top: 34%; width: 18px; height: 13px; background-position: -116px -42px}
 .order-status .title { font-size: 1.4rem}
 .order-status > div { padding: 4px 0}
-.order-detail .order-list .returnBtn { float: right; margin-right: 1rem;}
+.order-detail .order-list .returnBtn { float: right; margin-right: 1rem}
 
 /*文字列表*/
 .text-list { padding:1.2rem 1rem; background:#fff}
@@ -590,7 +609,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .delivery .num-code { display:inline-block; text-align:center; margin-left:10px}
 .delivery .num-code p { font-size: 5rem; line-height: 5rem; color:#f04e23}
 .qr-code { padding:3rem 0; text-align:center}
-.qr-code img { width: 200px; height: 200px;}
+.qr-code img { width: 200px; height: 200px}
 .cut-line { width:90%; height:1px; margin-left:auto; margin-right:auto; border-top:1px solid #ddd; text-align:center}
 .cut-line span { position:relative; padding:0 1rem; top:-10px; background:#fff; color: #999}
 
@@ -633,15 +652,15 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .order { background: #fff}
 .order .hd { display: -webkit-box; display: -ms-box; display: box; padding: 1rem}
 .order .hd .code { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; display: block}
-.order .bd { padding-left: 1rem; border: solid 1px #ddd;}
-.order .bd > div { padding: 1rem; padding-left: 0; border-bottom: solid 1px #ddd;}
+.order .bd { padding-left: 1rem; border: solid 1px #ddd}
+.order .bd > div { padding: 1rem; padding-left: 0; border-bottom: solid 1px #ddd}
 .order .bd > div:last-child { border-bottom: 0}
-.order .ft { text-align: right;}
-.order .ft .inner { padding: 1rem;}
+.order .ft { text-align: right}
+.order .ft .inner { padding: 1rem}
 .all-order .order { margin-bottom: 1rem}
 .all-order .order:last-child { margin-bottom: 0}
 .all-order .small { padding: .3rem .6rem}
-.all-order .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; font-size: 1.3rem;}
+.all-order .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; font-size: 1.3rem}
 .all-order .btn-box { padding: .5rem 1rem; margin: 0; text-align: right; overflow: hidden}
 .all-order .btn-box .btn { padding: 3px 6px; font-size: 1.3rem}
 
@@ -650,11 +669,11 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .point { padding-left: 1.5rem; border-top: solid 1px #ddd; border-bottom: solid 1px #ddd; background: #fff}
 .point li { padding: 1rem 1rem 1rem 0; border-bottom: solid 1px #ddd; color: #333}
 .point li:last-child { border-bottom: none}
-.point-fixed { position: fixed; left: 0; top: -100%; z-index: 100; width: 100%; background: #fff;}
-.add-point { padding: 20% 1rem;}
-.add-point-input { width:100%; padding: 1rem .5rem; margin: 0 0 1rem; vertical-align:middle; box-sizing:border-box; font-size:1.8rem; border:solid 1px #ddd;}
+.point-fixed { position: fixed; left: 0; top: -100%; z-index: 100; width: 100%; background: #fff}
+.add-point { padding: 20% 1rem}
+.add-point-input { width:100%; padding: 1rem .5rem; margin: 0 0 1rem; vertical-align:middle; box-sizing:border-box; font-size:1.8rem; border:solid 1px #ddd}
 .point-move { top: 0; -webkit-animation: point-move .5s 1 ease 0;  -ms-animation: point-move .5s 1 ease 0; animation: point-move .5s 1 ease 0}
-.point-back { top: -100%; -webkit-animation:point-back .2s 1 ease 0; -ms-animation:point-back .2s 1 ease 0; animation:point-back .2s 1 ease 0;}
+.point-back { top: -100%; -webkit-animation:point-back .2s 1 ease 0; -ms-animation:point-back .2s 1 ease 0; animation:point-back .2s 1 ease 0}
 
 @-webkit-keyframes point-move{
 	0%{ top:-100%}
@@ -716,7 +735,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .backtop { display:; position:fixed; z-index:1000; right:3px; bottom:48px; width:40px; height:40px; font-size:0; text-indent:-9999em; overflow:hidden; background:rgba(0, 0, 0, 0.7); border-radius:3px}
 .backtop:after { content:''; display:block; width:16px; height:16px; margin:1rem auto 0; background-position:-75px 0}
 /*loading*/
-.loading { position: fixed; left: 50%; top: 40%; z-index: 100; width: 120px; height: 120px; margin: 0 0 0 -60px; text-align: center; border-radius: 10px; background:#fff;}
+.loading { position: fixed; left: 50%; top: 40%; z-index: 100; width: 120px; height: 120px; margin: 0 0 0 -60px; text-align: center; border-radius: 10px; background:#fff}
 .loading .loadimg { -webkit-animation: rotate 1.2s linear infinite; -ms-animation: rotate 1.2s linear infinite; animation: rotate 1.2s linear infinite; min-width: 30px; min-height: 30px; margin: 30px auto 10px; background: url(../images/loading.png) no-repeat 50% 50%}
 @-webkit-keyframes rotate {
 	from { -webkit-transform: rotate(0)}
@@ -734,4 +753,6 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 
 /*3D转换*/
 .translate3d { overflow: hidden; -webkit-transform: translate3d(224px, 0px, 0px); transform: translate3d(224px, 0px, 0px); -webkit-transition: transform 2s linear; transition: transform 2s linear}
+
+
 

@@ -4,7 +4,7 @@ $('.a-back').tap(function() {
 });
 //更多
 $(".a-more").on('tap', function(){
-    $(".j-menu").toggle();
+    $(".j-nav").toggle();
 });
 
 
