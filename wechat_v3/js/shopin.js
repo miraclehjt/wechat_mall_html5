@@ -14,7 +14,7 @@ function loading(){
 	$('.loadMask,.loading').css('display','block');
 }
 function closeLoad(){
-	$('.loading,.loadMask').remove();
+	setTimeout($('.loading,.loadMask').remove(),2000);//2秒后隐藏
 }
 
 /*textarea 获取焦点时 另起一行*/

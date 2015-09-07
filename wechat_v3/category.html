@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 商品分类 </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="css/shopin.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="header fixed-bar">
+	<div class="left"><a href="javascript:;" class="a-back"><span>返回</span></a></div>
+	<div class="center">
+		<div class="search">
+			<form action="">
+				<input class="s-input" type="search" autocomplete="off" placeholder="请输入搜索内容" autosave="unique">
+				<a class="s-btn" href="javascript:;"></a>
+			</form>
+		</div>
+	</div>
+</div><!--//头部结束-->
+
+<div class="content">
+    <div id="cate-content">
+        <div class="m-cate-menu">
+            <div class="scroll-wapper" id="scroll1">
+                <ul class="scroller" id="cate-menu">
+                    <li id="cate-10001" class="on" catid="10001">
+                        <span>女装</span>
+                    </li>
+                    <li id="cate-10002" catid="10002">
+                        <span>女鞋</span>
+                    </li>
+                    <li id="cate-10003" catid="10003">
+                        <span>男装</span>
+                    </li>
+                    <li id="cate-10004" catid="10004">
+                        <span>男鞋</span>
+                    </li>
+                    <li id="cate-10005" catid="10005">
+                        <span>运动</span>
+                    </li>
+                    <li id="cate-10006" catid="10006">
+                        <span>内衣</span>
+                    </li>
+                    <li id="cate-10007" catid="10007">
+                        <span>户外</span>
+                    </li>
+                    <li id="cate-10008" catid="10008">
+                        <span>儿童天地</span>
+                    </li>
+                    <li id="cate-10008" catid="10009">
+                        <span>箱包/配饰</span>
+                    </li>
+                </ul>
+                <div class="cate-bg"></div>
+            </div>
+        </div>
+        <div class="m-cate-main">
+            <div class="scroll-wapper" id="scroll2">
+                <div class="scroller">
+                    <div class="m-cate-info" id="sub-10001">
+                        <h4>当季流行</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">短袖上衣</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">新品衬衫</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">连衣裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">雪纺衫</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">短裤</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">牛仔裤</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">半身裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">背心裙</span>
+                            </a>
+                        </div>
+                        <h4>裙装</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">连衣裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">半身裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">碎花裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">背心裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">吊带裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">旗袍</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">雪纺裙</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-cate-info dn " id="sub-10002">
+                        <h4>时尚单鞋</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">连衣裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">半身裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">碎花裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">背心裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">吊带裙</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">旗袍</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">雪纺裙</span>
+                            </a>
+                        </div>
+                  </div>
+                    <div class="m-cate-info dn " id="sub-10003">
+                        <h4>男士上装</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">长袖休闲衬衫</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">夹克短袖</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">休闲衬衫</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">短袖T恤</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">短袖POLO衫</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">长袖POLO衫</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">长袖T恤正装</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">长袖衬衫</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">短袖正装衬衫</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-cate-info dn " id="sub-10004">
+                        <h4>商务鞋</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">系带网眼皮鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">畅销商务休闲鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">正装皮鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">奢华魅力皮鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">出清网眼皮鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">系带正装皮鞋</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-cate-info dn " id="sub-10005">
+                        <h4>运动装备</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">双肩背包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">单肩背包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">运动袜</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">乒乓球/拍</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">羽毛球/拍</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">网球/拍</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">足篮排球</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">护腕护膝</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">运动器材</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-cate-info dn " id="sub-10006">
+                        <h4>女士内衣</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">精品文胸</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">蕾丝文胸</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">美体塑型</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">光面文胸</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">聚拢文胸</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">少女文胸</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-cate-info dn " id="sub-10007">
+                        <h4>户外鞋</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">登山鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">徒步鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">休闲鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">溯溪鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">沙滩鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">人字拖</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-cate-info dn " id="sub-10008">
+                        <h4>童鞋</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">帆布鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">运动鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">新品凉鞋</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">皮鞋</span>
+                            </a>
+                        </div>
+                        <h4>学习用品/玩具</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">文具用品</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">书包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">水壶</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">玩具</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="m-cate-info dn " id="sub-10009">
+                        <h4>潮流女包</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">炫彩包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">链条包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">单肩包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">手提包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">双肩包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">手拿包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">斜挎包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">钱包</span>
+                            </a>
+                        </div>
+                        <h4>精品男包/功能包</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">公文包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">手拿/手提包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">双肩包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">钱包</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">拉杆箱</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">数码包</span>
+                            </a>
+                        </div>
+                        <h4>时尚配饰</h4>
+                        <div class="m-group">
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">太阳镜</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">太阳伞</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">腰带</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">针扣腰带</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">滑扣腰带</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">首饰</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">领带</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">帽子</span>
+                            </a>
+                            <a class="a-item" href="javascript:toUrl('list.html');">
+                                <div class="ware-img ui-imglazyload" data-url="images/img/cate_01.jpg"></div>
+                                <span class="ellips">眼罩</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mode-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/base.min.js"></script>
+<script src="js/cate.js"></script>
+<script src="js/shopin.js"></script>
+<script src="js/fast.js"></script>
+<script>
+function toUrl(url) {
+    window.location.href = url;
+}
+FastClick.attach(document.body);
+</script>
+</body>
+</html>

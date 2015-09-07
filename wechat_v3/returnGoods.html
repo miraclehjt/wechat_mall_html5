@@ -57,7 +57,7 @@
 				<input type="tel" placeholder="请输入联系电话">
 			</div>
 		</div>
-		<div class="f-row">
+		<!-- <div class="f-row">
 			<label class="f-label"><em>*</em>退回方式</label>
 			<div class="f-main f-select">
 				<select class="select" id="returnMode">
@@ -65,11 +65,11 @@
 					<option value="2">快递退回</option>
 				</select>
 			</div>
-		</div>
+		</div> --><!---->
 		<div class="f-row">
 			<label class="f-label"><em>*</em>退款方式</label>
 			<div class="f-main f-select">
-				<select class="select" id="returnMode">
+				<select class="select" id="refundMode">
 					<option value="1">支付宝退款</option>
 					<option value="2">银行卡退款</option>
 				</select>
@@ -89,7 +89,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bank">
+		<div class="bank dn">
 			<div class="f-row">
 				<label class="f-label"><em>*</em>银行卡号</label>
 				<div class="f-main">
@@ -139,17 +139,23 @@
 	</div>
 	<div class="btn-box">
 		<a class="btn btn-block btn-submit disabled" href="returnSuccess.html">提交申请</a>
-		<p class="hint tr">温馨提示：退货成功后会扣除购买时所获积分</p>
+		<p class="hint tr">温馨提示：1、退货成功后会扣除购买时所获积分</p>
+		<p class="hint tr">　　　　　2、可到上品任意门店服务台办理退货</p>
 	</div>
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
 <script>
-$('.return textarea').focus(function(){
-	$(this).closest('.row').addClass('block-input');
-});
-$('.return textarea').blur(function(){
-	$(this).closest('.row').removeClass('block-input');
+$('#refundMode').change(function() {
+	var _refund = $(this).children('option:selected').val();
+	if(_refund == 1){
+		$('.alipay').show();
+		$('.bank').hide();
+	}
+	if(_refund == 2){
+		$('.bank').show();
+		$('.alipay').hide();
+	}
 });
 </script>
 </body>

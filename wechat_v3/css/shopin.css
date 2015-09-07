@@ -283,7 +283,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 
 /*品牌页*/
 .bigbrand { position: relative; text-align: center}
-.bigbrand .logoarea { position: absolute; width: 100%; top: 7%}
+.bigbrand .logoarea { position: absolute; width: 100%; top: 50%; margin-top: -65px}
 .bigbrand .logo { width: 60px; height: 60px; margin: 0 auto 4px; border-radius: 100%; overflow: hidden}
 .bigbrand .logo img { width: 100%; height: 100%; border-radius: 100%}
 .bigbrand .slogan { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; padding: 0 1rem; font-size: 1.4rem; color: #fff}
@@ -336,36 +336,49 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .brand-activity .b-info { color: #999}
 
 /*优惠券*/
+.tabbar { display: table; table-layout: fixed; width: 100%; height: 45px; line-height: 44px; overflow: hidden; font-size: 1.5rem; font-weight: 400; background: #fff}
+.tabbar li { position: relative; display: table-cell; overflow: hidden; text-align: center; white-space: nowrap; text-overflow: ellipsis; color: #333; border-bottom: solid 1px #ddd}
+.tabbar li.active { height: 44px; border-bottom: solid 2px #f04e23; color: #f04e23}
+.tabbar li:nth-child(n+2):before { content: ''; position: absolute; left: 0; top: 50%; width: 1px; height: 14px; margin-top: -7px; background: #ddd}
+.coupon-list { padding: 0 10px}
+.coupon-list li { overflow: hidden; position: relative; margin-top: 1rem}
+.coupon-list li:after { content: ''; position: absolute; left: 0; top: 0; width: 2px; height: 100%; background: url(../images/coupon.png) repeat-y 0 0; background-size: 2px 7px}
+.coupon-list .c-par { text-align: center; font-family: arial; color: #fff}
+.coupon-list .c-par .par-value { position: relative; padding-left: 16px; font-size: 4.5rem;}
+.coupon-list .c-par i { position: absolute; left: 2px; bottom: 4px; font-size: 1.6rem}
+.coupon-list .c-date { white-space: nowrap; font-size: 1.2rem}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*兑换券*/
+.get-coupon li { padding-bottom: 10px}
+.get-coupon .c-brand { background: #ff8355}
+.get-coupon .c-category { background: #3dc3d4}
+.get-coupon .c-global { background: #0de371}
+.get-coupon .c-logo { height: 14px; padding: 8px 0 3px 10px}
+.get-coupon .c-logo img { width: 40px; height: 14px; vertical-align: middle;}
+.get-coupon .c-par { float: left; padding: 0 8px; margin-right: 8px; border-right: dotted 1px #fff;}
+.get-coupon .c-info { padding-top: 5px; line-height: 18px; overflow: hidden; color: #fff}
+.get-coupon .c-condition { margin-top: 5px}
+.get-coupon .c-btn { -webkit-box-sizing: border-box; box-sizing: border-box; position: absolute; right: 0; top: 0; width: 50px; height: 100%; line-height: 2rem; padding: 20px 8px 0; font-size: 1.6rem; text-align: center; background: #f2f92d; color: #ff8355}
+.get-coupon .c-btn:after { content: ''; display: block; width: 16px; height: 16px; margin: 0 auto; border: solid #ff8355; border-width: 0 0 1px 1px; -webkit-transform: rotate(-45deg); transform: rotate(-45deg)}
+.get-coupon .c-type { padding: 3px 5px}
+.get-coupon .c-brand .c-type { background: #e56327}
+.get-coupon .c-category .c-type { background: #189fba}
+.get-coupon .c-global .c-type { background: #00c968}
+/*我的券*/
+.my-coupon li { display: table; table-layout: fixed; width: 100%; background: #fff; border-bottom: solid 1px #ddd;}
+.my-coupon li > div { display: table-cell; width: 100%; vertical-align: middle}
+.coupon-list li:after { left: auto; right: 0; -webkit-transform: rotate(180deg); transform: rotate(180deg)}
+.my-coupon .c-logo { width: 98px; text-align: center;}
+.my-coupon .c-logo img { width: 78px; vertical-align: middle;}
+.my-coupon .c-info { text-align: center;}
+.my-coupon .c-type { font-size: 1.6rem}
+.my-coupon .c-date { margin-top: 3px; color: #999}
+.my-coupon .c-par { width: 90px; line-height: 16px; padding: 1.8rem 0 1.2rem}
+.my-coupon .c-par .par-value { font-size: 3rem}
+.my-coupon .c-brand .c-par { background: #ff8355}
+.my-coupon .c-category .c-par { background: #3dc3d4}
+.my-coupon .c-global .c-par { background: #0de371}
+.my-coupon .c-date i { line-height: 3px; display: block}
 
 /*商品列表*/
 .list { overflow: hidden}
@@ -734,6 +747,8 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 #date i, #date s { position:absolute; left:0; top:0; width:100%; height:100%}
 #date i { line-height:1.6rem; font-size:1.2rem; background:rgba(0,0,0,.8); color:#fff}
 #date i:before { content:''; display:block; width:10px; height:18px; margin:3px auto; border: #fff solid; border-width: 2px 0 0 2px; -webkit-transform: rotate(225deg); -moz-transform: rotate(225deg); -ms-transform: rotate(225deg); -o-transform: rotate(225deg); transform: rotate(225deg)}
+.checkin-rule { padding: 1rem; line-height: 16px; background: #fff}
+.checkin-rule p { padding: 4px 0}
 
 /*pop*/
 .pop { -webkit-transition: all linear .4s; transition: all linear .4s; position: fixed; left: 50%; top: 30%; z-index: 1000; width: 50%; padding: 2rem 1rem; margin-left: -30%; text-align: center; pointer-events: none; box-shadow: 1px 1px 20px rgba(0, 0, 0, .5); border-radius: 5px; background: #fff; border: solid 1px #eee; opacity: 0}
