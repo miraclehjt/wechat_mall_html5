@@ -44,7 +44,8 @@ input[type=checkbox]:before,
 .icon-checkbox,
 .icon-del,
 .order-address:before,
-.order-status:before { background-image: url(../images/sprites.png); background-repeat: no-repeat; background-size: 200px 120px}
+.order-status:before,
+.brand-week .time:before { background-image: url(../images/sprites.png); background-repeat: no-repeat; background-size: 200px 120px}
 
 /*global*/
 .dn { display: none}
@@ -132,7 +133,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .sub-nav a:nth-child(4):before { background-position:-87px -60px}
 
 /*主体内容*/
-.header.fixed-bar ~ .content{ padding-top: 44px}
+.header.fixed-bar ~ .content { padding-top: 44px}
 .footer.fixed-bar ~ .content { padding-bottom: 44px}
 
 /*内容为空时展示*/
@@ -305,28 +306,36 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .pic-container { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; sizing: border-box; width: 100%; padding: 0 5px; overflow: hidden; text-align: center}
 .pic-container img { display: block; max-width: 100%; margin: 5px auto; vertical-align: middle}
 
-/*品牌周*/
-.storeList { width: 100%; height: 100%; overflow-y:scroll; background: #fff}
+/*选择门店*/
+.storeList { background: #fff}
 .storeList ul { padding-left: 1rem}
 .storeList li { position: relative; padding: 8px 40px 8px 0; border-bottom: solid 1px #ddd}
 .storeList .name { font-size: 1.6rem; color: #000}
 .storeList .ads { font-size: 1.4rem; color: #999}
 .storeList .cur .name { color: #f04e23}
 .storeList .cur:after { -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg); content: ''; position: absolute; right: 1.2rem; top: 50%; width: 9px; height: 15px; margin-top: -1rem; border: #f04e23 solid; border-width: 2px 0 0 2px}
-.brand-week { font-size: 1.2rem}
-.brand-week .bname { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1}
+/*品牌周*/
+.brand-week .item { position: relative; margin-bottom: 1rem;}
+.brand-week .item:last-child { margin-bottom: 0}
+.brand-week .pic img { width: 100%}
+.brand-week .time { position: absolute; left: 5px; top: 5px; padding: 3px 6px; background: rgba(0,0,0,.5); border-radius:25px; color: #fff}
+.brand-week .time:before { content: ''; float: left; width: 16px; height: 16px; margin: .1rem .33rem 0 0; background-position: -143px -74px}
+.brand-week .text { display: -webkit-box; display: -ms-box; display: box; height: 33px; line-height: 33px; padding: 0 .6rem; overflow: hidden; background: #fff; border-bottom: solid 1px #ddd;}
+.brand-week .text > p { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1}
+.brand-week .text .name { max-width: 11rem; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
+.brand-week .text .getCoupon { float: right;}
+.getCoupon { line-height: 16px; padding: 4px 1rem; margin-top: 4px; background: #eee; border-radius: 24px;}
+.getCoupon .icon { display: inline-block; width: 16px; height: 16px; margin-left: 3px; background: #f04e23; border-radius: 100%;}
+.getCoupon .icon:after { content: ''; position: relative; right: -6px; top: -5px; width:0; height:0; line-height: 0; font-size: 0; border: solid 4px transparent; border-left: solid 6px #fff}
+.getCoupon.disabled { color: #ccc}
+.getCoupon.disabled .icon { background: #ddd}
+/*大牌活动*/
+.brand-activity li { display: -webkit-box; display: -ms-box; display: box; padding: 1rem; overflow: hidden; background: #fff; border-bottom: solid 1px #ddd;}
+.brand-activity .b-logo { display:-webkit-box; -webkit-box-orient:horizontal; -webkit-box-pack:center; -webkit-box-align:center; display:-o-box; -o-box-orient:horizontal; -o-box-pack:center; -o-box-align:center; display:-ms-box; -ms-box-orient:horizontal; -ms-box-pack:center; -ms-box-align:center; display:box; box-orient:horizontal; box-pack:center; box-align:center; width: 60px; height: 60px; overflow: hidden; margin-right: 1rem; border: solid 1px #ddd; border-radius: 100%;}
+.brand-activity .b-logo img { width: 100%;}
+.brand-activity .b-info { color: #999}
 
-
-
-
-
-
-
-
-
-
-
-
+/*优惠券*/
 
 
 
@@ -561,6 +570,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 
 /*收货地址*/
 #actionBtn { height: 3.5rem; width: 100%; position: fixed; left: 0; bottom: 0; border: 0; font-size: 1.6rem; background: #f04e23; color: #fff}
+.m-address { margin-bottom: 42px}
 .m-address .address-bottom { padding: 1rem 0; margin-top: .5rem; overflow: hidden; border-top: dashed 1px #ddd}
 .m-address .address-bottom label { float: left}
 .m-address .address-bottom label input[type='checkbox'] { vertical-align: -3px; margin-right: .5rem}
@@ -573,7 +583,6 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .pickup-store > div { padding: 4px 0}
 
 /*订单详情*/
-.order-detail { padding-top: 1rem}
 .order-detail .order-list { padding: .6rem 0 0; overflow: hidden; background: #fff}
 .order-detail .small { padding: .3rem .6rem}
 .order-detail .small .d-title { -webkit-line-clamp: 1; -ms-line-clamp: 1; line-clamp: 1; height: 22px; line-height: 22px; font-size: 1.3rem}
@@ -703,9 +712,8 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 
 
 /*浏览记录*/
-.record { padding-left: 1rem; background: #fff}
-.record .s-product .clamp { height: 44px; line-height: 18px}
-.btn-clear { background: #f04e23; border: 0; color: #fff}
+.record .small { padding: 1rem; border-bottom: solid 1px #ddd;}
+.record .small .d-title { height: 32px; line-height: 16px; margin-bottom: 4px;}
 
 /*订单回收站*/
 .recycle .buy { background: #04bf02; border: 0; color: #fff}

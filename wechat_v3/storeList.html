@@ -9,7 +9,6 @@
 <meta content="no-cache" http-equiv="Cache-Control">
 <title>上品折扣微商城</title>
 <link href="css/shopin.css" rel="stylesheet"/>
-<link href="css/swiper.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -18,7 +17,6 @@
 	<div class="center">
 		<h1>五棵松店<i class="arrow-down"></i></h1>
 	</div>
-	<div class="right"><a href="javascript:;" class="a-navigation">导航</a></div>
 </div><!--//头部结束-->
 <div class="content">
 	<div class="storeList">
@@ -58,12 +56,13 @@
 		</ul>
 	</div>
 </div>
-<a href="javasctript:;" class="backtop"></a>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
 <script>
 $('.storeList li').on('tap', function() {
 	$(this).addClass('cur').siblings().removeClass('cur');
+	//选完门店后跳转到之前的页面
+	window.history.back();
 });
 </script>
 </body>
