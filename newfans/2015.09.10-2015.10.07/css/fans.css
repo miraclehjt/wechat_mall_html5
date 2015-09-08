@@ -91,7 +91,8 @@ img.bg { position: fixed; left: 0; top: 0; z-index: -1; width: 100%; height: 100
 .pop .usePoint { font-size: 18px; font-weight: 500; color: #006335}
 .pop .usePoint b { font-weight: 700; color: #ec651a}
 .pop .exchange { font-size: 20px; font-weight: 700; color: #006335}
-.pop .hint { font-size: 1.4rem}
+.pop .title ~ .hint { font-size: 1.4rem}
+.pop .hint { font-size: 1.8rem}
 .pop .btn { margin-top: 1rem}
 .pop .popBtn { display: inline-block; width: 143px; height: 35px; line-height: 30px; font-size: 18px; font-weight: 700; background-position: 0 -330px; color: #f9f8cb}
 
