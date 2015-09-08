@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="no-cache" http-equiv="Cache-Control">
+<title>上品折扣微商城</title>
+<link href="css/fans.css" rel="stylesheet"/>
+</head>
+
+<body>
+<img class="bg" src=" images/bg1.jpg">
+<div class="exchange">
+	<div class="btn-box">
+		<a href="javascript:;" class="btn-exchange">点击兑换</a>
+	</div>
+	<div class="hint">请由我们的工作人员帮您点击兑换按钮，一经点击即认为已兑换，不可再兑换。请在2015年10月7日之前兑换，逾期作废。</div>
+</div>
+<div class="pop exchange-pop">
+	<div class="inside flex">
+		<div class="msg cell">
+			<h4 class="title">您确定兑换？</h4>
+			<div class="hint">请您在我们的工作人员面前或由我们的工作人员帮您点击确认按钮。</div>
+			<div class="btn"><a href="javascript:submitExchange();" class="popBtn btn-submit">确认</a></div>
+		</div>
+		<i class="close"></i>
+	</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script>
+function pop() {}
+pop.show = function(info) {
+	var $pop = $(".pop");
+	$("html").addClass("active-page");
+	$(".msg", $pop).html(info.msg);
+	$pop.css("opacity","1");
+};
+pop.hide = function() {
+	$(".pop").css("opacity","0");
+	$("html").removeClass("active-page");
+};
+$(".pop .close").tap(function(){
+	pop.hide();
+});
+$('.btn-exchange').tap(function(){
+	if(!$(this).hasClass('disabled')){
+		pop.show({});
+	}else{
+		return false;
+	}
+});
+function submitExchange(){
+	$('.btn-exchange').addClass('disabled');
+	pop.hide();
+}
+</script>
+</body>
+</html>
