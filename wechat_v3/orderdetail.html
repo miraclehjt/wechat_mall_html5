@@ -34,7 +34,7 @@
 				<div class="num-code"><p>6565805</p><span>请向导购出示此凭证提货</span></div>
 			</div>
 			<div class="cut-line"><span>或直接扫描二维码</span></div>
-			<div class="qr-code"><img src="images/img/qr.jpg"></div>
+			<div class="qr-code" id="qr-code"></div>
 		</div><!-- //自提订单 ：只自提订单显示-->
 		<div class="address order-address">
 			<div class="info">
@@ -152,6 +152,7 @@
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
+<script src="js/qrcode.min.js"></script>
 <script>
 $(".j_select").change(function(){
 	var value = $(this).find("option:selected").text();
@@ -160,6 +161,17 @@ $(".j_select").change(function(){
 $('#j_address').on('tap', function(event) {
 	window.location.href="address.html"
 });
+</script>
+<script>
+var qrcode = new QRCode(document.getElementById("qr-code"), {
+	width : 200,
+	height : 200
+});
+
+function makeCode () {
+	qrcode.makeCode('123456');
+}
+makeCode();
 </script>
 </body>
 </html>
