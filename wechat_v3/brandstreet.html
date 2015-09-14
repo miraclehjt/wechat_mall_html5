@@ -559,7 +559,12 @@ FastClick.attach(document.body);
 </script>
 <script>
 $('.recommend h4').on('click', function() {
-    $(this).next('.m-group').toggle();
+    if(!$(this).hasClass('open')){
+        $(this).addClass('open').siblings('h4').removeClass('open');
+        $(this).next('.m-group').show().siblings('.m-group').hide();
+    }else{
+        $(this).removeClass('open').next('.m-group').hide();
+    }
     var b = $("#scroll2");
     b.iScroll("refresh");
 });
