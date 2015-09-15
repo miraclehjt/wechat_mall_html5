@@ -25,6 +25,6 @@ $('.form-view textarea').blur(function(){
 	$(this).closest('.f-row').removeClass('block-input');
 });
 
-
-
-
+$(".ui-imglazyload").imglazyload({
+	extClass: "ware-img"
+})
