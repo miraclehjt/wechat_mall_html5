@@ -518,6 +518,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .m-sku .row-title { display: block; padding: 1.5rem 0 .5rem}
 .m-sku .sku-row .sku-item { display: inline-block; position: relative; padding: .5rem 1.2rem; margin: 0 .5rem .5rem 0; border: solid 1px #ddd; border-radius: 3px}
 .m-sku .sku-row .sku-item.on { background:  #f04e23; border-color: #f04e23; color: #fff}
+.m-sku .sku-row .sku-item.disabled{ background: #e2e2e2; border: solid 1px #ddd; color: #bdbdbd}
 .sku-footer { height: 40px; line-height: 40px; overflow: hidden; text-align: center}
 .sku-footer a { float: left; width: 50%; font-size: 1.4rem; font-weight: 700; background: #f04e23; border-top: solid 1px #ddd; color: #fff}
 .sku-footer .btn-cancel { background: #fff; color: #666}
