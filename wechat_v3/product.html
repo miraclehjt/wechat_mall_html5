@@ -218,7 +218,7 @@ function addCart(){
 };
 
 //选择颜色、尺码
-$('.m-sku .sku-row .sku-item').on('tap', function(){
+$('.m-sku .sku-row .sku-item').live('tap', function(){
     if($(this).hasClass('on')){
         $(this).removeClass('on');
     }else{

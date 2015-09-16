@@ -564,7 +564,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .cart-main .small .d-main { height: 22px; margin-top: 16px; overflow: hidden}
 .cart-footer { border-top: solid 1px #ddd; color: #999}
 .cart-footer .cart-icb { top: 30%}
-.cart-footer .price b { font-size: 1.5rem; color: #f04e23}
+.cart-footer .total b { font-size: 1.5rem; color: #f04e23}
 .cart-footer .quantity b { margin: 0 .3rem; font-size: 1.4rem; color: #333}
 .editOrder .sub { display: none}
 .editOrder .opt { display: block}

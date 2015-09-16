@@ -37,7 +37,7 @@
 								<div class="d-main">
 									<div class="sub">
 										<span class="price">
-											<span class="s">￥<em class="n">198</em>.00</span><del>吊牌价￥1499.00</del>
+											<span class="s">￥<em class="n">254</em>.00</span><del>吊牌价￥1499.00</del>
 										</span>
 									</div>
 									<div class="opt">
@@ -59,7 +59,7 @@
 								<div class="d-main">
 									<div class="sub">
 										<span class="price">
-											<span class="s">￥<em class="n">198</em>.00</span><del>吊牌价￥1499.00</del>
+											<span class="s">￥<em class="n">199</em>.00</span><del>吊牌价￥1499.00</del>
 										</span>
 									</div>
 									<div class="opt">
@@ -98,7 +98,7 @@
 				<div class="cart-icb"><input type="checkbox" name="shop" class="icon-checkbox selectAll" checked></div>
 				<div class="cart-item">
 					<a class="btn btn-pay" href="payment.html">结算</a>
-					<div class="price">总计：<b>￥198.00</b></div>
+					<div class="total">总计：<b>￥198.00</b></div>
 					<div class="quantity">共<b>1</b>件商品</div>
 				</div>
 			</div>
@@ -119,7 +119,7 @@
 								<div class="d-main">
 									<div class="sub">
 										<span class="price">
-											<span class="s">￥<em class="n">198</em>.00</span><del>吊牌价￥1499.00</del>
+											<span class="s">￥<em class="n">288</em>.00</span><del>吊牌价￥1499.00</del>
 										</span>
 									</div>
 									<div class="opt">
@@ -141,7 +141,7 @@
 								<div class="d-main">
 									<div class="sub">
 										<span class="price">
-											<span class="s">￥<em class="n">198</em>.00</span><del>吊牌价￥1499.00</del>
+											<span class="s">￥<em class="n">398</em>.00</span><del>吊牌价￥1499.00</del>
 										</span>
 									</div>
 									<div class="opt">
@@ -163,7 +163,7 @@
 								<div class="d-main">
 									<div class="sub">
 										<span class="price">
-											<span class="s">￥<em class="n">198</em>.00</span><del>吊牌价￥1499.00</del>
+											<span class="s">￥<em class="n">79</em>.00</span><del>吊牌价￥1499.00</del>
 										</span>
 									</div>
 									<div class="opt">
@@ -180,7 +180,7 @@
 				<div class="cart-icb"><input type="checkbox" name="shop" class="icon-checkbox selectAll" checked></div>
 				<div class="cart-item">
 					<a class="btn btn-pay" href="payment.html">结算</a>
-					<div class="price">总计：<b>￥198.00</b></div>
+					<div class="total">总计：<b>￥198.00</b></div>
 					<div class="quantity">共<b>1</b>件商品</div>
 				</div>
 			</div>
@@ -194,92 +194,6 @@
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
-<script>
-$('.cartEdit').on('tap', function() {
-	if($(this).text() == '编辑'){
-		$(this).text('确定').parents('.cart-list').addClass('editOrder');
-		$(this).parents('.cart-list').find('a').click(function(event) {
-			event.preventDefault();
-		});
-	}else{
-		$(this).text('编辑').parents('.cart-list').removeClass('editOrder');
-		$(this).parents('.cart-list').find('a').unbind('click');
-	}
-});
-//全选
-$('.selectAll').on('change', 'input', function() {
-	var $this = $(this).closest('.cart-list');
-	var obj = $this.find('.setSelectAll');
-	var value = this.checked;
-	if(value == false) {
-		for(var i=0; i<obj.length; i++) {
-			obj[i].checked=false;
-		}
-	}else{
-		for(var i=0; i<obj.length; i++){
-			obj[i].checked=true;
-		}
-	}
-});
-
-$('.setSelectAll').on('change', 'input', function() {
-	var $this = $(this).closest('.cart-list');
-	var obj = $this.find('.setSelectAll');
-	var count = obj.length;
-	var selectCount = 0;
-	for(var i = 0; i < count; i++) {
-		if(obj[i].checked == true){
-			selectCount++;
-		}
-	}
-	if(count == selectCount) {
-		$this.find('.selectAll').prop('checked',true);
-	}else{
-		$this.find('.selectAll').prop('checked',false);
-	}
-});
-
-//调整购买数量
-var increase,decrease,num,numTxt;
-increase = $(".increase");
-decrease = $(".decrease");
-num = "";
-increase.on('tap', function() {
-	numTxt = $(this).closest(".number").find(".num");
-	num = numTxt.val();
-	num++;
-	numTxt.val(num);
-	//ajax代码可以放这里传递到数据库实时改变总价
-});
-decrease.on('tap', function() {
-	numTxt = $(this).closest(".number").find(".num");
-	num = numTxt.val();
-	if(num >0){
-		if(num==1){
-			num--;
-			alert('购买数量不能为0')
-		} else {
-			num--;
-			numTxt.val(num);
-		}
-	}
-});
-
-//删除
-$('.icon-del').on('tap', function() {
-	var a = $(this).closest(".cart-list");
-	var len = a.find('.cart-box .cart-group').length;
-	if( len <= 1){
-		$(this).closest(".cart-list").remove();
-	}else{
-		$(this).closest(".cart-group").remove();
-	}
-	var cartList = $('.cart-list').length;
-	if(cartList == 0){
-		$('.cart-main').css('display','block');
-		$('.empty').css('display','block');
-	}
-});
-</script>
+<script src="js/cart.js"></script>
 </body>
 </html>
