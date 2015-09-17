@@ -41,9 +41,18 @@
 				<div class="d">
 					<a href="product.html"><h3 class="d-title clamp">卡雷尔2015秋季新品女装商城同款九分袖连衣裙淑女花色针织连衣裙</h3></a>
 					<div class="d-main">
-						<div class="sub">
+						<div class="sub flex">
+							<div class="order-promotion cell">
+								<span class="j_multi">促销活动</span>
+								<select name="" class="order-select j_select">
+									<option value="">两件85折</option>
+									<option value="">三件8折</option>
+									<option value="">满赠</option>
+									<option value="">全场包邮全场包邮全场包邮</option>
+								</select>
+							</div>
 							<span class="price">
-								<span class="s">￥<em class="n">198</em>.00</span><del>吊牌价￥1499.00</del>
+								<span class="s">￥<em class="n">198</em>.00</span>
 							</span>
 						</div>
 					</div>
@@ -54,9 +63,18 @@
 				<div class="d">
 					<a href="product.html"><h3 class="d-title clamp">卡雷尔2015秋季新品女装商城同款九分袖连衣裙淑女花色针织连衣裙</h3></a>
 					<div class="d-main">
-						<div class="sub">
+						<div class="sub flex">
+							<div class="order-promotion cell">
+								<span class="j_multi">促销活动</span>
+								<select name="" class="order-select j_select">
+									<option value="">三件8折</option>
+									<option value="">两件85折</option>
+									<option value="">满赠</option>
+									<option value="">全场包邮全场包邮全场包邮</option>
+								</select>
+							</div>
 							<span class="price">
-								<span class="s">￥<em class="n">198</em>.00</span><del>吊牌价￥1499.00</del>
+								<span class="s">￥<em class="n">198</em>.00</span>
 							</span>
 						</div>
 					</div>
@@ -70,22 +88,6 @@
 				<p>营业时间：很早-很晚</p>
 			</div>
 		</div><!-- //自提门店 ：只自提订单显示-->
-		<div class="promotion mt">
-			<div class="b-box">
-				<p class="title">促销活动</p>
-				<div class="conts">
-					<div class="arrow">
-						<span class="j_multi">未选择</span>
-						<select name="promotion" class="order-select j_select">
-							<option value="">两件85折</option>
-							<option value="">三件8折</option>
-							<option value="">满赠</option>
-							<option value="">全场包邮</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div><!-- //促销活动 -->
 		<div class="coupon mt">
 			<div class="b-box options">
 				<p class="title">10元女装品类优惠券</p>
@@ -129,6 +131,12 @@
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
 <script>
+//初始选中第一项
+$(".j_select").each(function(){
+	var $val = $(this).find("option:first").text();
+	$(this).prev('.j_multi').text($val);
+});
+
 $(".j_select").change(function(){
 	var value = $(this).find("option:selected").text();
     $(this).prev('.j_multi').text(value);
