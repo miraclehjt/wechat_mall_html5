@@ -55,11 +55,13 @@
 		});
 
 		//删除
-		obj.find('.icon-del').on('tap', function() {
+		obj.find('.icon-del').click(function() {
 			var len = obj.find('.cart-box .cart-group').length;
 			if( len <= 1){
+				alert('1')
 				$(this).closest(".cart-list").remove();
 			}else{
+				alert('2')
 				$(this).closest(".cart-group").remove();
 			}
 			setTotal();
@@ -115,7 +117,7 @@
 			});
 		}
 		//结算
-		obj.find('.btn-pay').on('tap', function(){
+		obj.find('.btn-pay').click(function(){
 			if(!$(this).hasClass('disabled')){
 				$(this).addClass('disabled');
 				// window.location='payment.html';
