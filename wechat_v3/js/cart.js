@@ -95,22 +95,22 @@
 		function setTotal() {
 			var quantity = 0;	//总数量
 			var total = 0;		//总价格
-			var len = $(this).find('.checked').length;
+			var len = obj.find('.checked').length;
 			if(len <= 1){
-				$(this).closest('.cart-list').find(".total b").html('￥0.00');
-				$(this).closest('.cart-list').find(".quantity b").html(0);
+				obj.find(".total b").html('￥0.00');
+				obj.closest('.cart-list').find(".quantity b").html(0);
 			}
 			obj.find('.cart-box .checked').each(function(i){
 				var number = $(this).find('.num').val();		//数量
 				var price = $(this).find('.price .n').text();	//单价
 				total += parseInt(number) * parseFloat(price);
 				quantity += parseInt(number);
-				$(this).closest('.cart-list').find(".total b").html('￥' + total.toFixed(2));
-				$(this).closest('.cart-list').find(".quantity b").html(quantity);
+				obj.find(".total b").html('￥' + total.toFixed(2));
+				obj.find(".quantity b").html(quantity);
 				if(quantity >= 1){
-					$(this).closest('.cart-list').find('.btn-pay').removeClass('disabled');
+					obj.find('.btn-pay').removeClass('disabled');
 				}else{
-					$(this).closest('.cart-list').find('.btn-pay').addClass('disabled');
+					obj.find('.btn-pay').addClass('disabled');
 				}
 			});
 		}
