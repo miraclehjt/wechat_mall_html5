@@ -58,10 +58,8 @@
 		obj.find('.icon-del').click(function() {
 			var len = obj.find('.cart-box .cart-group').length;
 			if( len <= 1){
-				alert('1')
 				$(this).closest(".cart-list").remove();
 			}else{
-				alert('2')
 				$(this).closest(".cart-group").remove();
 			}
 			setTotal();

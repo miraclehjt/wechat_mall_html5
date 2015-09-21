@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="no-cache" http-equiv="Cache-Control">
+<title>上品折扣微商城</title>
+<link href="css/shopin.css" rel="stylesheet"/>
+<link href="css/ticket.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="header">
+	<div class="left"><a href="javascript:;" class="a-back"><span>返回</span></a></div>
+	<div class="center">
+		<h1>兑换优惠券</h1>
+	</div>
+</div><!--//头部结束-->
+
+<div class="coupon-content">
+	<div class="coupon-list get-coupon ticket-detail">
+		<ul>
+			<li class="c-brand">
+				<div class="c-logo"><img src="images/wlogo.png"></div>
+				<div class="c-par"><b class="par-value"><i>￥</i>50</b></div>
+				<div class="c-info">
+					<div class="c-topic">上品折扣活动名称</div>
+					<p class="c-condition">使用劵范围，线上或线下</p>
+					<p class="c-date">2015.12.12<i>－</i>2015.12.30</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="barcode code-box">
+		 <div id="barcode"></div>
+	</div>
+	<div class="coupon-rule">
+		<h5>使用说明：</h5>
+		<ul>
+			<li>1、领取地点：草桥上品折扣MALL（北京市丰台区草桥东路1号）有效期至2015年8月12日，仅限兑换一次，点击兑换后失效，如您未到店对换，逾期作废。</li>
+			<li>2、领取地点：草桥上品折扣MALL（北京市丰台区草桥东路1号）有效期至2015年8月12日，仅限兑换一次，点击兑换后失效，如您未到店对换，逾期作废。</li>
+			<li>3、领取地点：草桥上品折扣MALL（北京市丰台区草桥东路1号）有效期至2015年8月12日，仅限兑换一次，点击兑换后失效，如您未到店对换，逾期作废。</li>
+			<li>4、领取地点：草桥上品折扣MALL（北京市丰台区草桥东路1号）有效期至2015年8月12日，仅限兑换一次，点击兑换后失效，如您未到店对换，逾期作废。</li>
+			<li>5、领取地点：草桥上品折扣MALL（北京市丰台区草桥东路1号）有效期至2015年8月12日，仅限兑换一次，点击兑换后失效，如您未到店对换，逾期作废。</li>
+		</ul>
+	</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/shopin.js"></script>
+<script src="js/barcode.js"></script>
+<script>
+window.onload= function (){
+	$(function(){
+		// showDiv：代表需要显示的divID，
+		// textVlaue ： 代表需要生成的值，
+		// barcodeType：代表生成类型(A、B、C)三种类型
+		createBarcode('barcode','2FA1HVN2UM3HJ35','B')
+	});
+};
+</script>
+</body>
+</html>
