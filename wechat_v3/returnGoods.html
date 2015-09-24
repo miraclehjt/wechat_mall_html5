@@ -40,6 +40,17 @@
 			</div>
 		</div>
 		<div class="f-row">
+			<label class="f-label"><em>*</em>退货数量</label>
+			<div class="f-main f-select">
+				<select class="select" id="number">
+					<option value="">请选择退货数量</option>
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+				</select>
+			</div>
+		</div>
+		<div class="f-row">
 			<label class="f-label"><em>*</em>退货说明</label>
 			<div class="f-main">
 				<textarea placeholder="最多200字" max-length="200"></textarea>
@@ -133,12 +144,13 @@
 		        <div class="takephoto-trigger">
 			        <div class="add-icon">+</div>
 			        <div class="add-text">上传凭证<br><span>(最多三张)</span></div>
+			        <input class="takephoto-input" type="file" capture="camera" accept="images/*" name="file">
 		        </div>
 	        </div>
 		</div>
 	</div>
 	<div class="btn-box">
-		<a class="btn btn-block btn-submit disabled" href="returnSuccess.html">提交申请</a>
+		<a class="btn btn-block btn-submit disabled" href="javascript:;">提交申请</a>
 		<p class="hint tr">温馨提示：1、退货成功后会扣除购买时所获积分</p>
 		<p class="hint tr">　　　　　2、可到上品任意门店服务台办理退货</p>
 	</div>
@@ -155,6 +167,19 @@ $('#refundMode').change(function() {
 	if(_refund == 2){
 		$('.bank').show();
 		$('.alipay').hide();
+	}
+});
+$('.takephoto-queue i').live('click', function() {
+	$(this).parent('li').remove();
+	//ajax
+});
+
+//判断所有必填项都有数据 给$('.btn-submit').removeClass('disabled');
+
+$('.btn-submit').on('tap', 'a', function() {
+	event.preventDefault();
+	if(!$(this).hasClass('disabled')){
+		window.location = 'returnSuccess.html'
 	}
 });
 </script>

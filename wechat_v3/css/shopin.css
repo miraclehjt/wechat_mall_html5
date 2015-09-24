@@ -761,12 +761,15 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .recycle .buy { background: #04bf02; border: 0; color: #fff}
 
 /*退货服务*/
-.takephoto-queue li { float: left; display: inline-block; width: 88px; height: 88px; border-radius: 5px; text-align: center; margin-right: 1rem}
-.takephoto-queue li img { width: 88px; height: 88px}
-.uploader-field { overflow: hidden; margin-bottom: .5rem}
-.takephoto-trigger { float: left; display: inline-block; width: 88px; height: 88px; background: #fff; border: 2px dotted #e4e4e4; border-radius: 5px; text-align: center; }
+.takephoto-queue { display: inline-block;}
+.takephoto-queue li { position: relative; display: inline-block; width: 88px; height: 88px; border-radius: 5px; text-align: center; margin: 0 .4rem 0 .4rem;}
+.takephoto-queue li img { width: 88px; height: 88px; vertical-align: middle;}
+.takephoto-queue i { position: absolute; top: -5px; right: -5px; display: block; width: 18px; height: 18px; line-height: 18px; overflow: hidden; background: red; color: #fff; border-radius: 100%}
+.uploader-field { margin-bottom: .5rem}
+.takephoto-trigger { position: relative; display: inline-block; vertical-align: middle; width: 88px; height: 88px; background: #fff; border: 2px dotted #e4e4e4; border-radius: 5px; text-align: center; }
 .takephoto-trigger .add-icon { font-family: ArialMT,Arial; font-weight: 400; font-size: 48px; height: 48px; line-height: 48px; color: #ddd; }
 .takephoto-trigger .add-text { font-family: STHeitiSC-Light,'Heiti SC Light','Heiti SC'; font-weight: 200; font-size: 14px; color: #bbb; line-height: 14px; }
+.takephoto-input { position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0; opacity: 0;}
 
 /*每日签到*/
 .m-checkin { background:#fff}
