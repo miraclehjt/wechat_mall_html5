@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*reset*/
 body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, fieldset, input, textarea, pre { margin: 0; padding: 0}
-h1,h2,h3,h4,h5,h6 { font-size: 100px; font-weight: 400}
+h1,h2,h3,h4,h5,h6 { font-size: 150px; font-weight: 400}
 i,cite,em,var,address,dfn { font-style: normal}
 em, strong, i, s, b, u { font-style: normal; font-weight: normal; text-decoration: none;}
 a:-webkit-any-link { text-decoration: none}
@@ -126,7 +126,7 @@ left: 0;height: 100%; display: none; width:100%; min-width:3.2rem; max-width:6.4
 .h-btn .btn-js { width: 40%; background-color: #feb70d}
 
 /*after*/
-.after {  display:none;position: absolute;
+.after {position: absolute;
 top: 0;
 z-index: 99;
 width: 100%;height: 100%;
