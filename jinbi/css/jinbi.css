@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*reset*/
 body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, fieldset, input, textarea, pre { margin: 0; padding: 0}
-h1,h2,h3,h4,h5,h6 { font-size: 150px; font-weight: 400}
+h1,h2,h3,h4,h5,h6 { font-size: 100px; font-weight: 400}
 i,cite,em,var,address,dfn { font-style: normal}
 em, strong, i, s, b, u { font-style: normal; font-weight: normal; text-decoration: none;}
 a:-webkit-any-link { text-decoration: none}
@@ -119,18 +119,14 @@ left: 0;height: 100%; display: none; width:100%; min-width:3.2rem; max-width:6.4
 	}
 }
 .h-btn { padding: 0 0 4%; text-align: center; -webkit-animation-delay: 2.8s; animation-delay: 2.8s;}
-.h-a3-box .btn { padding: 8px 20px; margin-bottom: 12px; font-size: .16rem; font-weight: 700; color: #670f0b;}
+.h-a3-box .btn { padding: 8px 20px; margin-bottom: 12px; font-size: .24rem; font-weight: 700; color: #670f0b;}
 .h-a3-box .start-btn { width: 60%; padding: 15px 0; text-indent: 15px;}
 .h-a3-box .start-btn:after { content: ''; display: inline-block; margin-left: 8px; width: 0; height: 0; line-height: 0; font-size: 0; border-style: solid; border-width: 12px 9px; vertical-align: top; border-color: transparent transparent #670f0b transparent; -webkit-transform: rotate(90deg);}
 .h-btn .time { margin-bottom: .1rem; font-size: .1rem; color: #fff}
 .h-btn .btn-js { width: 40%; background-color: #feb70d}
 
 /*after*/
-.after {position: absolute;
-top: 0;
-z-index: 99;
-width: 100%;height: 100%;
-background-color: #0cb2fe;padding-top: 32%; background: url(../../images/game/b.jpg) center 0 no-repeat; background-size: 100%;}
+.after {position: absolute;top: 0;z-index: 99;width: 100%;height: 100%;background-color: #0cb2fe;padding-top: 32%; background: url(../../images/game/b.jpg) center 0 no-repeat; background-size: 100%;}
 .getgold { text-align: center;}
 .getgold h2 { font-size: .5rem; color: #fff32b;}
 .getgold p { font-size: .3rem; color: #fff;}
