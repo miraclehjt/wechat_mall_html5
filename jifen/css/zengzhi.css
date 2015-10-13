@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*reset*/
+html { font-size:62.5%;}
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd { margin:0; padding:0;}
+html,body{position:relative;height:100%}
+body{ width:100%; min-width:320px; max-width:640px; line-height:1.6rem; margin:0 auto; -webkit-user-select:none;-webkit-text-size-adjust:100% !important;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:1.4rem;  background:#008f77;color:#666;}
+h1,h2,h3,h4,h5,h6 { font-size: 100%;}
+a { text-decoration:none; -webkit-tap-highlight-color:rgba(255,68,0,.25); color:#666;}
+a img { border:0; vertical-align:top;}
+ol, ul { list-style-type:none;}
+em, strong, i, s, b { font-style:normal; font-weight:normal; text-decoration:none;}
+a, input, select, textarea { outline:0; resize:none;}
+
+/*img*/
+.img img { width: 100%; vertical-align: middle;}
+
+/*页头*/
+.topNav{ height:50px; text-align:center; background:#ff520c;}
+.topNav h1 { font-weight: 700; font-size: 30px; line-height: 50px; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#fff;}
+/*头图*/
+.figure { margin-bottom: 1.5rem;}
+.figure .txt { position: relative; width:84%; padding:3%; margin: -26px auto 0; font-size: 14px; border:1px dashed #fff; background-color:rgba(72,64,42,.5); color: #fff;}
+/*异业券*/
+.redeem { padding: 0 1rem; margin-bottom: 10px; border-bottom: 5px solid #fff;}
+.redeem .txt { line-height: 30px; text-align: right; font-size: 14px; color: #fff;}
+.ticketList .redeem:last-child { margin-bottom: 10px; border-bottom: none}
