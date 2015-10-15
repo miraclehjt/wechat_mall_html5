@@ -66,57 +66,5 @@
 <li><div class="dq-brand"><a href="http://weixin.shopin.net/pdamw_pay/product.html?showwxpaytitle=1&sid=9419591&shopSid=1002&supplySid=102308"><div class="img"><img src="http://images.shopin.net/images/1008/2015/09/29/Pic9419591_3507802_0.resize_to.210x210.jpg "></div><div class="dq-desc flex"><div class="dq-sub cell"><h4>雪莲羊绒衫</h4><div class="dq-price">￥<em>580</em></div></div></div></a></div></li>
 	</ul>
 </div>
-
-<div class='pop'><p class='msg'>恭喜您获得品牌优惠券一张</p><div class="pop-btns"></div></div><!-- //提示弹窗 -->
-<div class="mask"></div>
-<script src="js/zepto.min.js"></script>
-<script src="js/msgbox.js"></script>
-<script>
-$('#getBrandTicket .dq-brand').on('tap', function(event) {
-	var _this = $(this);
-	var _ticketid = _this.attr('ticketid');
-	if(_ticketid == 1){
-		pop.show({
-			msg: '恭喜您获得品牌优惠券一张!'
-		});
-	}
-	if(_ticketid == 2){
-		pop.show({
-			msg: '抱歉，您已领取过该品牌优惠券!'
-		});
-	}
-	if(_ticketid == 3){
-		pop.show({
-			msg: '抱歉，该品牌优惠券已抢完!'
-		});
-	}
-});
-
-function pop() {}
-pop.show = function(info) {
-	var $pop = $('.pop');
-	// $("html").addClass('active-page');
-	$('.msg', $pop).html(info.msg);
-	$pop.css('display','block');
-	$('.mask').css('display','block');
-	window.ontouchmove=function(e){
-		e.preventDefault && e.preventDefault();
-		e.returnValue=false;
-		e.stopPropagation && e.stopPropagation();
-		return false;
-	}
-	setTimeout(pop.hide,2500)
-};
-pop.hide = function() {
-	$('.pop,.mask').css('display','none');
-	// $("html").removeClass('active-page');
-	window.ontouchmove=function(e){
-		e.preventDefault && e.preventDefault();
-		e.returnValue=true;
-		e.stopPropagation && e.stopPropagation();
-		return true;
-	}
-};
-</script>
 </body>
 </html>
