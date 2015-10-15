@@ -558,6 +558,7 @@ function toUrl(url) {
 FastClick.attach(document.body);
 </script>
 <script>
+$('.recommend h4:first').addClass('open').next('.m-group').show();
 $('.recommend h4').on('click', function() {
     if(!$(this).hasClass('open')){
         $(this).addClass('open').siblings('h4').removeClass('open');
