@@ -1,9 +1,9 @@
 //后退
-$('.a-back').tap(function() {
+$('.a-back').click(function() {
     window.history.back();
 });
 //更多
-$(".a-more").on('tap', function(){
+$(".a-more").click(function(){
     $(".j-nav").toggle();
 });
 
