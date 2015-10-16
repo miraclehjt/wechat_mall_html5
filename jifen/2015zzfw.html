@@ -60,5 +60,30 @@
 	</div>
 </div>
 <div class="return img"><a href="#"><img src="images/return.png"></a></div>
+<script src="js/zepto.min.js"></script>
+<script>
+function pop() {}
+pop.show = function(info) {
+	var $pop = $('.pop');
+	$('.msg', $pop).html(info.msg);
+	$pop.css('display','block');
+	$('.mask').css('display','block');
+	window.ontouchmove=function(e){
+		e.preventDefault && e.preventDefault();
+		e.returnValue=false;
+		e.stopPropagation && e.stopPropagation();
+		return false;
+	}
+};
+pop.hide = function() {
+	$('.pop,.mask').css('display','none');
+	window.ontouchmove=function(e){
+		e.preventDefault && e.preventDefault();
+		e.returnValue=true;
+		e.stopPropagation && e.stopPropagation();
+		return true;
+	}
+};
+</script>
 </body>
 </html>
