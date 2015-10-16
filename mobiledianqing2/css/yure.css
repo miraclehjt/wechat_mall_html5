@@ -1,0 +1,80 @@
+@charset"UTF-8";
+/*reset*/
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,fieldset,input,textarea,pre{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:100px;font-weight:400}
+i,cite,em,var,address,dfn{font-style:normal}
+em,strong,i,s,b,u{font-style:normal;font-weight:normal;text-decoration:none;}
+a:-webkit-any-link{text-decoration:none}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,iframe{border:0}
+ol,ul{list-style:none}
+input,textarea,select,button{font-family:inherit;font-weight:inherit;font-size:inherit;margin:0}
+select,button,input{color:inherit}
+input[type="submit"],input[type="reset"],input[type="button"],input{-webkit-appearance:none}
+input:focus,textarea:focus{outline:none}
+input:focus{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only}
+html{-webkit-text-size-adjust:none;font-size:100px;}
+body{font:.14rem/1.5'HelveticaNeue',Helvetica,sans-serif;background: #ff0}
+a{text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,.2);color:#666}
+img{vertical-align:middle}
+a img{border:0}
+.img img { width: 100%}
+
+/*flex*/
+.flex { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row}
+.flex, .flex *, .flex:after, .flex:before { -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box}
+.flex .cell { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; -webkit-flex-basis: 0; -ms-flex-basis: 0; flex-basis: 0; position: relative; width: 0; max-width: 100%; display: block; padding: 0!important}
+
+/*时间轴*/
+.timeline { position: relative; vertical-align: middle; background: url(../images/timeline.jpg) center 0 no-repeat; background-size: cover}
+.timeline:after { position: absolute; left: 60px; top: 24px; right: 10px; z-index: 1; content: ''; height: 3px; background: #770003; border-radius: 6px;}
+.timeline p:first-child { height: 21px; line-height: 21px; vertical-align: middle;}
+.timeline ul { position: relative; z-index: 2; height: 50px; padding-left: 50px; background: url(../images/dqyr.png) 10px center no-repeat; background-size: 37px 37px;}
+.timeline li { height: 100%; text-align: center; color: #fff}
+.timeline li i { display: block; width: 6px; height: 6px; line-height: 0; vertical-align: middle; overflow: hidden; margin: 1px auto 0; background: #bdbdbd; border-radius: 100%;}
+.timeline li.current { color: #fff100}
+.timeline li.current i { background: #fff100;}
+.dq-title { position: relative; padding: 7px 0; margin-bottom: 10px; text-align: center; background: #ff9600}
+.dq-title h2 { position: relative; z-index: 10; font-weight: 700; font-size: 18px; color: #cc1515; text-shadow: 1px 1px 0 #ffcb00}
+.dq-title h3 { position: relative; z-index: 10; font-size: 12px; color: #000cff; text-shadow: 1px 1px 0 #ffcb00}
+.dq-title i { position: absolute; left: 50%; bottom: -5px; z-index: 0; margin-left: -22px; vertical-align: middle; border-bottom: 20px solid #ff9600; border-left: 10px solid transparent; border-right: 10px solid transparent; height: 0; width: 20px; -webkit-transform:rotate(-148deg); -ms-transform:rotate(-148deg); transform:rotate(-148deg);}
+
+/*品牌列表*/
+.dq-list { padding: 5px 1px 0; overflow: hidden;}
+.dq-list li { float: left; width: 33.3334%; margin-bottom: 9px; font-size: 0; -webkit-box-sizing: border-box;}
+.dq-list .img { position: relative;}
+.dq-sale { display: none; position: absolute; left: 0; bottom: 0; right: 0; line-height: 26px; font-size: 12px; text-align: center; background: rgba(0,0,0,.6); color: #ff0}
+.dq-brand { margin: 0 1px}
+.dq-desc { padding: 5px 0; background: #fff}
+.dq-desc .img { width: 40%}
+.dq-desc h4 { height: 20px; font-size: 13px; display:-webkit-box; -webkit-line-clamp:1; line-clamp:1; -webkit-box-orient:vertical; -ms-box-orient:vertical; box-orient:vertical; overflow:hidden; text-overflow:ellipsis; word-break:break-all}
+.dq-desc .dq-price { font-size: 12px; line-height: 19px; white-space: nowrap; color: #136fea;}
+.dq-desc .dq-price em { font-size: 16px}
+.dq-ticket { line-height: 24px; text-align: center; font-size: 12px; background: #136fea; color: #fff}
+.dq-price, .dq-ticket { -webkit-transition: all linear .4s; -ms-transition: all linear .4s; transition: all linear .4s}
+.dq-list2 .dq-desc { padding: 0 5px 5px;}
+.dq-list2 .dq-desc .dq-buy { width: 32px; font-size: 12px; padding: 2px 3px; font-weight: 700; background: #71088b; color: #ff0}
+
+/*用于将 html body 禁止滚动条 有兼容问题，当页面滚动至下方后，点击弹层 会先滚动至页面上方再弹出层*/
+/*.active-page, .active-page body { width: 100%; height: 100%; overflow: hidden; -webkit-transform-origin: 0px 0px; -webkit-transform: scale(1, 1);}*/
+/*pop*/
+.pop { display: none; -webkit-transition: all linear .4s; transition: all linear .4s; position: fixed; left: 50%; top: 30%; z-index: 1000; width: 70%; padding: 8px; text-align: center; margin-left: -35%; box-shadow: 1px 1px 20px rgba(0, 0, 0, .5); border-radius: 5px; background: #cc1515;}
+.pop .inner { padding: 7px; border: dashed 1px #fff; color: #fff}
+.pop-btns { margin-top: 6px}
+.pop-btns .btn-close { display: inline-block; padding: 2px 8px; background: #ff0; color: #cc1515}
+/*mask*/
+.mask { display: none; -webkit-transition: all linear .4s; transition: all linear .4s; position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; background: rgba(0,0,0,.8)}
+
+/*Media Queries*/
+@media only screen and (min-width:768px){
+	.timeline { font-size: 24px;}
+	.timeline:after { left: 110px; top: 48px; content: ''; height: 6px;}
+	.timeline ul { height: 100px; padding-left: 100px; background-position: 20px center; background-size: 74px 74px;}
+	.timeline li i { width: 12px; height: 12px;}
+	.dq-title h2 { font-size: 30px}
+	.dq-title h3 { font-size: 20px}
+	.dq-desc h4 { height: 30px; font-size: 26px;}
+	.dq-desc .dq-price { font-size: 24px; line-height: 38px;}
+	.dq-desc .dq-price em { font-size: 32px}
+	.dq-ticket { font-size: 24px; line-height: 40px;}
+}
