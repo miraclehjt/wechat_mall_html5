@@ -33,6 +33,7 @@ a, input, select, textarea { outline:0; resize:none;}
 .pop .msg .p3 { width: 90%; margin: 0 auto; font-size: 20px; font-weight: 700; line-height: 42px; border-radius: 5px; background: #efe939; color: #08672d}
 .pop .msg .p4 { font-size: 14px; color: #efe939}
 .pop .msg .p5 { font-size: 14px; color: #000}
+.pop i { position: absolute; right: 0; top: 0; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 100%; color: #fff; background: #f00;}
 .pop .btns { margin-top: 18px}
 .pop .btns .btn { display: block; width: 142px; height: 35px; line-height: 32px; margin: 0 auto; text-align: center; font-size: 20px; background: url(../images/btn.png) 0 0 no-repeat; background-size: cover; color: #f6f7cb}
 /*mask*/
