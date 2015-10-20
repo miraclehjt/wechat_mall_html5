@@ -58,16 +58,52 @@
 		<div class="img"><img src="images/rerc5zhe.png"></div>
 		<p class="txt">10积分兑换</p>
 	</div>
-	<div class="redeem">
+	<div class="redeem" ticketid="123456">
 		<div class="img"><img src="images/lt50.png"></div>
 		<p class="txt">15积分兑换</p>
 	</div>
 </div>
 <div class="return img"><a href="#"><img src="images/return.png"></a></div>
-<div class='pop'><div class="inner"><p class='msg'>恭喜您获得品牌优惠券一张</p><div class="pop-btns"><a href="javascript:pop.hide();" class="btn btn-close">确定</a></div></div></div><!-- //提示弹窗 -->
+<div class='pop'>
+	<div class="inner">
+		<div class='msg'>
+			<p class="p1">您即将消耗15积分</p>
+			<p class="p2">兑换中国联通50M流量卡一张</p>
+			<p class="p2">很遗憾，您的积分不足</p>
+			<p class="p3">恭喜您兑换成功！</p>
+			<p class="p4">您已获得：</p>
+			<p class="p2">中国联通50M流量卡一张</p>
+			<p class="p5">请前往[我的购物券]查看</p>
+			<div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">确认兑换</a></div>
+		</div>
+	</div>
+</div><!-- //提示弹窗 -->
 <div class="mask"></div>
 <script src="js/zepto.min.js"></script>
 <script>
+$('.ticketList .redeem').click(function(event) {
+	var ticketid = $(this).attr('ticketid');
+	if(ticketid == 123456){
+		pop.show({
+			msg: '<p class="p1">您即将消耗15积分</p><p class="p2">兑换中国联通50M流量卡一张</p><div class="btns"><a href="javascript:confirmExchange();" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+});
+function confirmExchange(){
+	var myPoint = 100;
+	var hasPoint = 15;
+	if(myPoint > hasPoint){
+		pop.show({
+			msg:'<p class="p2">很遗憾，您的积分不足</p><div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">确认</a></div>'
+		})
+	}else{
+		pop.show({
+			msg:'<p class="p3">恭喜您兑换成功！</p><p class="p4">您已获得：</p><p class="p2">中国联通50M流量卡一张</p><p class="p5">请前往[我的购物券]查看</p>'
+		})
+	}
+}
+
+
 function pop() {}
 pop.show = function(info) {
 	var $pop = $('.pop');
