@@ -59,43 +59,76 @@
 			</li>
 		</ul>
 	</div>
-	<!-- 老版本优惠券兼容1 -->
-	<div class="m-coupon">
-		<div class="coupon type1">
-			<div class="price"><i class="icon">￥</i>100<p class="small">(购物卡)</p></div>
-			<div class="info">
-				<div class="grant">
-					<div class="logo"><img src="images/wlogo.png"></div>
-				</div>
-				<div class="explain">领取地点：草桥上品折扣MALL（北京市丰台区草桥东路1号）<br>有效期至2015年8月12日，仅限兑换一次，点击兑换后失效，如您未到店对换，逾期作废。</div>
-				<div class="code2">网络码：2axc54dcvdff</div>
-				<div class="code2">实体码：123456</div>
-			</div>
-			<i class="icon"></i>
+<!-- 增值服务里的优惠券 -->
+<div class="appreciation">
+	<div class="figure">
+		<div class="img"><img src="images/top.png"></div>
+		<p class="txt">免责声明：您使用积分兑换相应的异业合作优惠券使用权归优惠券服务提供者所有，兑换后积分不返还，所有积分兑换券为每个人只能使用一次，包括但不限于分享给其他人使用，请仔细阅读使用须知与有效期。服务范围仅限在北京市内。</p>
+	</div>
+	<div class="ticketList">
+		<div class="redeem">
+			<div class="img"><img src="images/nfsq.png"></div>
+			<p class="txt">200积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/adc.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/58dj40.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/dddc.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/58dj10.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/cdjy20.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/msh20.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/rrc400.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/rrc1000.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem">
+			<div class="img"><img src="images/rerc5zhe.png"></div>
+			<p class="txt">10积分兑换</p>
+		</div>
+		<div class="redeem" ticketid="123456">
+			<div class="img"><img src="images/lt50.png"></div>
+			<p class="txt">15积分兑换</p>
 		</div>
 	</div>
-	<!--老版本优惠券兼容2-->
-	<div class="ticket_di">
-		<a href="javascript:;" class="j_dialog"><img src="images/didi.png" width="100%" height="100%"/></a>
+</div>
+<!-- 增值服务里的优惠券 -->
+<div class='pop popTicket'>
+	<div class="inner">
+		<div class='msg'>
+			<p class="p1">您即将消耗15积分</p>
+			<p class="p2">兑换中国联通50M流量卡一张</p>
+			<p class="p2">很遗憾，您的积分不足</p>
+			<p class="p3">恭喜您兑换成功！</p>
+			<p class="p4">您已获得：</p>
+			<p class="p2">中国联通50M流量卡一张</p>
+			<p class="p5">请前往[我的购物券]查看</p>
+			<div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">确认兑换</a></div>
+		</div>
+		<i onclick="pop.hide();">X</i>
 	</div>
-	<div class="ticket_58">
-		<a href="javascript:;" class="j_dialog"><img src="images/58daojia.png" width="100%" height="100%"/></a>
-	</div>
-	<div class="ticket_jiayou">
-		<a href="javascript:;" class="j_dialog"><img src="images/jiayou.png" width="100%" height="100%"/></a>
-	</div>
-	<div class="ticket_daojia">
-		<a href="javascript:;" class="j_dialog"><img src="images/daojia.png" width="100%" height="100%"/></a>
-	</div>
-	<div class="ticket_renrenche">
-		<a href="javascript:;" class="j_dialog"><img src="images/renrenche.png" width="100%" height="100%"/></a>
-	</div>
-	<div class="ticket_renrenche_1000">
-		<a href="javascript:;" class="j_dialog"><img src="images/renrenche_1000.png" width="100%" height="100%"/></a>
-	</div>
-	<div class="ticket_renrenche_5zhe">
-		<a href="javascript:;" class="j_dialog"><img src="images/renrenche_5zhe.png" width="100%" height="100%"/></a>
-	</div>
+</div><!-- //提示弹窗 -->
+<div class="mask"></div>
 </div>
 <div class="empty">
 	<div class="empty-pic cry-pic"></div>
@@ -104,5 +137,52 @@
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/shopin.js"></script>
+<script>
+$('.ticketList .redeem').click(function(event) {
+	var ticketid = $(this).attr('ticketid');
+	if(ticketid == 123456){
+		pop.show({
+			msg: '<p class="p1">您即将消耗15积分</p><p class="p2">兑换中国联通50M流量卡一张</p><div class="btns"><a href="javascript:confirmExchange();" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+});
+function confirmExchange(){
+	var myPoint = 100;
+	var hasPoint = 15;
+	if(myPoint > hasPoint){
+		pop.show({
+			msg:'<p class="p2">很遗憾，您的积分不足</p><div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">确认</a></div>'
+		})
+	}else{
+		pop.show({
+			msg:'<p class="p3">恭喜您兑换成功！</p><p class="p4">您已获得：</p><p class="p2">中国联通50M流量卡一张</p><p class="p5">请前往[我的购物券]查看</p>'
+		})
+	}
+}
+
+
+function pop() {}
+pop.show = function(info) {
+	var $pop = $('.pop');
+	$('.msg', $pop).html(info.msg);
+	$pop.css('display','block');
+	$('.mask').css('display','block');
+	window.ontouchmove=function(e){
+		e.preventDefault && e.preventDefault();
+		e.returnValue=false;
+		e.stopPropagation && e.stopPropagation();
+		return false;
+	}
+};
+pop.hide = function() {
+	$('.pop,.mask').css('display','none');
+	window.ontouchmove=function(e){
+		e.preventDefault && e.preventDefault();
+		e.returnValue=true;
+		e.stopPropagation && e.stopPropagation();
+		return true;
+	}
+};
+</script>
 </body>
 </html>

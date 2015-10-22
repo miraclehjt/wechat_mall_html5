@@ -49,3 +49,32 @@
 .ticket_di,.ticket_58,.ticket_jiayou,.ticket_daojia,.ticket_renrenche,.ticket_renrenche_1000,.ticket_renrenche_5zhe{ padding: 8px 10px 0; border-bottom:6px solid #fff;}
 .ticket_di p,.ticket_58 p,.ticket_jiayou p,.ticket_daojia p,.ticket_renrenche p,.ticket_renrenche_1000 p,.ticket_renrenche_5zhe p { padding: 4px 0; text-align: right; color:#fff; font:600 14px/22px 'microsoft yahei';}
 .return{ margin-top:10%;}
+
+/*img*/
+.img img { width: 100%; vertical-align: middle;}
+
+/*页头*/
+.topNav{ height:50px; text-align:center; background:#ff520c;}
+.topNav h1 { font-weight: 700; font-size: 30px; line-height: 50px; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#fff;}
+/*头图*/
+.figure { margin-bottom: 1.5rem;}
+.figure .txt { position: relative; width:84%; padding:3%; margin: -26px auto 0; font-size: 14px; border:1px dashed #fff; background-color:rgba(72,64,42,.5); color: #fff;}
+/*异业券*/
+.redeem { padding: 0 1rem; margin-bottom: 10px; border-bottom: 5px solid #fff;}
+.redeem .txt { line-height: 30px; text-align: right; font-size: 14px; color: #fff;}
+.appreciation { margin-top: 1rem; background: #008f77}
+.ticketList .redeem:last-child { margin-bottom: 10px; border-bottom: none}
+/*弹出层*/
+.popTicket { display: none; -webkit-transition: all linear .4s; transition: all linear .4s; position: fixed; left: 50%; top: 30%; z-index: 1000; width: 260px; height: 205px; padding: 18px 18px 25px; text-align: center; margin-left: -130px; -webkit-box-sizing: border-box; box-sizing: border-box; box-shadow: none; background: url(../images/pop.png) 0 0 no-repeat; border: 0; pointer-events: auto; background-size: cover; opacity: 1}
+.popTicket .inner { width: 100%; height: 100%; display:-webkit-box; -webkit-box-orient:horizontal; -webkit-box-pack:center; -webkit-box-align:center; display:-moz-box; -moz-box-orient:horizontal; -moz-box-pack:center; -moz-box-align:center; display:-o-box; -o-box-orient:horizontal; -o-box-pack:center; -o-box-align:center; display:-ms-box; -ms-box-orient:horizontal; -ms-box-pack:center; -ms-box-align:center; display:box; box-orient:horizontal; box-pack:center; box-align:center;}
+.popTicket .msg p { line-height: 30px; color: #fff}
+.popTicket .msg .p1 { font-size: 20px}
+.popTicket .msg .p2 { font-size: 16px; font-weight: 700}
+.popTicket .msg .p3 { width: 90%; margin: 0 auto; font-size: 20px; font-weight: 700; line-height: 42px; border-radius: 5px; background: #efe939; color: #08672d}
+.popTicket .msg .p4 { font-size: 14px; color: #efe939}
+.popTicket .msg .p5 { font-size: 14px; color: #000}
+.popTicket i { position: absolute; right: 0; top: 0; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 100%; color: #fff; background: #f00;}
+.popTicket .btns { margin-top: 18px}
+.popTicket .btns .btn { display: block; width: 142px; height: 35px; line-height: 32px; padding: 0; margin: 0 auto; text-align: center; font-size: 20px; background: url(../images/btn.png) 0 0 no-repeat; border: 0; background-size: cover; color: #f6f7cb}
+/*mask*/
+.mask { display: none; -webkit-transition: all linear .4s; transition: all linear .4s; position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; background: rgba(0,0,0,.8)}
