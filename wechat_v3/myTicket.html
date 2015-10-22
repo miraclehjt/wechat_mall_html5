@@ -25,37 +25,37 @@
 		<li><a href="getTicket.html">领取劵</a></li>
 		<li class="active"><a href="myTicket.html">我的券</a></li>
 	</ul>
-	<div class="coupon-list get-coupon">
+	<div class="coupon-list my-coupon">
 		<ul>
 			<li class="c-brand">
-				<div class="c-logo"><img src="images/wlogo.png"></div>
-				<div class="c-par"><b class="par-value"><i>￥</i>50</b></div>
-				<div class="c-info">
-					<span class="c-type">品牌劵</span>
-					<p class="c-condition">0积分可兑换</p>
-					<p class="c-date">2015.12.12<i>－</i>2015.12.30</p>
-				</div>
-				<div class="c-btn">立即兑换</div>
+				<a href="ticket.html">
+					<div class="c-logo"><img src="images/clogo.png"></div>
+					<div class="c-info">
+						<span class="c-type">品牌劵</span>
+						<p class="c-date">2015.12.12<i>－</i>2015.12.30</p>
+					</div>
+					<div class="c-par"><b class="par-value"><i>￥</i>500</b><p>满99元使用</p></div>
+				</a>
 			</li>
 			<li class="c-category">
-				<div class="c-logo"><img src="images/wlogo.png"></div>
-				<div class="c-par"><b class="par-value"><i>￥</i>100</b></div>
-				<div class="c-info">
-					<span class="c-type">品类劵</span>
-					<p class="c-condition">0积分可兑换</p>
-					<p class="c-date">2015.12.12<i>－</i>2015.12.30</p>
-				</div>
-				<div class="c-btn">立即兑换</div>
+				<a href="ticket.html">
+					<div class="c-logo"><img src="images/clogo.png"></div>
+					<div class="c-info">
+						<span class="c-type">品类劵</span>
+						<p class="c-date">2015.12.12<i>－</i>2015.12.30</p>
+					</div>
+					<div class="c-par"><b class="par-value"><i>￥</i>500</b><p>满99元使用</p></div>
+				</a>
 			</li>
 			<li class="c-global">
-				<div class="c-logo"><img src="images/wlogo.png"></div>
-				<div class="c-par"><b class="par-value"><i>￥</i>500</b></div>
-				<div class="c-info">
-					<span class="c-type">全场劵</span>
-					<p class="c-condition">0积分可兑换</p>
-					<p class="c-date">2015.12.12<i>－</i>2015.12.30</p>
-				</div>
-				<div class="c-btn">立即兑换</div>
+				<a href="ticket.html">
+					<div class="c-logo"><img src="images/clogo.png"></div>
+					<div class="c-info">
+						<span class="c-type">全场劵</span>
+						<p class="c-date">2015.12.12<i>－</i>2015.12.30</p>
+					</div>
+					<div class="c-par"><b class="par-value"><i>￥</i>500</b><p>满99元使用</p></div>
+				</a>
 			</li>
 		</ul>
 	</div>
@@ -167,9 +167,7 @@ pop.show = function(info) {
 	$pop.css('display','block');
 	$('.mask').css('display','block');
 	var popHeight = $pop.height();
-	$pop.css({
-		'marginTop' : -popHeight/2
-	});
+	$pop.css('marginTop', -popHeight/2);
 	window.ontouchmove=function(e){
 		e.preventDefault && e.preventDefault();
 		e.returnValue=false;
