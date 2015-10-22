@@ -427,7 +427,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .larger-view li .p .p-pic { width: 100%}
 .larger-view li .d-main p { display: inline-block}
 .larger-view del { display: none}
-.larger-view li .d-title { -webkit-line-clamp: 1; line-clamp: 1;}
+.larger-view li .d-title { height: 20px; -webkit-line-clamp: 1; line-clamp: 1;}
 
 /*品类*/
 .m-cate { position: relative; overflow: hidden; background-color: #fff}
