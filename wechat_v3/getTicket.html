@@ -149,7 +149,7 @@ $('.ticketList .redeem').click(function(event) {
 function confirmExchange(){
 	var myPoint = 100;
 	var hasPoint = 15;
-	if(myPoint > hasPoint){
+	if(myPoint < hasPoint){
 		pop.show({
 			msg:'<p class="p2">很遗憾，您的积分不足</p><div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">确认</a></div>'
 		})
