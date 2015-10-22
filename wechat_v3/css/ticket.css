@@ -78,7 +78,7 @@
 .popTicket .btns .btn { display: block; width: 142px; height: 35px; line-height: 32px; padding: 0; margin: 0 auto; text-align: center; font-size: 20px; background: url(../images/btn.png) 0 0 no-repeat; border: 0; background-size: cover; color: #f6f7cb}
 /*我的券使用规则*/
 .useRule { display: none; position: fixed; left: 50%; top: 50%; z-index: 1000; -webkit-box-sizing: border-box; box-sizing: border-box; box-shadow: none; border: 0; pointer-events: auto; width: 90%; margin-left: -45%; padding: 5px 0; text-align: left; -webkit-box-sizing: border-box; box-sizing: border-box; opacity: 1; background: #ed1414; color: #fff;}
-.useRule .urTop { padding:  0 10px 10px; background: #fd5656}
+.useRule .urTop { max-height: 240px; overflow-y:scroll; padding:  0 10px 10px; background: #fd5656}
 .useRule h5 { padding: 8px 0 4px; font-size: 13px; color: #fbff8f}
 .useRule .urBottom { padding: 10px; background: #ed1414}
 .useRule .btns { padding: 10px 0;}
