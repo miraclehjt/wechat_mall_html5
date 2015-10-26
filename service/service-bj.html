@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="no-cache" http-equiv="Cache-Control">
+<title>联系客服</title>
+<link href="css/style.css" rel="stylesheet"/>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+	$(".qustion:first dd").show();
+	$(".qustion dt a").click(function(){
+		$(this).parents().children("dd").toggle().parents().siblings().children("dd").hide();
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="service">
+	<div class="item">
+        <h6>1 上品折扣营业时间</h6>
+        <div class="conts">
+            <p>夏季　9：30—10：00</p>
+            <p>冬季　9：30—21：30</p>
+        </div>
+    </div>
+    <div class="line"></div>
+	<div class="item">
+        <h6>2 上品客服电话<a class="olcs" href="http://www.sobot.com/chat/h5/index.html?sysNum=78ece65705e34dda9309d545af4b4f8c">在线客服</a></h6>
+        <div class="conts">
+            <p><a href="tel:4008980808">4008980808</a></p>
+        </div>
+    </div>
+    <div class="line"></div>
+	<div class="item">
+        <h6>3 上品折扣网服务时间</h6>
+        <div class="conts">
+            <p>客户服务中心人工服务时间目前是周一到周日9：00-21：00</p>
+            <p>①客服热线：<a href="tel:4008980808">4008980808</a></p>
+            <p>其他时间您可以通过邮件留言</p>
+            <p>②客服mail(我们在收到邮件后的1-2个工作日内回复您的问题)</p>
+            <p>咨询：<a href="sms:question@shopin.cn">question@shopin.cn</a></p>
+            <p>查询：<a href="sms:Web-order@shopin.cn">Web-order@shopin.cn</a></p>
+            <p>投诉：<a href="sms:service@shopin.cn">service@shopin.cn</a></p>
+        </div>
+    </div>
+    <div class="line"></div>
+	<div class="item">
+        <h6>4 常见问题</h6>
+        <div class="conts">
+            <dl id="q1" class="qustion">
+                <dt class="gradient"><a href="#q1">1、如何成为上品的会员？可以及时了解你们商场的活动信息？</a><i></i></dt>
+                <dd>答：</dd>
+                <!--<dd>A：您可以通过关注“上品折扣杭州”公众号成为我们的会员</dd>-->
+                <dd>A：扫描店内的二维码并关注公众号成为我们的会员；</dd>
+                <dd>B：登录上品折扣网，点击首页上方的免费注册按钮。</dd>
+                <dd>C：如果还是不能自助完成注册，您可以到服务台求助服务人员。</dd>
+                <dd>注册后可以成为普通会员并有积分，绑定手机并验证后成为上品全渠道会员，可以使用跨渠道提货，全渠道退货等功能。</dd>
+            </dl>
+            <!--<dl id="q2" class="qustion">
+                <dt class="gradient"><a href="#q2">2、为什么你们的商场里没有收银台？手机没有流量不能使用微信支付？</a><i></i></dt>
+                <dd>答：</dd>
+                <dd>A：上品折扣杭州下沙店是首家全渠道销售线上支付体验店，我们与腾讯合作使用微信支付，顾客可以使用微信通过绑定银行卡支付，
+           微信支付购物无需至收银台排队、无需找零，可以为你带来全新的便捷购物体验。</dd>
+                <dd>B：我们卖场有免费的WIFI，您可以很容易的登录使用WIFI。</dd>
+            </dl>-->
+            <dl id="q3" class="qustion">
+                <dt class="gradient"><a href="#q3">2、使用微信支付是否安全？手机被盗怎么保障微信支付安全？</a><i></i></dt>
+                <dd>答：</dd>
+                <dd>A：微信支付是业界最安全的移动支付解决方案，同时针对消费者推出“中国人保全额承保“多重保障您的支付安全。</dd>
+                <dd>B：万一您的微信登陆密码和支付密码同时被盗，您可致电绑定银行卡的发卡行将该银行卡挂失，挂失后微信支付将无法使用。您在挂失银行卡后，请立即修改您的微信支付密码，然后致电银行解除挂失后方可正常使用微信支付。</dd>
+            </dl>
+            <dl id="q4" class="qustion">
+                <dt class="gradient"><a  href="#q4">3、付款后如何获得商品？是否支持到店自提？</a><i></i></dt>
+                <dd>答：</dd>
+                <dd>A：您在下单时可以选择到店自提或快递上门的两种方式收到商品</dd>
+                <dd>B：自提时需要您携带手机，向店内导购人员出示手机里订单生成提货凭证码，即可完成提货</dd>
+            </dl>
+            <dl id="q5" class="qustion">
+                <dt class="gradient"><a href="#q5">4、商品有三包吗？发票在哪里开？多长时间可以开发票？</a><i></i></dt>
+                <dd>答：</dd>
+                <dd>A：在我们这里销售的所有商品全部按《消法》规定为您提供三包服务。</dd>
+                <dd>B：您可以到服务台根据订单开据发票，发票在购买商品的一年内都可以开。</dd>
+            </dl>
+            <dl id="q6" class="qustion">
+                <dt class="gradient"><a href="#q6">5、使用微信支付购买商品后怎么退/换货？</a><i></i></dt>
+                <dd>答：</dd>
+                <dd>您可以到店柜台导购办理，或者在手机微信商城右下角点击“我”进入会员中心“自助退货”进入网上快递退货申请流程</dd>
+            </dl>
+            <dl id="q7" class="qustion">
+                <dt class="gradient"><a href="#q7">6、微信支付退货货款多长时间能够返回到银行卡上？如果没有返回到银行卡上要如何处理？</a><i></i></dt>
+                <dd>答：</dd>
+                <dd>A：一般情况下，会在商家成功提交退款后2-5个工作日退入用户银行卡内。</dd>
+                <dd>B：如果用户逾期仍未收到退款资金，可以提供银行卡资金流水截图联系财付通客服发单银行进行核查处理。客服电话：<a href="tel:4008980808">4008980808</a></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+</body>
+</html>
