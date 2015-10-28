@@ -16,9 +16,16 @@
 <div class="header">
 	<div class="left"><a href="javascript:;" class="a-back"><span>返回</span></a></div>
 	<div class="center">
-		<h1>兑换优惠券</h1>
+		<h1>我的优惠券</h1>
 	</div>
+	<div class="right"><a href="javascript:;" class="a-more"><span>更多</span></a></div>
 </div><!--//头部结束-->
+<div class="nav sub-nav j-nav">
+	<a class="on" href="index.html">首页</a>
+	<a href="category.html">分类</a>
+	<a href="cart.html">购物车</a>
+	<a href="vip.html">我</a>
+</div><!-- //二级导航结束 -->
 
 <div class="coupon-content">
 	<ul class="tabbar">
@@ -66,6 +73,10 @@
 		<p class="txt">免责声明：您使用积分兑换相应的异业合作优惠券使用权归优惠券服务提供者所有，兑换后积分不返还，所有积分兑换券为每个人只能使用一次，包括但不限于分享给其他人使用，请仔细阅读使用须知与有效期。服务范围仅限在北京市内。</p>
 	</div>
 	<div class="ticketList">
+		<div class="redeem" ticketid="11">
+			<div class="img"><img src="images/tyy.png"></div>
+			<p class="txt">30积分兑换</p>
+		</div>
 		<div class="redeem">
 			<div class="img"><img src="images/nfsq.png"></div>
 			<p class="txt">200积分兑换</p>
@@ -143,6 +154,11 @@ $('.ticketList .redeem').click(function(event) {
 	if(ticketid == 123456){
 		pop.show({
 			msg: '<p class="p1">您即将消耗15积分</p><p class="p2">兑换中国联通50M流量卡一张</p><div class="btns"><a href="javascript:confirmExchange();" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+	if(ticketid == 11){
+		pop.show({
+			msg: '<p class="p1">您即将消耗30积分</p><p class="p2">泰医源祛痘护理体验券一张</p><div class="btns"><a href="javascript:confirmExchange();" class="btn btn-close">确认兑换</a></div>'
 		});
 	}
 });
