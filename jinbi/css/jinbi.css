@@ -130,8 +130,7 @@ left: 0;height: 100%; display: none; width:100%; min-width:3.2rem; max-width:6.4
 .getgold { text-align: center;}
 .getgold h2 { font-size: .5rem; color: #fff32b;}
 .getgold p { font-size: .3rem; color: #fff;}
-.btn-group { padding: 10px 0;}
-.btn-group:last-child { margin-top: 10px}
+.btn-group { padding: 6px 0;}
 .btn-group a { width: 80%; padding: 8px 0; font-size: .18rem; color: #022daa;}
 .btn-group .convert { width: 50%; margin-top: .15rem; font-weight: 700; color: #f00;}
 
