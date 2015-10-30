@@ -60,7 +60,8 @@
 /*异业券*/
 .redeem { padding: 0 1rem; margin-bottom: 10px; border-bottom: 5px solid #fff;}
 .redeem .txt { height: 30px; line-height: 30px; text-align: right; font-size: 14px; color: #fff;}
-.appreciation { margin-top: 1rem; background: #008f77}
+.coupon-list { margin-bottom: 1rem}
+.appreciation { background: #008f77}
 .ticketList { padding-top: 1rem}
 .ticketList .redeem:last-child { margin-bottom: 10px; border-bottom: none}
 /*弹出层*/
