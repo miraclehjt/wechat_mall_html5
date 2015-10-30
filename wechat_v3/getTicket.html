@@ -16,7 +16,7 @@
 <div class="header">
 	<div class="left"><a href="javascript:;" class="a-back"><span>返回</span></a></div>
 	<div class="center">
-		<h1>我的优惠券</h1>
+		<h1>领取优惠券</h1>
 	</div>
 	<div class="right"><a href="javascript:;" class="a-more"><span>更多</span></a></div>
 </div><!--//头部结束-->
@@ -133,8 +133,8 @@
 			<p class="p3">恭喜您兑换成功！</p>
 			<p class="p4">您已获得：</p>
 			<p class="p2">中国联通50M流量卡一张</p>
-			<p class="p5">请前往[我的购物券]查看</p>
-			<div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">确认兑换</a></div>
+			<!-- <p class="p5">请前往[我的购物券]查看</p> -->
+			<div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>
 		</div>
 		<i onclick="pop.hide();">X</i>
 	</div>
@@ -167,15 +167,14 @@ function confirmExchange(){
 	var hasPoint = 15;
 	if(myPoint < hasPoint){
 		pop.show({
-			msg:'<p class="p2">很遗憾，您的积分不足</p><div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">确认</a></div>'
+			msg:'<p class="p2">很遗憾，您的积分不足</p><div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">知道了</a></div>'
 		})
 	}else{
 		pop.show({
-			msg:'<p class="p3">恭喜您兑换成功！</p><p class="p4">您已获得：</p><p class="p2">中国联通50M流量卡一张</p><p class="p5">请前往[我的购物券]查看</p>'
+			msg:'<p class="p3">恭喜您成功兑换</p><p class="p2">泰医源祛痘护理体验券一张</p><div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>'
 		})
 	}
 }
-
 
 function pop() {}
 pop.show = function(info) {
