@@ -1,0 +1,40 @@
+@charset "utf-8";
+/*reset*/
+html { font-size:62.5%;}
+body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd { margin:0; padding:0;}
+html,body{position:relative;height:100%}
+body{ width:100%; min-width:320px; max-width:640px; line-height:1.6rem; margin:0 auto; -webkit-user-select:none;-webkit-text-size-adjust:100% !important;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:1.4rem;  background:#008f77;color:#666;}
+h1,h2,h3,h4,h5,h6 { font-size: 100%;}
+a { text-decoration:none; -webkit-tap-highlight-color:rgba(255,68,0,.25); color:#666;}
+a img { border:0; vertical-align:top;}
+ol, ul { list-style-type:none;}
+em, strong, i, s, b { font-style:normal; font-weight:normal; text-decoration:none;}
+a, input, select, textarea { outline:0; resize:none;}
+
+/*img*/
+.img img { width: 100%; vertical-align: middle;}
+
+/*页头*/
+.topNav{ height:50px; text-align:center; background:#ff520c;}
+.topNav h1 { font-weight: 700; font-size: 30px; line-height: 50px; font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#fff;}
+/*头图*/
+.figure { margin-bottom: 1.5rem;}
+.figure .txt { position: relative; width:84%; padding:3%; margin: -26px auto 0; font-size: 14px; border:1px dashed #fff; background-color:rgba(72,64,42,.5); color: #fff;}
+/*异业券*/
+.redeem { padding: 0 1rem; margin-bottom: 10px; border-bottom: 5px solid #fff;}
+.redeem .txt { line-height: 30px; text-align: right; font-size: 14px; color: #fff;}
+.ticketList .redeem:last-child { margin-bottom: 10px; border-bottom: none}
+/*弹出层*/
+.pop { display: none; -webkit-transition: all linear .4s; transition: all linear .4s; position: fixed; left: 50%; top: 30%; z-index: 1000; width: 260px; height: 205px; padding: 18px 18px 25px; text-align: center; margin-left: -130px; -webkit-box-sizing: border-box; box-sizing: border-box; box-shadow: 1px 1px 20px rgba(0, 0, 0, .5); border-radius: 5px; background: url(../images/pop.png) 0 0 no-repeat; background-size: cover;}
+.pop .inner { width: 100%; height: 100%; display:-webkit-box; -webkit-box-orient:horizontal; -webkit-box-pack:center; -webkit-box-align:center; display:-moz-box; -moz-box-orient:horizontal; -moz-box-pack:center; -moz-box-align:center; display:-o-box; -o-box-orient:horizontal; -o-box-pack:center; -o-box-align:center; display:-ms-box; -ms-box-orient:horizontal; -ms-box-pack:center; -ms-box-align:center; display:box; box-orient:horizontal; box-pack:center; box-align:center;}
+.pop .msg p { line-height: 30px; color: #fff}
+.pop .msg .p1 { font-size: 20px}
+.pop .msg .p2 { font-size: 16px; font-weight: 700}
+.pop .msg .p3 { width: 90%; margin: 0 auto; font-size: 20px; font-weight: 700; line-height: 42px; border-radius: 5px; background: #efe939; color: #08672d}
+.pop .msg .p4 { font-size: 14px; color: #efe939}
+.pop .msg .p5 { font-size: 14px; color: #000}
+.pop i { position: absolute; right: 0; top: 0; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 100%; color: #fff; background: #f00;}
+.pop .btns { margin-top: 18px}
+.pop .btns .btn { display: block; width: 142px; height: 35px; line-height: 32px; margin: 0 auto; text-align: center; font-size: 20px; background: url(../images/btn.png) 0 0 no-repeat; background-size: cover; color: #f6f7cb}
+/*mask*/
+.mask { display: none; -webkit-transition: all linear .4s; transition: all linear .4s; position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; background: rgba(0,0,0,.8)}
