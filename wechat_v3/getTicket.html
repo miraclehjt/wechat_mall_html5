@@ -73,6 +73,37 @@
 		<p class="txt">免责声明：您使用积分兑换相应的异业合作优惠券使用权归优惠券服务提供者所有，兑换后积分不返还，所有积分兑换券为每个人只能使用一次，包括但不限于分享给其他人使用，请仔细阅读使用须知与有效期。服务范围仅限在北京市内。</p>
 	</div>
 	<div class="ticketList">
+		<!--start:2015/11/10 新增-->
+		<div class="redeem" ticketid="15">
+			<div class="img"><img src="images/fshy5.png"></div>
+			<p class="txt">500积分兑换</p>
+		</div>
+		<div class="redeem" ticketid="16">
+			<div class="img"><img src="images/fshy10.png"></div>
+			<p class="txt">1000积分兑换</p>
+		</div>
+		<div class="redeem" ticketid="17">
+			<div class="img"><img src="images/fshy20.png"></div>
+			<p class="txt">2000积分兑换</p>
+		</div>
+		<div class="redeem" ticketid="18">
+			<div class="img"><img src="images/fshy30.png"></div>
+			<p class="txt">3000积分兑换</p>
+		</div>
+		<div class="redeem" ticketid="19">
+			<div class="img"><img src="images/fshy40.png"></div>
+			<p class="txt">4000积分兑换</p>
+		</div>
+		<div class="redeem" ticketid="20">
+			<div class="img"><img src="images/fshy50.png"></div>
+			<p class="txt">5000积分兑换</p>
+		</div>
+		<!--end:2015/11/10 新增-->
+
+		<div class="redeem" ticketid="123456">
+			<div class="img"><img src="images/lt50.png"></div>
+			<p class="txt">15积分兑换</p>
+		</div>
 		<div class="redeem" ticketid="11">
 			<div class="img"><img src="images/tyy.png"></div>
 			<p class="txt">30积分兑换</p>
@@ -117,10 +148,6 @@
 			<div class="img"><img src="images/rerc5zhe.png"></div>
 			<p class="txt">10积分兑换</p>
 		</div>
-		<div class="redeem" ticketid="123456">
-			<div class="img"><img src="images/lt50.png"></div>
-			<p class="txt">15积分兑换</p>
-		</div>
 	</div>
 </div>
 <!-- 增值服务里的优惠券 -->
@@ -158,11 +185,41 @@ $('.ticketList .redeem').click(function(event) {
 	}
 	if(ticketid == 11){
 		pop.show({
-			msg: '<p class="p1">您即将消耗30积分</p><p class="p2">泰医源祛痘护理体验券一张</p><div class="btns"><a href="javascript:confirmExchange();" class="btn btn-close">确认兑换</a></div>'
+			msg: '<p class="p1">您即将消耗30积分</p><p class="p2">泰医源祛痘护理体验券一张</p><div class="btns"><a href="javascript:confirmExchange(11);" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+	if(ticketid == 15){
+		pop.show({
+			msg: '<p class="p1">您即将消耗500积分</p><p class="p2">兑换5元优惠券一张</p><div class="btns"><a href="javascript:confirmExchange(15);" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+	if(ticketid == 16){
+		pop.show({
+			msg: '<p class="p1">您即将消耗1000积分</p><p class="p2">兑换10元优惠券一张</p><div class="btns"><a href="javascript:confirmExchange(16);" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+	if(ticketid == 17){
+		pop.show({
+			msg: '<p class="p1">您即将消耗2000积分</p><p class="p2">兑换20元优惠券一张</p><div class="btns"><a href="javascript:confirmExchange(17);" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+	if(ticketid == 18){
+		pop.show({
+			msg: '<p class="p1">您即将消耗3000积分</p><p class="p2">兑换30元优惠券一张</p><div class="btns"><a href="javascript:confirmExchange(18);" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+	if(ticketid == 19){
+		pop.show({
+			msg: '<p class="p1">您即将消耗4000积分</p><p class="p2">兑换40元优惠券一张</p><div class="btns"><a href="javascript:confirmExchange(19);" class="btn btn-close">确认兑换</a></div>'
+		});
+	}
+	if(ticketid == 20){
+		pop.show({
+			msg: '<p class="p1">您即将消耗5000积分</p><p class="p2">兑换50元优惠券一张</p><div class="btns"><a href="javascript:confirmExchange(20);" class="btn btn-close">确认兑换</a></div>'
 		});
 	}
 });
-function confirmExchange(){
+function confirmExchange(ticketid){
 	var myPoint = 100;
 	var hasPoint = 15;
 	if(myPoint < hasPoint){
@@ -170,9 +227,36 @@ function confirmExchange(){
 			msg:'<p class="p2">很遗憾，您的积分不足</p><div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">知道了</a></div>'
 		})
 	}else{
-		pop.show({
-			msg:'<p class="p3">恭喜您成功兑换</p><p class="p2">泰医源祛痘护理体验券一张</p><div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>'
-		})
+		if(ticketid == 15){
+			pop.show({
+				msg:'<p class="p3">恭喜您成功兑换</p><p class="p2">上品折扣5元优惠券一张</p><div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>'
+			})
+		}
+		if(ticketid == 16){
+			pop.show({
+				msg:'<p class="p3">恭喜您成功兑换</p><p class="p2">上品折扣10元优惠券一张</p><div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>'
+			})
+		}
+		if(ticketid == 17){
+			pop.show({
+				msg:'<p class="p3">恭喜您成功兑换</p><p class="p2">上品折扣20元优惠券一张</p><div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>'
+			})
+		}
+		if(ticketid == 18){
+			pop.show({
+				msg:'<p class="p3">恭喜您成功兑换</p><p class="p2">上品折扣30元优惠券一张</p><div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>'
+			})
+		}
+		if(ticketid == 19){
+			pop.show({
+				msg:'<p class="p3">恭喜您成功兑换</p><p class="p2">上品折扣40元优惠券一张</p><div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>'
+			})
+		}
+		if(ticketid == 20){
+			pop.show({
+				msg:'<p class="p3">恭喜您成功兑换</p><p class="p2">上品折扣50元优惠券一张</p><div class="btns"><a href="myTicket.html" class="btn">立即查看</a></div>'
+			})
+		}
 	}
 }
 
