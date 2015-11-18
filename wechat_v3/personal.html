@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="no-cache" http-equiv="Cache-Control">
+<title>上品折扣微商城</title>
+<link href="css/shopin.css" rel="stylesheet"/>
+<style>
+.page {display: none;position: absolute;left: 0;bottom: 0;right: 0;width: 100%;height: 100%;overflow: hidden;}
+#datescroll div{float: left;margin-left: 10%;padding-right: 22px;}
+#datescroll_datetime div{float: left;margin-left: 10%;padding-right: 22px;}
+#yearwrapper{position: absolute;left: 0;top:20px;bottom: 60px;width:80%;}
+#monthwrapper{position: absolute;left: 26%;top:20px;bottom: 60px;width:80%;}
+#daywrapper{position: absolute;left: 50%;top:20px;bottom: 60px;width:80%;}
+#Hourwrapper{position: absolute;left: 0;top:195px;bottom: 68px;width:80%;}
+#Minutewrapper{position: absolute;left: 26%;top:195px;bottom: 68px;width:80%;}
+#Secondwrapper{position: absolute;left: 50%;top:195px;bottom: 68px;width:80%;}
+/*增加手指滑动触摸面积*/
+#Hourwrapper ul li{color: #898989;font-size: 12px;}
+#Minutewrapper ul li{color: #898989;font-size: 12px;}
+#Secondwrapper ul li{color: #898989;font-size: 12px;}
+#yearwrapper ul li{color: #898989;font-size: 12px;}
+#monthwrapper ul li{color: #898989;font-size: 12px;}
+#daywrapper ul li{color: #898989;font-size: 12px;}
+#markyear{position:relative; margin-left: 76px;top:-2px;}
+#markmonth{position:relative; margin-left: 40px;top:-2px;}
+#markday{position:relative; margin-left: 42px;top:-2px;}
+#markhour{position:relative; margin-left: 62px;top:-2px;}
+#markminut{position:relative; margin-left: 58px;top:-2px;}
+#marksecond{position:relative; margin-left: 68px;top:-2px;}
+#dateheader{width: 100%;height: 50px;background: #79C12F;text-align: center;color: #fff;line-height: 50px;font-size: 20px;}
+#setcancle ul{text-align: center;line-height: 30px; margin:1px auto;font-size: 20px;}
+#setcancle ul li{border-radius:3px;float: left;width: 40%;height: 30px;list-style-type: none;font-family:'microsoft yahei';font-size:16px;}
+#dateconfirm{position: absolute;background:#f04e23;right:20px;color:#fff;}
+#datecancle{position: absolute;background:  #dcdddd;left:20px;width: 40%;color:#666;}
+#dateshadow{display: none;position: absolute;width: 100%;height: 100%;top:0;left:0;background: rgba(0,0,0,.5);}
+#datePage{font-size: 22px; border-radius: 3px; margin-right: auto;vertical-align:middle;margin-left: auto;width: 100%;height: 200px;background: #FFFFFF;z-index:9999999;}
+#datemark{font-size: 18px;left:5%;width: 90%;height: 20px;position:absolute;top:70px;background:#eee;border:1px solid #eee;}
+#timemark{font-size: 18px;left:5%;width: 90%;height: 20px;position:absolute;top:242px;background:#eee;border:1px solid #eee;}
+#datescroll{background: #F8F8F8;width:94%; margin:20px 3%;border: 1px solid #E0E0E0;border-radius: 4px;height: 120px;text-align: center;line-height: 40px;}
+#datescroll_datetime{display: none;background:#F8F8F8;width:94%; margin:10px 3%;margin-top: 10px;border: 1px solid #E0E0E0;border-radius: 4px;height: 120px;text-align: center;line-height: 40px;}
+#yearwrapper ul,#monthwrapper ul,#daywrapper ul{width:40%;}
+#Hourwrapper ul,#Minutewrapper ul,#Secondwrapper ul{width:40%;}
+#dateFooter{width:100%;background: #fff;height: 50px;bottom: 0px;position: absolute;}
+.personal-view { margin-top: 15px; padding-left: 12px; border-top: solid 1px #d9d9d9; border-bottom: solid 1px #d9d9d9; background: #fff}
+.personal-view .f-row { padding: 12px 0; border-bottom: solid 1px #d9d9d9;}
+.personal-view .f-row:last-child { border: 0}
+.personal-view .f-label { padding-left: 0; -webkit-box-pack:center; -webkit-box-align:center; box-pack:center; box-align:center;}
+</style>
+<script src="js/zepto.min.js" ></script>
+<script src="js/date.js" ></script>
+<script src="js/iscroll.js" ></script>
+<script>
+$(function(){
+    $('#beginTime').date();
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+    <div class="left"><a href="javascript:;" class="a-back"><span>返回</span></a></div>
+    <div class="center">
+        <h1>个人信息</h1>
+    </div>
+</div><!--//头部结束-->
+<div class="form-view personal-view">
+    <div class="f-row">
+        <label class="f-label">性别</label>
+        <div class="f-main">
+            <input id="name" type="text" placeholder="您的性别">
+        </div>
+    </div>
+    <div class="f-row">
+        <label class="f-label">生日</label>
+        <div class="f-main">
+            <input id="beginTime" type="text" placeholder="您的生日">
+        </div>
+    </div>
+    <div class="f-row">
+        <label class="f-label">职业</label>
+        <div class="f-main">
+            <input id="zipcode" type="text" placeholder="您的职业">
+        </div>
+    </div>
+    <div class="f-row">
+        <label class="f-label">收入</label>
+        <div class="f-main f-select">
+            <select class="select">
+                <option value="0">请选择</option>
+                <option value="">5000-10000</option>
+                <option value="">10000-20000</option>
+                <option value="">20000-50000</option>
+                <option value="">50000以上</option>
+            </select>
+        </div>
+    </div>
+    <div class="f-row">
+        <label class="f-label">身份证号</label>
+        <div class="f-main">
+            <input id="zipcode" type="text" placeholder="您的身份证号码">
+        </div>
+    </div>
+    <div class="f-row">
+        <label class="f-label">会员地址</label>
+        <div class="f-main">
+            <textarea placeholder="请填写您的常住地址" max-length="200"></textarea>
+        </div>
+    </div>
+</div>
+<!--时间日期插件容器-->
+<div id="datePlugin"></div>
+</body>
+</html>
