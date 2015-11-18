@@ -116,6 +116,16 @@
 				</div>
 			</div>
 		</div><!-- //优惠券 -->
+		<div class="list mt">
+			<div class="b-box options">
+				<p class="title cell">优惠金额</p>
+				<div class="conts">
+					<div class="arrow">
+						<p>10元</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- //优惠券 -->
 		<div class="postage mt">
 			<div class="b-box options">
 				<p class="title">邮费</p>
@@ -128,12 +138,15 @@
 		</div><!-- //邮费 -->
 		<div class="bottom-bar mt">
 			<div class="total-price">
-				<p class="text"><span class="subtotal">合计</span>共1件商品</p>
-				<p class="realPay"><strong class="price">￥402.00</strong></p>
-				<p class="submitOrder"><input type="button" class="btn btn-pay j_submit" value="确认" onClick="window.location.href='orderDetail.html'"></p>
+				<div class="compute">
+					<p class="realPay"><span class="subtotal">合计：￥</span><strong class="price">402.00</strong></p>
+					<p class="text">共1件， 含邮费 <span class="f-red">6</span> 元</p>
+				</div>
+				<div class="submitOrder">
+					<input type="button" class="btn btn-pay j_submit" value="确认" onClick="window.location.href='orderDetail.html'">
+				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 <script src="js/zepto.min.js"></script>

@@ -377,9 +377,9 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .my-coupon .c-logo { width: 90px; text-align: center;}
 .my-coupon .c-logo img { width: 78px; vertical-align: middle;}
 .my-coupon .c-info { text-align: center;}
-.my-coupon .c-type { font-size: 1.6rem}
+.my-coupon .c-type { font-size: 1.5rem}
 .my-coupon .c-date { margin-top: 3px; color: #999}
-.my-coupon .c-par { width: 100px; line-height: 16px; padding: 1.8rem 0 1.2rem}
+.my-coupon .c-par { width: 90px; line-height: 16px; padding: 1.8rem 0 1.2rem}
 .my-coupon .c-par .par-value { font-size: 3rem}
 .my-coupon .c-brand .c-par { background: #ff8355}
 .my-coupon .c-category .c-par { background: #3dc3d4}
@@ -608,11 +608,10 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .b-box .arrow:after { content: ''; position: absolute; right: 0; top: 50%; width: 10px; height: 10px; margin: -7px 5px 0 0; border: #aaa solid; border-width: 2px 0 0 2px; -webkit-transform: rotate(135deg); -ms-transform: rotate(135deg); transform: rotate(135deg)}
 .coupon .arrow:after { display: block}
 .bottom-bar { padding: 1rem; background: #fff; border-top: solid 1px #ddd}
-.total-price { display: -webkit-box; display: -ms-box; display: box}
-.total-price .text { text-align: right; color: #999}
-.total-price .subtotal { display: block; font-size: 1.4rem; color: #f04e23}
-.total-price .realPay { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1; margin-right: 1rem; margin-left: 5px; color: #f04e23; font-size: 2rem}
-
+.total-price { display: -webkit-box; display: -ms-box; display: box; box-orient:vertical; -webkit-box-pack:center; -webkit-box-align:center; box-pack:center; box-align:center;}
+.total-price .compute { -webkit-box-flex: 1; -ms-box-flex: 1; box-flex: 1;}
+.total-price .realPay { margin-left: 5px; color: #f04e23;}
+.total-price .realPay .price { font-size: 2rem}
 
 /*收货地址*/
 #actionBtn { height: 3.5rem; width: 100%; position: fixed; left: 0; bottom: 0; border: 0; font-size: 1.6rem; background: #f04e23; color: #fff}
