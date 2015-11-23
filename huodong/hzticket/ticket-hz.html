@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="no-cache" http-equiv="Cache-Control">
+<title>上品折扣微商城</title>
+<link href="css/ticket.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="topNav"><h1>兑换优惠券</h1></div>
+<!-- 增值服务里的优惠券 -->
+<div class="figure">
+	<div class="img"><img src="images/top.png"></div>
+	<p class="txt">免责声明 ：您使用的积分兑换相应的优惠券和礼品，兑换后积分不返还，兑换的礼品以实物为准，请仔细阅读使用须知与有效期。服务范围仅限在杭州门店使用。</p>
+</div>
+<div class="ticketList">
+	<!--start:2015/11/20 新增-->
+	<!--如果是跳到其它页领取的优惠券： onclick="toUrl('http://www.baidu.com/')"-->
+	<div class="voucher" ticketPop="1" ticketid="1" credit="1000" ticketName="上品折扣10元优惠券">
+		<div class="img"><img src="images/fs10.png"></div>
+		<p class="txt">1000积分兑换</p>
+	</div>
+	<div class="voucher" ticketPop="1" ticketid="2" credit="2000" ticketName="上品折扣20元优惠券">
+		<div class="img"><img src="images/fs20.png"></div>
+		<p class="txt">2000积分兑换</p>
+	</div>
+	<div class="voucher" ticketPop="1" ticketid="3" credit="3000" ticketName="上品折扣30元优惠券">
+		<div class="img"><img src="images/fs30.png"></div>
+		<p class="txt">3000积分兑换</p>
+	</div>
+	<div class="voucher" ticketPop="1" ticketid="4" credit="5000" ticketName="上品折扣50元优惠券">
+		<div class="img"><img src="images/fs50.png"></div>
+		<p class="txt">5000积分兑换</p>
+	</div>
+	<div class="voucher" ticketPop="1" ticketid="5" credit="500" ticketName="青花瓷餐具套装">
+		<div class="img"><img src="images/qhc.png"></div>
+		<p class="txt">500积分兑换</p>
+	</div>
+	<div class="voucher" ticketPop="1" ticketid="6" credit="1000" ticketName="指甲刀套餐">
+		<div class="img"><img src="images/zjd.png"></div>
+		<p class="txt">1000积分兑换</p>
+	</div>
+	<div class="voucher" ticketPop="1" ticketid="7" credit="2000" ticketName="清风抽纸">
+		<div class="img"><img src="images/qf.png"></div>
+		<p class="txt">2000积分兑换</p>
+	</div>
+	<div class="voucher" ticketPop="1" ticketid="8" credit="3000" ticketName="犸凯奴头巾">
+		<div class="img"><img src="images/mkn.png"></div>
+		<p class="txt">3000积分兑换</p>
+	</div>
+	<div class="voucher" ticketPop="1" ticketid="9" credit="6000" ticketName="康佳取暖器">
+		<div class="img"><img src="images/kj.png"></div>
+		<p class="txt">6000积分兑换</p>
+	</div>
+	<!--end:2015/11/20 新增-->
+</div>
+<!-- 增值服务里的优惠券 -->
+
+<!--//弹出窗口开始-->
+<div class='pop popTicket'>
+	<div class="inner">
+		<div class='msg'>
+			<p class="p1">您即将消耗15积分</p>
+			<p class="p2">兑换中国联通50M流量卡一张</p>
+			<p class="p2">很遗憾，您的积分不足</p>
+			<p class="p3">恭喜您兑换成功！</p>
+			<p class="p4">您已获得：</p>
+			<p class="p2">中国联通50M流量卡一张</p>
+			<!-- <p class="p5">请前往[我的购物券]查看</p> -->
+			<div class="btns"><a href="myticket-hz.html" class="btn">立即查看</a></div>
+		</div>
+		<i onclick="pop.hide();">X</i>
+	</div>
+</div>
+<div class="mask"></div>
+<!--//弹出窗口结束-->
+<script src="js/zepto.min.js"></script>
+<script>
+$('.ticketList .voucher').on('tap', function() {
+	var ticketPop = $(this).attr('ticketPop');
+	var ticketid = $(this).attr('ticketid');
+	var ticketName = $(this).attr('ticketName');
+	var hasCredit = $(this).attr('credit');
+	var myCredit = 3000;
+	if(ticketPop == 1){
+		if(myCredit < hasCredit){
+			pop.show({
+				msg:'<p class="p2">很遗憾，您的积分不足</p><div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">知道了</a></div>'
+			})
+		}else{
+			if(ticketid == 5 || ticketid == 6 || ticketid == 7 || ticketid == 8 || ticketid == 9){
+				pop.show({
+					msg:'<p class="p2">请到门店服务台核销积分兑换实物！</p><div class="btns"><a href="javascript:pop.hide();" class="btn btn-close">知道了</a></div>'
+				})
+			}else{
+				pop.show({
+					msg: '<p class="p1">您即将消耗' + hasCredit + '积分</p><p class="p2">兑换' + ticketName + '</p><div class="btns"><a href="javascript:confirmExchange(' + ticketid + ');" class="btn btn-close">确认兑换</a></div>'
+				});
+			}
+		}
+	}
+});
+
+function confirmExchange(ticketid){
+	pop.show({
+		msg:'<p class="p3">恭喜您兑换成功！</p><p class="p2">请前往个人中心查看！</p><div class="btns"><a href="myticket-hz.html" class="btn">立即查看</a></div>'
+	})
+}
+//弹出窗口开始
+function pop() {}
+pop.show = function(info) {
+	var $pop = $('.pop');
+	$('.msg', $pop).html(info.msg);
+	$pop.css('display','block');
+	$('.mask').css('display','block');
+	window.ontouchmove=function(e){
+		e.preventDefault && e.preventDefault();
+		e.returnValue=false;
+		e.stopPropagation && e.stopPropagation();
+		return false;
+	}
+};
+pop.hide = function() {
+	$('.pop,.mask').css('display','none');
+	window.ontouchmove=function(e){
+		e.preventDefault && e.preventDefault();
+		e.returnValue=true;
+		e.stopPropagation && e.stopPropagation();
+		return true;
+	}
+};
+function toUrl(url){
+	window.location.href = url;
+};
+</script>
+</body>
+</html>
