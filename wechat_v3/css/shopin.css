@@ -709,7 +709,7 @@ input[type=checkbox]:checked:before { background-position: -143px -30px; border:
 .order .bd { padding-left: 1rem; border: solid 1px #ddd}
 .order .bd > div { padding: 1rem; padding-left: 0; border-bottom: solid 1px #ddd}
 .order .bd > div:last-child { border-bottom: 0}
-.order .ft { text-align: right}
+.order .ft { padding: 1rem;}
 .order .ft .inner { padding: 1rem}
 .all-order .order { margin-bottom: 1rem}
 .all-order .order:last-child { margin-bottom: 0}
